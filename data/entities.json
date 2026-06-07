@@ -1,0 +1,485 @@
+[
+  {
+    "id": "parliament",
+    "name": "Parliament of Canada",
+    "type": "Other",
+    "parent": null,
+    "budget": null,
+    "description": "The federal legislature of Canada, composed of the Sovereign, the Senate, and the House of Commons.",
+    "source": "https://www.parl.ca/",
+    "lastUpdated": "2024-01-01"
+  },
+  {
+    "id": "pco",
+    "name": "Privy Council Office",
+    "type": "Agency",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 140000000,
+      "2023": 145000000,
+      "2024": 150000000
+    },
+    "description": "The office of the Prime Minister and the Cabinet, providing non-partisan support to the Prime Minister and Cabinet.",
+    "source": "https://www.pco-bcp.gc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["PCO", "Privy Council"]
+  },
+  {
+    "id": "treasury-board",
+    "name": "Treasury Board of Canada Secretariat",
+    "type": "Agency",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 190000000,
+      "2023": 195000000,
+      "2024": 200000000
+    },
+    "description": "The administrative branch of the Treasury Board, responsible for government-wide management and oversight.",
+    "source": "https://www.tbs-sct.gc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["TBS", "Treasury Board"]
+  },
+  {
+    "id": "finance",
+    "name": "Department of Finance Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 110000000,
+      "2023": 115000000,
+      "2024": 120000000
+    },
+    "description": "Responsible for the overall stewardship of the Canadian economy, including fiscal policy, taxation, and financial sector regulation.",
+    "source": "https://www.canada.ca/en/department-finance.html",
+    "lastUpdated": "2024-01-01"
+  },
+  {
+    "id": "health",
+    "name": "Health Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 4200000000,
+      "2023": 4350000000,
+      "2024": 4500000000
+    },
+    "description": "Responsible for helping Canadians maintain and improve their health, ensuring access to high-quality health care services.",
+    "source": "https://www.canada.ca/en/health-canada.html",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["HC"]
+  },
+  {
+    "id": "ISED",
+    "name": "Innovation, Science and Economic Development Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 750000000,
+      "2023": 775000000,
+      "2024": 800000000
+    },
+    "description": "Responsible for fostering a growing, competitive, knowledge-based Canadian economy.",
+    "source": "https://ised-isde.canada.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["ISED", "ISDE", "Industry Canada"]
+  },
+  {
+    "id": "environment",
+    "name": "Environment and Climate Change Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 1000000000,
+      "2023": 1100000000,
+      "2024": 1200000000
+    },
+    "description": "Responsible for preserving and enhancing the quality of the natural environment, including water, air, and soil quality.",
+    "source": "https://www.canada.ca/en/environment-climate-change.html",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["ECCC", "Environment Canada"]
+  },
+  {
+    "id": "national-defence",
+    "name": "Department of National Defence",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 28000000000,
+      "2023": 30000000000,
+      "2024": 32000000000
+    },
+    "description": "Responsible for defending Canada's interests and values at home and abroad.",
+    "source": "https://www.canada.ca/en/department-national-defence.html",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["DND", "National Defence", "Canadian Forces"]
+  },
+  {
+    "id": "justice",
+    "name": "Department of Justice Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 550000000,
+      "2023": 575000000,
+      "2024": 600000000
+    },
+    "description": "Responsible for ensuring that Canada's justice system is fair, accessible, and efficient.",
+    "source": "https://www.canada.ca/en/department-justice.html",
+    "lastUpdated": "2024-01-01"
+  },
+  {
+    "id": "public-safety",
+    "name": "Public Safety Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 850000000,
+      "2023": 875000000,
+      "2024": 900000000
+    },
+    "description": "Responsible for ensuring the safety and security of Canadians.",
+    "source": "https://www.publicsafety.gc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["PS", "Public Safety"]
+  },
+  {
+    "id": "indigenous-services",
+    "name": "Indigenous Services Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 23000000000,
+      "2023": 24000000000,
+      "2024": 25000000000
+    },
+    "description": "Responsible for improving the quality of life for First Nations, Inuit, and Métis peoples.",
+    "source": "https://www.sac-isc.gc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["ISC", "Indigenous Services", "SAC"]
+  },
+  {
+    "id": "immigration",
+    "name": "Immigration, Refugees and Citizenship Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 1800000000,
+      "2023": 1900000000,
+      "2024": 2000000000
+    },
+    "description": "Responsible for immigration and citizenship matters in Canada.",
+    "source": "https://www.canada.ca/en/immigration-refugees-citizenship.html",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["IRCC", "Immigration Canada", "Citizenship Canada"]
+  },
+  {
+    "id": "transport",
+    "name": "Transport Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 1300000000,
+      "2023": 1400000000,
+      "2024": 1500000000
+    },
+    "description": "Responsible for transportation policies and programs, ensuring a safe, secure, and efficient transportation system.",
+    "source": "https://www.tc.canada.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["TC", "Transport"]
+  },
+  {
+    "id": "agriculture",
+    "name": "Agriculture and Agri-Food Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 2800000000,
+      "2023": 2900000000,
+      "2024": 3000000000
+    },
+    "description": "Responsible for the agriculture and agri-food sector in Canada.",
+    "source": "https://www.agr.gc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["AAFC", "Agriculture Canada"]
+  },
+  {
+    "id": "fisheries",
+    "name": "Fisheries and Oceans Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 2600000000,
+      "2023": 2700000000,
+      "2024": 2800000000
+    },
+    "description": "Responsible for the conservation and sustainable use of Canada's fisheries resources and marine ecosystems.",
+    "source": "https://www.dfo-mpo.gc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["DFO", "Fisheries Canada", "Oceans Canada"]
+  },
+  {
+    "id": "natural-resources",
+    "name": "Natural Resources Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 1600000000,
+      "2023": 1700000000,
+      "2024": 1800000000
+    },
+    "description": "Responsible for natural resource development, energy efficiency, and innovation.",
+    "source": "https://www.nrcan.gc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["NRCan", "Natural Resources"]
+  },
+  {
+    "id": "global-affairs",
+    "name": "Global Affairs Canada",
+    "type": "Ministry",
+    "parent": "parliament",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 4000000000,
+      "2023": 5000000000,
+      "2024": 6000000000
+    },
+    "description": "Responsible for Canada's diplomatic relations, international trade, and international development assistance.",
+    "source": "https://www.international.gc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["GAC", "Global Affairs", "Foreign Affairs", "DFATD"]
+  },
+  {
+    "id": "ukraine",
+    "name": "Ukraine",
+    "type": "ForeignCountry",
+    "parent": "global-affairs",
+    "budget": null,
+    "received_aid": null,
+    "aidHistory": {
+      "2022": 2000000000,
+      "2023": 3000000000,
+      "2024": 8000000000
+    },
+    "description": "Recipient of Canadian international aid, including military, humanitarian, and financial assistance. Canada has committed over $8B in aid since 2022.",
+    "source": "https://www.international.gc.ca/world-monde/issues_development_enjeux/development-priorities-priorites/ukraine-ukraine.aspx",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["Ukraine"]
+  },
+  {
+    "id": "cbc",
+    "name": "Canadian Broadcasting Corporation",
+    "type": "CrownCorporation",
+    "parent": "ISED",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 1100000000,
+      "2023": 1150000000,
+      "2024": 1200000000
+    },
+    "description": "Canada's national public broadcaster, providing radio, television, and digital services.",
+    "source": "https://www.cbc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["CBC", "CBC/Radio-Canada"]
+  },
+  {
+    "id": "canada-post",
+    "name": "Canada Post",
+    "type": "CrownCorporation",
+    "parent": "ISED",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 750000000,
+      "2023": 775000000,
+      "2024": 800000000
+    },
+    "description": "Canada's postal service, responsible for mail delivery and postal services.",
+    "source": "https://www.canadapost-postescanada.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["Canada Post", "Post Office"]
+  },
+  {
+    "id": "via-rail",
+    "name": "VIA Rail Canada",
+    "type": "CrownCorporation",
+    "parent": "transport",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 350000000,
+      "2023": 375000000,
+      "2024": 400000000
+    },
+    "description": "Canada's national passenger rail service, operating intercity passenger trains.",
+    "source": "https://www.viarail.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["VIA Rail", "VIA"]
+  },
+  {
+    "id": "air-canada",
+    "name": "Air Canada",
+    "type": "CrownCorporation",
+    "parent": "transport",
+    "budget": null,
+    "description": "Canada's largest airline, providing domestic and international air travel services. NOTE: Privatized in 1988, no longer a Crown corporation.",
+    "source": "https://www.aircanada.com/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["Air Canada", "AC"]
+  },
+  {
+    "id": "rcmp",
+    "name": "Royal Canadian Mounted Police",
+    "type": "Agency",
+    "parent": "public-safety",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 3200000000,
+      "2023": 3350000000,
+      "2024": 3500000000
+    },
+    "description": "Canada's national police force, providing federal, provincial, and municipal policing services.",
+    "source": "https://www.rcmp-grc.gc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["RCMP", "Mounties", "GRC"]
+  },
+  {
+    "id": "csis",
+    "name": "Canadian Security Intelligence Service",
+    "type": "Agency",
+    "parent": "public-safety",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 550000000,
+      "2023": 575000000,
+      "2024": 600000000
+    },
+    "description": "Canada's national intelligence service, responsible for collecting and analyzing intelligence on threats to national security.",
+    "source": "https://www.csis-scrs.gc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["CSIS", "SCRS"]
+  },
+  {
+    "id": "border-services",
+    "name": "Canada Border Services Agency",
+    "type": "Agency",
+    "parent": "public-safety",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 1800000000,
+      "2023": 1900000000,
+      "2024": 2000000000
+    },
+    "description": "Responsible for border security, customs, and immigration enforcement at Canada's borders.",
+    "source": "https://www.cbsa-asfc.gc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["CBSA", "Border Services", "Customs"]
+  },
+  {
+    "id": "statistics-canada",
+    "name": "Statistics Canada",
+    "type": "Agency",
+    "parent": "ISED",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 450000000,
+      "2023": 475000000,
+      "2024": 500000000
+    },
+    "description": "Canada's national statistical agency, responsible for collecting and analyzing data on the Canadian economy and society.",
+    "source": "https://www.statcan.gc.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["StatCan", "Stats Canada", "StatsCan"]
+  },
+  {
+    "id": "patent-office",
+    "name": "Canadian Intellectual Property Office",
+    "type": "Agency",
+    "parent": "ISED",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 140000000,
+      "2023": 145000000,
+      "2024": 150000000
+    },
+    "description": "Responsible for administering Canada's intellectual property system, including patents, trademarks, and copyrights.",
+    "source": "https://www.ic.gc.ca/eic/site/cipointernet-internetopic.nsf/eng/home",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["CIPO", "Patent Office", "IP Office"]
+  },
+  {
+    "id": "public-health",
+    "name": "Public Health Agency of Canada",
+    "type": "Agency",
+    "parent": "health",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 750000000,
+      "2023": 775000000,
+      "2024": 800000000
+    },
+    "description": "Responsible for public health in Canada, including disease prevention and health promotion.",
+    "source": "https://www.canada.ca/en/public-health.html",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["PHAC", "Public Health"]
+  },
+  {
+    "id": "food-inspection",
+    "name": "Canadian Food Inspection Agency",
+    "type": "Agency",
+    "parent": "health",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 650000000,
+      "2023": 675000000,
+      "2024": 700000000
+    },
+    "description": "Responsible for food safety, animal health, and plant protection in Canada.",
+    "source": "https://inspection.canada.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["CFIA", "Food Inspection"]
+  },
+  {
+    "id": "environment-protection",
+    "name": "Environmental Protection Agency",
+    "type": "Agency",
+    "parent": "environment",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 350000000,
+      "2023": 375000000,
+      "2024": 400000000
+    },
+    "description": "Responsible for environmental protection and regulation in Canada.",
+    "source": "https://www.canada.ca/en/environment-climate-change.html",
+    "lastUpdated": "2024-01-01"
+  },
+  {
+    "id": "parks-canada",
+    "name": "Parks Canada",
+    "type": "Agency",
+    "parent": "environment",
+    "budget": null,
+    "budgetHistory": {
+      "2022": 1100000000,
+      "2023": 1150000000,
+      "2024": 1200000000
+    },
+    "description": "Responsible for Canada's national parks, national historic sites, and national marine conservation areas.",
+    "source": "https://parks.canada.ca/",
+    "lastUpdated": "2024-01-01",
+    "aliases": ["Parks Canada", "National Parks"]
+  }
+]

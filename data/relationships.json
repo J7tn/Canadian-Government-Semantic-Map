@@ -1,0 +1,347 @@
+[
+  {
+    "from": "pco",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "treasury-board",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "finance",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "health",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "ISED",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "environment",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "national-defence",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "justice",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "public-safety",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "indigenous-services",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "immigration",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "transport",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "agriculture",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "fisheries",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "natural-resources",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "global-affairs",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "ukraine",
+    "to": "global-affairs",
+    "type": "reports_to"
+  },
+  {
+    "from": "cbc",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "canada-post",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "via-rail",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "air-canada",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "rcmp",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "csis",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "border-services",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "statistics-canada",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "patent-office",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "public-health",
+    "to": "health",
+    "type": "reports_to"
+  },
+  {
+    "from": "food-inspection",
+    "to": "health",
+    "type": "reports_to"
+  },
+  {
+    "from": "environment-protection",
+    "to": "environment",
+    "type": "reports_to"
+  },
+  {
+    "from": "parks-canada",
+    "to": "environment",
+    "type": "reports_to"
+  },
+  {
+    "from": "treasury-board",
+    "to": "national-defence",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "indigenous-services",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "health",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "ISED",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "transport",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "agriculture",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "fisheries",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "public-safety",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "immigration",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "environment",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "natural-resources",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "justice",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "global-affairs",
+    "type": "funds"
+  },
+  {
+    "from": "global-affairs",
+    "to": "ukraine",
+    "type": "international_aid"
+  },
+  {
+    "from": "ISED",
+    "to": "canada-post",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "cbc",
+    "type": "funds"
+  },
+  {
+    "from": "transport",
+    "to": "via-rail",
+    "type": "funds"
+  },
+  {
+    "from": "environment",
+    "to": "parks-canada",
+    "type": "funds"
+  },
+  {
+    "from": "health",
+    "to": "public-health",
+    "type": "funds"
+  },
+  {
+    "from": "health",
+    "to": "food-inspection",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "rcmp",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "csis",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "border-services",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "statistics-canada",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "patent-office",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "pco",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "treasury-board",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "finance",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "justice",
+    "type": "funds"
+  },
+  {
+    "from": "environment",
+    "to": "environment-protection",
+    "type": "funds"
+  },
+  {
+    "from": "rcmp",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "csis",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "border-services",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "public-health",
+    "to": "health",
+    "type": "oversees"
+  },
+  {
+    "from": "food-inspection",
+    "to": "health",
+    "type": "oversees"
+  },
+  {
+    "from": "environment-protection",
+    "to": "environment",
+    "type": "oversees"
+  },
+  {
+    "from": "parks-canada",
+    "to": "environment",
+    "type": "oversees"
+  },
+  {
+    "from": "statistics-canada",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "patent-office",
+    "to": "ISED",
+    "type": "oversees"
+  }
+]
