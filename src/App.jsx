@@ -1,12 +1,10 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import GraphView from './components/GraphView'
 import Sidebar from './components/Sidebar'
 import SearchBar from './components/SearchBar'
 import Filters from './components/Filters'
-import TimeFilter from './components/TimeFilter'
 import Legend from './components/Legend'
 import Sources from './components/Sources'
-import entities from '../data/entities.json'
 import relationships from '../data/relationships.json'
 
 function App() {
@@ -16,12 +14,19 @@ function App() {
     type: 'all',
     budgetThreshold: 0
   })
-  const [yearRange, setYearRange] = useState({ start: 2024, end: 2024 })
+  const [entities, setEntities] = useState([])
+
+  useEffect(() => {
+    fetch('/data/entities.json')
+      .then(res => res.json())
+      .then(data => setEntities(data))
+      .catch(err => console.error('Error loading entities:', err))
+  }, [])
 
   const handleNodeClick = useCallback((nodeId) => {
     const entity = entities.find(e => e.id === nodeId)
     setSelectedEntity(entity)
-  }, [])
+  }, [entities])
 
   const handleSearch = useCallback((query) => {
     setSearchQuery(query)
@@ -29,10 +34,6 @@ function App() {
 
   const handleFilterChange = useCallback((newFilters) => {
     setFilters(newFilters)
-  }, [])
-
-  const handleYearRangeChange = useCallback((newYearRange) => {
-    setYearRange(newYearRange)
   }, [])
 
   const handleCloseSidebar = useCallback(() => {
@@ -47,20 +48,18 @@ function App() {
           <div className="flex items-center gap-4">
             <SearchBar onSearch={handleSearch} entities={entities} />
             <Filters onFilterChange={handleFilterChange} />
-            <TimeFilter yearRange={yearRange} onYearRangeChange={handleYearRangeChange} />
             <Sources />
           </div>
         </div>
       </header>
       <div className="flex flex-1 overflow-hidden">
-        <div className="flex-1 relative">
+        <div className="flex-1 relative min-w-0">
           <GraphView
             entities={entities}
             relationships={relationships}
             onNodeClick={handleNodeClick}
             searchQuery={searchQuery}
             filters={filters}
-            yearRange={yearRange}
           />
           <Legend />
         </div>
@@ -68,7 +67,6 @@ function App() {
           <Sidebar
             entity={selectedEntity}
             onClose={handleCloseSidebar}
-            yearRange={yearRange}
           />
         )}
       </div>

@@ -23,7 +23,7 @@ const Sidebar = ({ entity, onClose }) => {
   }
 
   return (
-    <div className="w-96 bg-white border-l border-gray-200 overflow-y-auto shadow-lg">
+    <div className="w-96 flex-shrink-0 bg-white border-l border-gray-200 overflow-y-auto shadow-lg">
       <div className="p-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-bold text-gray-900">{entity.name}</h2>
@@ -55,9 +55,37 @@ const Sidebar = ({ entity, onClose }) => {
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">
               {entity.type === 'ForeignCountry' ? 'Received Aid' : 'Budget'}
             </h3>
-            <p className="text-gray-900 font-semibold text-lg">
-              {entity.type === 'ForeignCountry' ? formatBudget(entity.received_aid) : formatBudget(entity.budget)}
-            </p>
+            {entity.type === 'ForeignCountry' ? (
+              entity.aidVerified === false ? (
+                <>
+                  <p className="text-gray-900 font-semibold text-lg">
+                    Unverified
+                  </p>
+                  <p className="text-xs text-gray-500 mt-1">
+                    Aid data requires specific source citation
+                  </p>
+                </>
+              ) : (
+                <p className="text-gray-900 font-semibold text-lg">
+                  {formatBudget(entity.received_aid)}
+                </p>
+              )
+            ) : (
+              entity.budgetVerified === false ? (
+                <>
+                  <p className="text-gray-900 font-semibold text-lg">
+                    Unverified
+                  </p>
+                  <p className="text-xs text-gray-500 mt-1">
+                    Budget data requires specific source citation
+                  </p>
+                </>
+              ) : (
+                <p className="text-gray-900 font-semibold text-lg">
+                  {formatBudget(entity.budget)}
+                </p>
+              )
+            )}
           </div>
 
           {entity.parent && (
@@ -81,6 +109,11 @@ const Sidebar = ({ entity, onClose }) => {
             >
               {entity.source}
             </a>
+            {entity.sourceParsedDate && (
+              <p className="text-xs text-gray-500 mt-1">
+                Parsed: {entity.sourceParsedDate}
+              </p>
+            )}
           </div>
 
           <div>

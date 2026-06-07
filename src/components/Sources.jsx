@@ -1,8 +1,15 @@
-import React, { useState } from 'react'
-import sources from '../../data/sources.json'
+import React, { useState, useEffect } from 'react'
 
 const Sources = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [sources, setSources] = useState([])
+
+  useEffect(() => {
+    fetch('/data/sources.json')
+      .then(res => res.json())
+      .then(data => setSources(data))
+      .catch(err => console.error('Error loading sources:', err))
+  }, [])
 
   return (
     <>
