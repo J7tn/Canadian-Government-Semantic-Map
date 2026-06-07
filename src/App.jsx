@@ -5,7 +5,6 @@ import SearchBar from './components/SearchBar'
 import Filters from './components/Filters'
 import Legend from './components/Legend'
 import Sources from './components/Sources'
-import relationships from '../data/relationships.json'
 
 function App() {
   const [selectedEntity, setSelectedEntity] = useState(null)
@@ -15,12 +14,20 @@ function App() {
     budgetThreshold: 0
   })
   const [entities, setEntities] = useState([])
+  const [relationships, setRelationships] = useState([])
 
   useEffect(() => {
-    fetch('/data/entities.json')
+    fetch('/entities.json')
       .then(res => res.json())
       .then(data => setEntities(data))
       .catch(err => console.error('Error loading entities:', err))
+  }, [])
+
+  useEffect(() => {
+    fetch('/relationships.json')
+      .then(res => res.json())
+      .then(data => setRelationships(data))
+      .catch(err => console.error('Error loading relationships:', err))
   }, [])
 
   const handleNodeClick = useCallback((nodeId) => {

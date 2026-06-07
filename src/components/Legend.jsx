@@ -7,7 +7,7 @@ const Legend = () => {
     { type: 'CrownCorporation', color: '#16a34a', label: 'Crown Corporation' },
     { type: 'Program', color: '#9333ea', label: 'Program' },
     { type: 'Other', color: '#6b7280', label: 'Other' },
-    { type: 'ForeignCountry', color: '#3b82f6', label: 'Foreign Country' }
+    { type: 'ForeignCountry', color: '#f97316', label: 'Foreign Country' }
   ]
 
   const relationshipTypes = [

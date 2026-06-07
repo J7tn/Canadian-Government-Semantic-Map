@@ -5,7 +5,7 @@ const Sources = () => {
   const [sources, setSources] = useState([])
 
   useEffect(() => {
-    fetch('/data/sources.json')
+    fetch('/sources.json')
       .then(res => res.json())
       .then(data => setSources(data))
       .catch(err => console.error('Error loading sources:', err))

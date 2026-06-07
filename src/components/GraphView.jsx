@@ -14,7 +14,7 @@ const GraphView = ({ entities, relationships, onNodeClick, searchQuery, filters 
       CrownCorporation: '#16a34a',
       Program: '#9333ea',
       Other: '#6b7280',
-      ForeignCountry: '#3b82f6'
+      ForeignCountry: '#f97316'
     }
 
     const filteredEntities = entities.filter(entity => {
@@ -114,7 +114,7 @@ const GraphView = ({ entities, relationships, onNodeClick, searchQuery, filters 
             'target-arrow-color': '#16a34a',
             'target-arrow-shape': 'triangle',
             'curve-style': 'bezier',
-            'control-point-step-size': -50
+            'control-point-step-size': 50
           }
         },
         {
@@ -147,16 +147,17 @@ const GraphView = ({ entities, relationships, onNodeClick, searchQuery, filters 
       layout: {
         name: 'cose',
         animate: false,
-        nodeRepulsion: 500000,
-        nodeOverlap: 20,
-        idealEdgeLength: 250,
+        nodeRepulsion: 1000000,
+        nodeOverlap: 10,
+        idealEdgeLength: 300,
         edgeElasticity: 100,
         nestingFactor: 5,
         gravity: 30,
         numIter: 1000,
         initialTemp: 200,
         coolingFactor: 0.95,
-        minTemp: 1.0
+        minTemp: 1.0,
+        randomize: true
       },
       wheelSensitivity: 1.0
     })

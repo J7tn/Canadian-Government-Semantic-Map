@@ -1,5 +1,11 @@
 [
   {
+    "name": "Main Estimates 2024-25 - Budgetary Expenditures",
+    "url": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
+    "description": "Official Main Estimates CSV containing budget figures for all federal organizations. Total budget: $449,177,002,277.",
+    "lastAccessed": "2026-06-07"
+  },
+  {
     "name": "Government of Canada Website",
     "url": "https://www.canada.ca/en.html",
     "description": "Official portal for the Government of Canada, providing access to all federal departments and agencies.",
