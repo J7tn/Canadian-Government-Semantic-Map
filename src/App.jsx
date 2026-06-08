@@ -18,14 +18,14 @@ function App() {
   const [hoverDescription, setHoverDescription] = useState(null)
 
   useEffect(() => {
-    fetch('/entities.json')
+    fetch('/Canadian-Government-Semantic-Map/entities.json')
       .then(res => res.json())
       .then(data => setEntities(data))
       .catch(err => console.error('Error loading entities:', err))
   }, [])
 
   useEffect(() => {
-    fetch('/relationships.json')
+    fetch('/Canadian-Government-Semantic-Map/relationships.json')
       .then(res => res.json())
       .then(data => setRelationships(data))
       .catch(err => console.error('Error loading relationships:', err))
@@ -49,7 +49,7 @@ function App() {
   }, [])
 
   const handleResetLayout = useCallback(() => {
-    fetch('/layout.json')
+    fetch('/Canadian-Government-Semantic-Map/layout.json')
       .then(res => res.json())
       .then(positions => {
         // Clear the layout.json file by setting it to empty

@@ -151,7 +151,7 @@ const GraphView = ({ entities, relationships, onNodeClick, searchQuery, filters 
     })
 
     // Load positions from layout.json if available
-    fetch('/layout.json')
+    fetch('/Canadian-Government-Semantic-Map/layout.json')
       .then(res => res.json())
       .then(positions => {
         cy.nodes().forEach(node => {
