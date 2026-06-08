@@ -145,27 +145,48 @@ const GraphView = ({ entities, relationships, onNodeClick, searchQuery, filters 
         }
       ],
       layout: {
-        name: 'cose',
-        animate: false,
-        nodeRepulsion: 1000000,
-        nodeOverlap: 10,
-        idealEdgeLength: 300,
-        edgeElasticity: 100,
-        nestingFactor: 5,
-        gravity: 30,
-        numIter: 1000,
-        initialTemp: 200,
-        coolingFactor: 0.95,
-        minTemp: 1.0,
-        randomize: true
+        name: 'preset'
       },
       wheelSensitivity: 1.0
     })
+
+    // Load positions from layout.json if available
+    fetch('/layout.json')
+      .then(res => res.json())
+      .then(positions => {
+        cy.nodes().forEach(node => {
+          if (positions[node.id()]) {
+            node.position(positions[node.id()])
+          }
+        })
+      })
+      .catch(err => {
+        console.log('No layout.json found, using auto-layout')
+        // Run cose layout if no positions exist
+        cy.layout({
+          name: 'cose',
+          animate: false,
+          nodeRepulsion: 4000000,
+          nodeOverlap: 5,
+          idealEdgeLength: 500,
+          edgeElasticity: 100,
+          nestingFactor: 5,
+          gravity: 10,
+          numIter: 1000,
+          initialTemp: 200,
+          coolingFactor: 0.95,
+          minTemp: 1.0,
+          randomize: false
+        }).run()
+      })
 
     cy.on('tap', 'node', (evt) => {
       const node = evt.target
       onNodeClick(node.id())
     })
+
+    // Set global instance for download functionality
+    window.cyInstance = cy
 
     cyRef.current = cy
 
