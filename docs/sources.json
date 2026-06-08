@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Main Estimates 2024-25 - Budgetary Expenditures",
+    "url": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
+    "description": "Official Main Estimates CSV containing budget figures for all federal organizations. Total budget: $449,177,002,277.",
+    "lastAccessed": "2026-06-07"
+  },
+  {
+    "name": "Government of Canada Website",
+    "url": "https://www.canada.ca/en.html",
+    "description": "Official portal for the Government of Canada, providing access to all federal departments and agencies.",
+    "lastAccessed": "2026-06-07"
+  },
+  {
+    "name": "Parliament of Canada",
+    "url": "https://www.parl.ca/",
+    "description": "Official website of the Parliament of Canada, including information on the Senate and House of Commons.",
+    "lastAccessed": "2026-06-07"
+  },
+  {
+    "name": "Treasury Board of Canada Secretariat",
+    "url": "https://www.tbs-sct.gc.ca/",
+    "description": "Provides information on government-wide management, including budget and expenditure information.",
+    "lastAccessed": "2026-06-07"
+  },
+  {
+    "name": "Department of Finance Canada",
+    "url": "https://www.canada.ca/en/department-finance.html",
+    "description": "Official source for federal budget information and financial data.",
+    "lastAccessed": "2026-06-07"
+  },
+  {
+    "name": "GC InfoBase",
+    "url": "https://www.tbs-sct.gc.ca/ems-sgc/index-eng.asp",
+    "description": "Government of Canada's InfoBase provides detailed information on program spending and performance.",
+    "lastAccessed": "2026-06-07"
+  },
+  {
+    "name": "Open Government Portal",
+    "url": "https://open.canada.ca/en",
+    "description": "Provides access to government open data, information, and digital services.",
+    "lastAccessed": "2026-06-07"
+  },
+  {
+    "name": "Canada Gazette",
+    "url": "https://www.gazette.gc.ca/",
+    "description": "Official newspaper of the Government of Canada, publishing statutory notices and regulations.",
+    "lastAccessed": "2026-06-07"
+  },
+  {
+    "name": "Privy Council Office",
+    "url": "https://www.pco-bcp.gc.ca/",
+    "description": "Information on the Prime Minister's Office and Cabinet operations.",
+    "lastAccessed": "2026-06-07"
+  }
+]
