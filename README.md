@@ -51,7 +51,39 @@ npm run dev
 npm run build
 ```
 
-The built files will be in the `dist` directory.
+The built files will be in the `docs` directory.
+
+### Deployment
+
+This project uses GitHub Actions for automatic deployment to GitHub Pages. When you push changes to the `main` branch, the workflow automatically:
+
+1. Installs dependencies
+2. Builds the project
+3. Deploys to GitHub Pages
+
+**Development Workflow:**
+
+For day-to-day development with immediate feedback:
+```bash
+npm run dev
+```
+- Opens at `http://localhost:3000`
+- Changes appear instantly when you save files
+- Hot reloads automatically
+
+**Deployment Workflow:**
+
+To share changes with others:
+```bash
+git add .
+git commit -m "your message"
+git push
+```
+- GitHub Actions automatically builds and deploys
+- Changes appear at `https://j7tn.github.io/Canadian-Government-Semantic-Map/` after 1-2 minutes
+
+**Live Site:**
+https://j7tn.github.io/Canadian-Government-Semantic-Map/
 
 ## Project Structure
 
