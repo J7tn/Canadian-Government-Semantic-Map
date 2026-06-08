@@ -122,6 +122,61 @@ const Sidebar = ({ entity, onClose }) => {
             </h3>
             <p className="text-gray-700 text-sm">{entity.lastUpdated}</p>
           </div>
+
+          {entity.spendingBreakdown && (
+            <div>
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
+                Spending Breakdown
+              </h3>
+              <div className="space-y-2">
+                {Object.entries(entity.spendingBreakdown).map(([category, percentage]) => {
+                  const categoryLabels = {
+                    personnel: 'Personnel',
+                    professional_services: 'Professional Services',
+                    transportation: 'Transportation',
+                    information: 'Information Technology',
+                    rentals: 'Rentals',
+                    maintenance: 'Maintenance',
+                    utilities: 'Utilities',
+                    capital: 'Capital & Equipment',
+                    transfer_payments: 'Transfer Payments'
+                  }
+                  const categoryColors = {
+                    personnel: 'bg-blue-500',
+                    professional_services: 'bg-purple-500',
+                    transportation: 'bg-yellow-500',
+                    information: 'bg-cyan-500',
+                    rentals: 'bg-pink-500',
+                    maintenance: 'bg-orange-500',
+                    utilities: 'bg-green-500',
+                    capital: 'bg-red-500',
+                    transfer_payments: 'bg-indigo-500'
+                  }
+                  const amount = entity.budget ? entity.budget * percentage : 0
+                  
+                  return (
+                    <div key={category}>
+                      <div className="flex justify-between items-center mb-1">
+                        <span className="text-xs text-gray-600">{categoryLabels[category] || category}</span>
+                        <span className="text-xs font-medium text-gray-900">
+                          {(percentage * 100).toFixed(0)}% ({formatBudget(amount)})
+                        </span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div
+                          className={`${categoryColors[category] || 'bg-gray-500'} h-2 rounded-full transition-all duration-300`}
+                          style={{ width: `${percentage * 100}%` }}
+                        />
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+              <p className="text-xs text-gray-500 mt-3 italic">
+                * Estimated breakdown based on government-wide averages
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>

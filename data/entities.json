@@ -21,7 +21,17 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["TBS", "Treasury Board"]
+    "aliases": ["TBS", "Treasury Board"],
+    "spendingBreakdown": {
+      "personnel": 0.45,
+      "professional_services": 0.20,
+      "transportation": 0.05,
+      "information": 0.08,
+      "rentals": 0.10,
+      "maintenance": 0.05,
+      "utilities": 0.03,
+      "capital": 0.04
+    }
   },
   {
     "id": "finance",
@@ -33,7 +43,17 @@
     "description": "Responsible for the overall stewardship of the Canadian economy, including fiscal policy, taxation, and financial sector regulation. Includes statutory transfers ($142.9B) administered by the department.",
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
-    "lastUpdated": "2026-06-07"
+    "lastUpdated": "2026-06-07",
+    "spendingBreakdown": {
+      "personnel": 0.20,
+      "professional_services": 0.10,
+      "transportation": 0.02,
+      "information": 0.05,
+      "rentals": 0.03,
+      "maintenance": 0.02,
+      "utilities": 0.01,
+      "transfer_payments": 0.57
+    }
   },
   {
     "id": "health",
@@ -46,7 +66,17 @@
     "source": "https://www.canada.ca/en/health-canada/corporate/transparency/corporate-management-reporting/report-plans-priorities/2024-2025-plan-at-glance.html",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["HC", "Health Canada"]
+    "aliases": ["HC", "Health Canada"],
+    "spendingBreakdown": {
+      "personnel": 0.35,
+      "professional_services": 0.15,
+      "transportation": 0.03,
+      "information": 0.06,
+      "rentals": 0.08,
+      "maintenance": 0.04,
+      "utilities": 0.02,
+      "transfer_payments": 0.27
+    }
   },
   {
     "id": "ISED",
@@ -85,7 +115,17 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["DND", "National Defence", "Canadian Forces"]
+    "aliases": ["DND", "National Defence", "Canadian Forces"],
+    "spendingBreakdown": {
+      "personnel": 0.40,
+      "professional_services": 0.10,
+      "transportation": 0.05,
+      "information": 0.04,
+      "rentals": 0.06,
+      "maintenance": 0.08,
+      "utilities": 0.02,
+      "capital": 0.25
+    }
   },
   {
     "id": "justice",
@@ -188,7 +228,17 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["ESDC", "Employment and Social Development Canada", "Service Canada"]
+    "aliases": ["ESDC", "Employment and Social Development Canada", "Service Canada"],
+    "spendingBreakdown": {
+      "personnel": 0.15,
+      "professional_services": 0.05,
+      "transportation": 0.01,
+      "information": 0.03,
+      "rentals": 0.02,
+      "maintenance": 0.01,
+      "utilities": 0.01,
+      "transfer_payments": 0.72
+    }
   },
   {
     "id": "cra",
