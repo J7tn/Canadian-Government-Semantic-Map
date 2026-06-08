@@ -1,0 +1,2147 @@
+[
+  {
+    "from": "privy-council",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "treasury-board",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "finance",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "health",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "ISED",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "environment",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "national-defence",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "justice",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "public-safety",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "indigenous-services",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "immigration",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "transport",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "agriculture",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "fisheries",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "natural-resources",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "global-affairs",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "ukraine",
+    "to": "global-affairs",
+    "type": "reports_to"
+  },
+  {
+    "from": "canada-post",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "via-rail",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "rcmp",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "csis",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "border-services",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "statistics-canada",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "patent-office",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "public-health",
+    "to": "health",
+    "type": "reports_to"
+  },
+  {
+    "from": "food-inspection",
+    "to": "health",
+    "type": "reports_to"
+  },
+  {
+    "from": "parks-canada",
+    "to": "environment",
+    "type": "reports_to"
+  },
+  {
+    "from": "treasury-board",
+    "to": "national-defence",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "indigenous-services",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "health",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "ISED",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "transport",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "agriculture",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "fisheries",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "public-safety",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "immigration",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "environment",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "natural-resources",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "justice",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "global-affairs",
+    "type": "funds"
+  },
+  {
+    "from": "global-affairs",
+    "to": "ukraine",
+    "type": "international_aid"
+  },
+  {
+    "from": "ISED",
+    "to": "canada-post",
+    "type": "funds"
+  },
+  {
+    "from": "transport",
+    "to": "via-rail",
+    "type": "funds"
+  },
+  {
+    "from": "environment",
+    "to": "parks-canada",
+    "type": "funds"
+  },
+  {
+    "from": "health",
+    "to": "public-health",
+    "type": "funds"
+  },
+  {
+    "from": "health",
+    "to": "food-inspection",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "rcmp",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "csis",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "border-services",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "statistics-canada",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "patent-office",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "privy-council",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "treasury-board",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "finance",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "justice",
+    "type": "funds"
+  },
+  {
+    "from": "rcmp",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "csis",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "border-services",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "public-health",
+    "to": "health",
+    "type": "oversees"
+  },
+  {
+    "from": "food-inspection",
+    "to": "health",
+    "type": "oversees"
+  },
+  {
+    "from": "parks-canada",
+    "to": "environment",
+    "type": "oversees"
+  },
+  {
+    "from": "statistics-canada",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "patent-office",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "acoa",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "aecl",
+    "to": "natural-resources",
+    "type": "reports_to"
+  },
+  {
+    "from": "atsc",
+    "to": "justice",
+    "type": "reports_to"
+  },
+  {
+    "from": "canada-council-arts",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "canada-northern",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "canada-space-agency",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "cas",
+    "to": "justice",
+    "type": "reports_to"
+  },
+  {
+    "from": "casdo",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "casp",
+    "to": "treasury-board",
+    "type": "reports_to"
+  },
+  {
+    "from": "catsa",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "cbc",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "ccc",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "ccohs",
+    "to": "esdc",
+    "type": "reports_to"
+  },
+  {
+    "from": "cdc",
+    "to": "agriculture",
+    "type": "reports_to"
+  },
+  {
+    "from": "ced-quebec",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "cer",
+    "to": "natural-resources",
+    "type": "reports_to"
+  },
+  {
+    "from": "cgc",
+    "to": "agriculture",
+    "type": "reports_to"
+  },
+  {
+    "from": "chars",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "chrc",
+    "to": "justice",
+    "type": "reports_to"
+  },
+  {
+    "from": "cib",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "cics",
+    "to": "privy-council",
+    "type": "reports_to"
+  },
+  {
+    "from": "cihr",
+    "to": "health",
+    "type": "reports_to"
+  },
+  {
+    "from": "cirnac",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "clcc",
+    "to": "fisheries",
+    "type": "reports_to"
+  },
+  {
+    "from": "cmh",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "cmhc",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "cmhr",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "cmi",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "cmn",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "cnsc",
+    "to": "natural-resources",
+    "type": "reports_to"
+  },
+  {
+    "from": "copyright-board",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "correctional-service",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "cra",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "crc",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "crerc",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "crrf",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "crtc",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "cse",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "cta",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "ctc",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "defence-construction",
+    "to": "national-defence",
+    "type": "reports_to"
+  },
+  {
+    "from": "ecie",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "esdc",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "fbc",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "feddev-ontario",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "fednor",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "fintrac",
+    "to": "finance",
+    "type": "reports_to"
+  },
+  {
+    "from": "house-commons",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "iaac",
+    "to": "environment",
+    "type": "reports_to"
+  },
+  {
+    "from": "idrc",
+    "to": "global-affairs",
+    "type": "reports_to"
+  },
+  {
+    "from": "ijc",
+    "to": "environment",
+    "type": "reports_to"
+  },
+  {
+    "from": "invest-canada",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "irb",
+    "to": "immigration",
+    "type": "reports_to"
+  },
+  {
+    "from": "jccbi",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "law-commission",
+    "to": "justice",
+    "type": "reports_to"
+  },
+  {
+    "from": "leaders-debates",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "library-archives",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "library-parliament",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "marine-atlantic",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "mgerc",
+    "to": "national-defence",
+    "type": "reports_to"
+  },
+  {
+    "from": "mpcc",
+    "to": "national-defence",
+    "type": "reports_to"
+  },
+  {
+    "from": "nac",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "national-film-board",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "nbc",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "ncc",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "ngc",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "nmst",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "npa",
+    "to": "natural-resources",
+    "type": "reports_to"
+  },
+  {
+    "from": "nrc",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "nsERC",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "nsicop",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "nsira",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "oag",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "oceo",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "ocfja",
+    "to": "justice",
+    "type": "reports_to"
+  },
+  {
+    "from": "ocic",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "ocl",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "ocol",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "odpp",
+    "to": "justice",
+    "type": "reports_to"
+  },
+  {
+    "from": "ofsi",
+    "to": "finance",
+    "type": "reports_to"
+  },
+  {
+    "from": "oggs",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "oic",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "oic-intelligence",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "oipc",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "old-port",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "opsic",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "oseo",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "pacific-economic",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "parc-downsview",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "pbc",
+    "to": "public-safety",
+    "type": "reports_to"
+  },
+  {
+    "from": "pbo",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "pmprb",
+    "to": "health",
+    "type": "reports_to"
+  },
+  {
+    "from": "pps",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "privy-council",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "psc",
+    "to": "treasury-board",
+    "type": "reports_to"
+  },
+  {
+    "from": "pspc",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "ridley",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "rsc",
+    "to": "justice",
+    "type": "reports_to"
+  },
+  {
+    "from": "scc",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "senate",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "shared-services",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "sshrc",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "statistics-canada",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "telefilm",
+    "to": "canadian-heritage",
+    "type": "reports_to"
+  },
+  {
+    "from": "tsb",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "veterans-affairs",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "via-hfr",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "vrab",
+    "to": "veterans-affairs",
+    "type": "reports_to"
+  },
+  {
+    "from": "wdba",
+    "to": "transport",
+    "type": "reports_to"
+  },
+  {
+    "from": "western-diversification",
+    "to": "ISED",
+    "type": "reports_to"
+  },
+  {
+    "from": "women-gender",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "parliament",
+    "to": "health",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "ISED",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "environment",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "national-defence",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "public-safety",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "indigenous-services",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "immigration",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "transport",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "agriculture",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "fisheries",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "esdc",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "cra",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "cirnac",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "pspc",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "veterans-affairs",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "canadian-heritage",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "shared-services",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "correctional-service",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "cmhc",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "nrc",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "canada-council-arts",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "telefilm",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "canada-space-agency",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "nsERC",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "sshrc",
+    "type": "funds"
+  },
+  {
+    "from": "health",
+    "to": "cihr",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "cse",
+    "type": "funds"
+  },
+  {
+    "from": "finance",
+    "to": "ofsi",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "pbo",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "natural-resources",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "global-affairs",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "statistics-canada",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "library-archives",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "national-film-board",
+    "type": "funds"
+  },
+  {
+    "from": "global-affairs",
+    "to": "ukraine",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "cbc",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "acoa",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "canada-northern",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "feddev-ontario",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "fednor",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "ced-quebec",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "pacific-economic",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "western-diversification",
+    "type": "funds"
+  },
+  {
+    "from": "justice",
+    "to": "atsc",
+    "type": "funds"
+  },
+  {
+    "from": "natural-resources",
+    "to": "aecl",
+    "type": "funds"
+  },
+  {
+    "from": "transport",
+    "to": "catsa",
+    "type": "funds"
+  },
+  {
+    "from": "esdc",
+    "to": "ccohs",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "ccc",
+    "type": "funds"
+  },
+  {
+    "from": "agriculture",
+    "to": "cdc",
+    "type": "funds"
+  },
+  {
+    "from": "natural-resources",
+    "to": "cer",
+    "type": "funds"
+  },
+  {
+    "from": "agriculture",
+    "to": "cgc",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "chars",
+    "type": "funds"
+  },
+  {
+    "from": "justice",
+    "to": "chrc",
+    "type": "funds"
+  },
+  {
+    "from": "privy-council",
+    "to": "cics",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "cmhr",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "cmh",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "cmi",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "cmn",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "crrf",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "crtc",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "ctc",
+    "type": "funds"
+  },
+  {
+    "from": "transport",
+    "to": "tsb",
+    "type": "funds"
+  },
+  {
+    "from": "transport",
+    "to": "cta",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "crc",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "copyright-board",
+    "type": "funds"
+  },
+  {
+    "from": "justice",
+    "to": "cas",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "women-gender",
+    "type": "funds"
+  },
+  {
+    "from": "finance",
+    "to": "fintrac",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "house-commons",
+    "type": "funds"
+  },
+  {
+    "from": "immigration",
+    "to": "irb",
+    "type": "funds"
+  },
+  {
+    "from": "environment",
+    "to": "iaac",
+    "type": "funds"
+  },
+  {
+    "from": "global-affairs",
+    "to": "idrc",
+    "type": "funds"
+  },
+  {
+    "from": "environment",
+    "to": "ijc",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "invest-canada",
+    "type": "funds"
+  },
+  {
+    "from": "justice",
+    "to": "law-commission",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "leaders-debates",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "library-parliament",
+    "type": "funds"
+  },
+  {
+    "from": "transport",
+    "to": "marine-atlantic",
+    "type": "funds"
+  },
+  {
+    "from": "national-defence",
+    "to": "mgerc",
+    "type": "funds"
+  },
+  {
+    "from": "national-defence",
+    "to": "mpcc",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "nac",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "ncc",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "ngc",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "nmst",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "nsira",
+    "type": "funds"
+  },
+  {
+    "from": "natural-resources",
+    "to": "npa",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "oic",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "oag",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "oceo",
+    "type": "funds"
+  },
+  {
+    "from": "justice",
+    "to": "ocfja",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "ocl",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "ocol",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "ecie",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "ocic",
+    "type": "funds"
+  },
+  {
+    "from": "justice",
+    "to": "odpp",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "oggs",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "oic-intelligence",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "opsic",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "oseo",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "oipc",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "pbc",
+    "type": "funds"
+  },
+  {
+    "from": "health",
+    "to": "pmprb",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "pps",
+    "type": "funds"
+  },
+  {
+    "from": "justice",
+    "to": "rsc",
+    "type": "funds"
+  },
+  {
+    "from": "public-safety",
+    "to": "crerc",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "nsicop",
+    "type": "funds"
+  },
+  {
+    "from": "parliament",
+    "to": "senate",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "scc",
+    "type": "funds"
+  },
+  {
+    "from": "transport",
+    "to": "fbc",
+    "type": "funds"
+  },
+  {
+    "from": "transport",
+    "to": "jccbi",
+    "type": "funds"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "nbc",
+    "type": "funds"
+  },
+  {
+    "from": "transport",
+    "to": "via-hfr",
+    "type": "funds"
+  },
+  {
+    "from": "transport",
+    "to": "wdba",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "psc",
+    "type": "funds"
+  },
+  {
+    "from": "fisheries",
+    "to": "clcc",
+    "type": "funds"
+  },
+  {
+    "from": "transport",
+    "to": "ridley",
+    "type": "funds"
+  },
+  {
+    "from": "transport",
+    "to": "old-port",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "parc-downsview",
+    "type": "funds"
+  },
+  {
+    "from": "national-defence",
+    "to": "defence-construction",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "cib",
+    "type": "funds"
+  },
+  {
+    "from": "natural-resources",
+    "to": "cnsc",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "casp",
+    "type": "funds"
+  },
+  {
+    "from": "ISED",
+    "to": "casdo",
+    "type": "funds"
+  },
+  {
+    "from": "veterans-affairs",
+    "to": "vrab",
+    "type": "funds"
+  },
+  {
+    "from": "treasury-board",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "finance",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "health",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "environment",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "national-defence",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "justice",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "public-safety",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "indigenous-services",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "immigration",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "transport",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "agriculture",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "fisheries",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "esdc",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "cra",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "cirnac",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "pspc",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "veterans-affairs",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "shared-services",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "correctional-service",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "cmhc",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "nrc",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "canada-council-arts",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "telefilm",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "canada-space-agency",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "nsERC",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "sshrc",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "cihr",
+    "to": "health",
+    "type": "oversees"
+  },
+  {
+    "from": "cse",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "ofsi",
+    "to": "finance",
+    "type": "oversees"
+  },
+  {
+    "from": "pbo",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "natural-resources",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "global-affairs",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "privy-council",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "statistics-canada",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "library-archives",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "national-film-board",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "ukraine",
+    "to": "global-affairs",
+    "type": "oversees"
+  },
+  {
+    "from": "cbc",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "canada-post",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "via-rail",
+    "to": "transport",
+    "type": "oversees"
+  },
+  {
+    "from": "acoa",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "canada-northern",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "feddev-ontario",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "fednor",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "ced-quebec",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "pacific-economic",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "western-diversification",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "atsc",
+    "to": "justice",
+    "type": "oversees"
+  },
+  {
+    "from": "aecl",
+    "to": "natural-resources",
+    "type": "oversees"
+  },
+  {
+    "from": "catsa",
+    "to": "transport",
+    "type": "oversees"
+  },
+  {
+    "from": "ccohs",
+    "to": "esdc",
+    "type": "oversees"
+  },
+  {
+    "from": "ccc",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "cdc",
+    "to": "agriculture",
+    "type": "oversees"
+  },
+  {
+    "from": "cer",
+    "to": "natural-resources",
+    "type": "oversees"
+  },
+  {
+    "from": "cgc",
+    "to": "agriculture",
+    "type": "oversees"
+  },
+  {
+    "from": "chars",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "chrc",
+    "to": "justice",
+    "type": "oversees"
+  },
+  {
+    "from": "cics",
+    "to": "privy-council",
+    "type": "oversees"
+  },
+  {
+    "from": "cmhr",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "cmh",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "cmi",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "cmn",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "crrf",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "crtc",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "ctc",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "tsb",
+    "to": "transport",
+    "type": "oversees"
+  },
+  {
+    "from": "cta",
+    "to": "transport",
+    "type": "oversees"
+  },
+  {
+    "from": "crc",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "copyright-board",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "cas",
+    "to": "justice",
+    "type": "oversees"
+  },
+  {
+    "from": "women-gender",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "fintrac",
+    "to": "finance",
+    "type": "oversees"
+  },
+  {
+    "from": "house-commons",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "irb",
+    "to": "immigration",
+    "type": "oversees"
+  },
+  {
+    "from": "iaac",
+    "to": "environment",
+    "type": "oversees"
+  },
+  {
+    "from": "idrc",
+    "to": "global-affairs",
+    "type": "oversees"
+  },
+  {
+    "from": "ijc",
+    "to": "environment",
+    "type": "oversees"
+  },
+  {
+    "from": "invest-canada",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "law-commission",
+    "to": "justice",
+    "type": "oversees"
+  },
+  {
+    "from": "leaders-debates",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "library-parliament",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "marine-atlantic",
+    "to": "transport",
+    "type": "oversees"
+  },
+  {
+    "from": "mgerc",
+    "to": "national-defence",
+    "type": "oversees"
+  },
+  {
+    "from": "mpcc",
+    "to": "national-defence",
+    "type": "oversees"
+  },
+  {
+    "from": "nac",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "ncc",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "ngc",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "nmst",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "nsira",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "npa",
+    "to": "natural-resources",
+    "type": "oversees"
+  },
+  {
+    "from": "oic",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "oag",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "oceo",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "ocfja",
+    "to": "justice",
+    "type": "oversees"
+  },
+  {
+    "from": "ocl",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "ocol",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "ecie",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "ocic",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "odpp",
+    "to": "justice",
+    "type": "oversees"
+  },
+  {
+    "from": "oggs",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "oic-intelligence",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "opsic",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "oseo",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "oipc",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "pbc",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "pmprb",
+    "to": "health",
+    "type": "oversees"
+  },
+  {
+    "from": "pps",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "rsc",
+    "to": "justice",
+    "type": "oversees"
+  },
+  {
+    "from": "crerc",
+    "to": "public-safety",
+    "type": "oversees"
+  },
+  {
+    "from": "nsicop",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "senate",
+    "to": "parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "scc",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "fbc",
+    "to": "transport",
+    "type": "oversees"
+  },
+  {
+    "from": "jccbi",
+    "to": "transport",
+    "type": "oversees"
+  },
+  {
+    "from": "nbc",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "via-hfr",
+    "to": "transport",
+    "type": "oversees"
+  },
+  {
+    "from": "wdba",
+    "to": "transport",
+    "type": "oversees"
+  },
+  {
+    "from": "psc",
+    "to": "treasury-board",
+    "type": "oversees"
+  },
+  {
+    "from": "clcc",
+    "to": "fisheries",
+    "type": "oversees"
+  },
+  {
+    "from": "ridley",
+    "to": "transport",
+    "type": "oversees"
+  },
+  {
+    "from": "old-port",
+    "to": "transport",
+    "type": "oversees"
+  },
+  {
+    "from": "parc-downsview",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "defence-construction",
+    "to": "national-defence",
+    "type": "oversees"
+  },
+  {
+    "from": "cib",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "cnsc",
+    "to": "natural-resources",
+    "type": "oversees"
+  },
+  {
+    "from": "casp",
+    "to": "treasury-board",
+    "type": "oversees"
+  },
+  {
+    "from": "casdo",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "vrab",
+    "to": "veterans-affairs",
+    "type": "oversees"
+  }
+]
