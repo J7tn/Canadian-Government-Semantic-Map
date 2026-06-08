@@ -172,9 +172,6 @@ const Sidebar = ({ entity, onClose }) => {
                   )
                 })}
               </div>
-              <p className="text-xs text-gray-500 mt-3 italic">
-                * Estimated breakdown based on government-wide averages
-              </p>
             </div>
           )}
         </div>

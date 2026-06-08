@@ -23,14 +23,15 @@
     "lastUpdated": "2026-06-07",
     "aliases": ["TBS", "Treasury Board"],
     "spendingBreakdown": {
-      "personnel": 0.45,
-      "professional_services": 0.20,
-      "transportation": 0.05,
-      "information": 0.08,
-      "rentals": 0.10,
-      "maintenance": 0.05,
-      "utilities": 0.03,
-      "capital": 0.04
+      "personnel": 0.692230232106807,
+      "transportation": 0.00037419185816287096,
+      "information": 0.00022773940939334293,
+      "professional_services": 0.019183035830176935,
+      "rentals": 0.003019962526269207,
+      "maintenance": 0.00035416506145652925,
+      "utilities": 9.536575636996122e-05,
+      "capital": 0.0014338383588990238,
+      "transfer_payments": 0.00011909225092013488
     }
   },
   {
@@ -45,14 +46,15 @@
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
     "spendingBreakdown": {
-      "personnel": 0.20,
-      "professional_services": 0.10,
-      "transportation": 0.02,
-      "information": 0.05,
-      "rentals": 0.03,
-      "maintenance": 0.02,
-      "utilities": 0.01,
-      "transfer_payments": 0.57
+      "personnel": 0.0008977591197416017,
+      "transportation": 1.326726144661766e-05,
+      "information": 2.1642045383367553e-05,
+      "professional_services": 8.476946104344774e-05,
+      "rentals": 9.55473484734259e-06,
+      "maintenance": 2.287954958941803e-06,
+      "utilities": 0.0005677032527083474,
+      "capital": 1.0374944456155518e-05,
+      "transfer_payments": 0.6489144547449168
     }
   },
   {
@@ -68,14 +70,15 @@
     "lastUpdated": "2026-06-07",
     "aliases": ["HC", "Health Canada"],
     "spendingBreakdown": {
-      "personnel": 0.35,
-      "professional_services": 0.15,
-      "transportation": 0.03,
-      "information": 0.06,
-      "rentals": 0.08,
-      "maintenance": 0.04,
-      "utilities": 0.02,
-      "transfer_payments": 0.27
+      "personnel": 0.12901721601218125,
+      "transportation": 0.0011193788144773793,
+      "information": 0.0036157205355493833,
+      "professional_services": 0.06910818796696398,
+      "rentals": 0.0016950351959214443,
+      "maintenance": 0.001353704614735293,
+      "utilities": 0.0019625757676696586,
+      "capital": 0.004127008209815343,
+      "transfer_payments": 0.6428524278297207
     }
   },
   {
@@ -117,14 +120,15 @@
     "lastUpdated": "2026-06-07",
     "aliases": ["DND", "National Defence", "Canadian Forces"],
     "spendingBreakdown": {
-      "personnel": 0.40,
-      "professional_services": 0.10,
-      "transportation": 0.05,
-      "information": 0.04,
-      "rentals": 0.06,
-      "maintenance": 0.08,
-      "utilities": 0.02,
-      "capital": 0.25
+      "personnel": 0.4108270286685966,
+      "transportation": 0.024813957316997023,
+      "information": 0.0010868381968445041,
+      "professional_services": 0.1878180390391222,
+      "rentals": 0.026130679954580224,
+      "maintenance": 0.07287417604813369,
+      "utilities": 0.04584067126107255,
+      "capital": 0.2093856565558355,
+      "transfer_payments": 0.02956196880819679
     }
   },
   {
@@ -230,14 +234,15 @@
     "lastUpdated": "2026-06-07",
     "aliases": ["ESDC", "Employment and Social Development Canada", "Service Canada"],
     "spendingBreakdown": {
-      "personnel": 0.15,
-      "professional_services": 0.05,
-      "transportation": 0.01,
-      "information": 0.03,
-      "rentals": 0.02,
-      "maintenance": 0.01,
-      "utilities": 0.01,
-      "transfer_payments": 0.72
+      "personnel": 0.03510605056600943,
+      "transportation": 0.0007006339039217962,
+      "information": 0.0009710492176703032,
+      "professional_services": 0.008734945252906082,
+      "rentals": 0.0034905199724504193,
+      "maintenance": 8.521442973153158e-05,
+      "utilities": 0.000116629264739925,
+      "capital": 0.0006374202492957677,
+      "transfer_payments": 1.000418992129149
     }
   },
   {
