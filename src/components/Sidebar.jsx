@@ -153,13 +153,14 @@ const Sidebar = ({ entity, onClose }) => {
                     transfer_payments: 'bg-indigo-500'
                   }
                   const amount = entity.budget ? entity.budget * percentage : 0
+                  const percentageDisplay = (percentage * 100).toFixed(percentage * 100 < 1 ? 2 : percentage * 100 < 10 ? 1 : 0)
                   
                   return (
                     <div key={category}>
                       <div className="flex justify-between items-center mb-1">
                         <span className="text-xs text-gray-600">{categoryLabels[category] || category}</span>
                         <span className="text-xs font-medium text-gray-900">
-                          {(percentage * 100).toFixed(0)}% ({formatBudget(amount)})
+                          {percentageDisplay}% ({formatBudget(amount)})
                         </span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">

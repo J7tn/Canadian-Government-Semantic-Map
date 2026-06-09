@@ -185,6 +185,38 @@ const GraphView = ({ entities, relationships, onNodeClick, searchQuery, filters 
       onNodeClick(node.id())
     })
 
+    cy.on('dblclick', 'node', (evt) => {
+      const node = evt.target
+      cy.animate({
+        center: { eles: node },
+        zoom: 2,
+        duration: 500
+      })
+    })
+
+    let rightClickCount = 0
+    let rightClickTimeout = null
+
+    cy.on('cxttap', (evt) => {
+      rightClickCount++
+      
+      if (rightClickCount === 2) {
+        cy.fit(null, 50)
+        rightClickCount = 0
+        if (rightClickTimeout) {
+          clearTimeout(rightClickTimeout)
+          rightClickTimeout = null
+        }
+      } else {
+        if (rightClickTimeout) {
+          clearTimeout(rightClickTimeout)
+        }
+        rightClickTimeout = setTimeout(() => {
+          rightClickCount = 0
+        }, 500)
+      }
+    })
+
     // Set global instance for download functionality
     window.cyInstance = cy
 
