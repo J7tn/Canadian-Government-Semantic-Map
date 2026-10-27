@@ -1,34 +1,40 @@
-import React from 'react'
+import {
+  ENTITY_TYPES,
+  DEFAULT_ENTITY_BADGE,
+  SPENDING_CATEGORIES
+} from '../config/graphTheme'
+import { formatBudget, formatPercent } from '../utils/format'
+import { entityMoney } from '../utils/graphFilter'
+import { budgetInsight } from '../utils/budgetInsight'
+import { plainSummary } from '../utils/plainSummary'
 
 const Sidebar = ({ entity, onClose }) => {
   if (!entity) return null
 
-  const formatBudget = (budget) => {
-    if (!budget) return 'N/A'
-    return new Intl.NumberFormat('en-CA', {
-      style: 'currency',
-      currency: 'CAD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    }).format(budget)
-  }
+  const typeInfo = ENTITY_TYPES[entity.type]
+  const isForeignCountry = entity.type === 'ForeignCountry'
 
-  const typeColors = {
-    Ministry: 'bg-red-100 text-red-800',
-    Agency: 'bg-blue-100 text-blue-800',
-    CrownCorporation: 'bg-green-100 text-green-800',
-    Program: 'bg-purple-100 text-purple-800',
-    Other: 'bg-gray-100 text-gray-800',
-    ForeignCountry: 'bg-blue-100 text-blue-800'
-  }
+  const breakdownEntries = entity.spendingBreakdown
+    ? Object.entries(entity.spendingBreakdown)
+    : []
+  const accounted = breakdownEntries.reduce((sum, [, value]) => sum + value, 0)
+  const remainder = 1 - accounted
+  const money = entityMoney(entity)
+  const insights = budgetInsight(entity)
+  const summary = plainSummary(entity)
 
   return (
-    <div className="w-96 flex-shrink-0 bg-white border-l border-gray-200 overflow-y-auto shadow-lg">
+    <div
+      role="complementary"
+      aria-label="Entity details"
+      className="fixed inset-0 z-40 md:static md:z-auto md:w-96 md:flex-shrink-0 bg-white border-l border-gray-200 overflow-y-auto shadow-lg"
+    >
       <div className="p-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-bold text-gray-900">{entity.name}</h2>
           <button
             onClick={onClose}
+            aria-label="Close entity details"
             className="text-gray-400 hover:text-gray-600 transition-colors"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,9 +45,19 @@ const Sidebar = ({ entity, onClose }) => {
 
         <div className="space-y-4">
           <div>
-            <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${typeColors[entity.type] || typeColors.Other}`}>
-              {entity.type}
+            <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${typeInfo?.badge || DEFAULT_ENTITY_BADGE}`}>
+              {typeInfo?.label || entity.type}
             </span>
+          </div>
+
+          {/* Plain-language lead — jargon-free reading of type +
+              first description sentence; the formal Description below
+              remains the verbatim mandate text. */}
+          <div>
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">
+              What it does
+            </h3>
+            <p className="text-gray-800 text-sm leading-relaxed">{summary}</p>
           </div>
 
           <div>
@@ -53,14 +69,12 @@ const Sidebar = ({ entity, onClose }) => {
 
           <div>
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">
-              {entity.type === 'ForeignCountry' ? 'Received Aid' : 'Budget'}
+              {isForeignCountry ? 'Received Aid' : 'Budget'}
             </h3>
-            {entity.type === 'ForeignCountry' ? (
+            {isForeignCountry ? (
               entity.aidVerified === false ? (
                 <>
-                  <p className="text-gray-900 font-semibold text-lg">
-                    Unverified
-                  </p>
+                  <p className="text-gray-900 font-semibold text-lg">Unverified</p>
                   <p className="text-xs text-gray-500 mt-1">
                     Aid data requires specific source citation
                   </p>
@@ -73,9 +87,7 @@ const Sidebar = ({ entity, onClose }) => {
             ) : (
               entity.budgetVerified === false ? (
                 <>
-                  <p className="text-gray-900 font-semibold text-lg">
-                    Unverified
-                  </p>
+                  <p className="text-gray-900 font-semibold text-lg">Unverified</p>
                   <p className="text-xs text-gray-500 mt-1">
                     Budget data requires specific source citation
                   </p>
@@ -85,6 +97,20 @@ const Sidebar = ({ entity, onClose }) => {
                   {formatBudget(entity.budget)}
                 </p>
               )
+            )}
+            {insights.length > 0 && (
+              <div className="mt-2 p-3 bg-blue-50 border border-blue-100 rounded-lg">
+                <h4 className="text-xs font-semibold text-blue-800 uppercase tracking-wide mb-1">
+                  Why this number
+                </h4>
+                <ul className="space-y-1">
+                  {insights.map((insight, i) => (
+                    <li key={i} className="text-xs text-blue-900 leading-relaxed">
+                      {insight}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
           </div>
 
@@ -97,24 +123,26 @@ const Sidebar = ({ entity, onClose }) => {
             </div>
           )}
 
-          <div>
-            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">
-              Source
-            </h3>
-            <a
-              href={entity.source}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 text-sm underline"
-            >
-              {entity.source}
-            </a>
-            {entity.sourceParsedDate && (
-              <p className="text-xs text-gray-500 mt-1">
-                Parsed: {entity.sourceParsedDate}
-              </p>
-            )}
-          </div>
+          {entity.source && /^https:/i.test(entity.source) && (
+            <div>
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">
+                Source
+              </h3>
+              <a
+                href={entity.source}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 text-sm underline break-all"
+              >
+                {entity.source}
+              </a>
+              {entity.sourceParsedDate && (
+                <p className="text-xs text-gray-500 mt-1">
+                  Parsed: {entity.sourceParsedDate}
+                </p>
+              )}
+            </div>
+          )}
 
           <div>
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">
@@ -123,55 +151,48 @@ const Sidebar = ({ entity, onClose }) => {
             <p className="text-gray-700 text-sm">{entity.lastUpdated}</p>
           </div>
 
-          {entity.spendingBreakdown && (
+          {breakdownEntries.length > 0 && (
             <div>
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
                 Spending Breakdown
               </h3>
               <div className="space-y-2">
-                {Object.entries(entity.spendingBreakdown).map(([category, percentage]) => {
-                  const categoryLabels = {
-                    personnel: 'Personnel',
-                    professional_services: 'Professional Services',
-                    transportation: 'Transportation',
-                    information: 'Information Technology',
-                    rentals: 'Rentals',
-                    maintenance: 'Maintenance',
-                    utilities: 'Utilities',
-                    capital: 'Capital & Equipment',
-                    transfer_payments: 'Transfer Payments'
-                  }
-                  const categoryColors = {
-                    personnel: 'bg-blue-500',
-                    professional_services: 'bg-purple-500',
-                    transportation: 'bg-yellow-500',
-                    information: 'bg-cyan-500',
-                    rentals: 'bg-pink-500',
-                    maintenance: 'bg-orange-500',
-                    utilities: 'bg-green-500',
-                    capital: 'bg-red-500',
-                    transfer_payments: 'bg-indigo-500'
-                  }
-                  const amount = entity.budget ? entity.budget * percentage : 0
-                  const percentageDisplay = (percentage * 100).toFixed(percentage * 100 < 1 ? 2 : percentage * 100 < 10 ? 1 : 0)
-                  
+                {breakdownEntries.map(([category, percentage]) => {
+                  const meta = SPENDING_CATEGORIES[category]
+                  const amount = money ? money * percentage : 0
                   return (
                     <div key={category}>
                       <div className="flex justify-between items-center mb-1">
-                        <span className="text-xs text-gray-600">{categoryLabels[category] || category}</span>
+                        <span className="text-xs text-gray-600">{meta?.label || category}</span>
                         <span className="text-xs font-medium text-gray-900">
-                          {percentageDisplay}% ({formatBudget(amount)})
+                          {formatPercent(percentage)}% ({formatBudget(amount)})
                         </span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div
-                          className={`${categoryColors[category] || 'bg-gray-500'} h-2 rounded-full transition-all duration-300`}
-                          style={{ width: `${percentage * 100}%` }}
+                          className={`${meta?.color || 'bg-gray-500'} h-2 rounded-full transition-all duration-300`}
+                          style={{ width: `${Math.min(percentage, 1) * 100}%` }}
                         />
                       </div>
                     </div>
                   )
                 })}
+                {remainder > 0.005 && (
+                  <div>
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-xs text-gray-600">Uncategorized</span>
+                      <span className="text-xs font-medium text-gray-900">
+                        {formatPercent(remainder)}% ({formatBudget(money ? money * remainder : 0)})
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div
+                        className="bg-gray-400 h-2 rounded-full transition-all duration-300"
+                        style={{ width: `${Math.min(remainder, 1) * 100}%` }}
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           )}

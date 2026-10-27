@@ -21,18 +21,23 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["TBS", "Treasury Board"],
+    "aliases": [
+      "TBS",
+      "Treasury Board"
+    ],
     "spendingBreakdown": {
-      "personnel": 0.692230232106807,
-      "transportation": 0.00037419185816287096,
-      "information": 0.00022773940939334293,
-      "professional_services": 0.019183035830176935,
-      "rentals": 0.003019962526269207,
-      "maintenance": 0.00035416506145652925,
-      "utilities": 9.536575636996122e-05,
-      "capital": 0.0014338383588990238,
-      "transfer_payments": 0.00011909225092013488
-    }
+      "personnel": 0.546277112,
+      "transportation": 0.000295295,
+      "information": 0.000179722,
+      "professional_services": 0.015138393,
+      "rentals": 0.002383219,
+      "maintenance": 0.000279491,
+      "utilities": 7.5258e-05,
+      "transfer_payments": 9.3982e-05,
+      "other_subsidies": 0.434146005,
+      "capital": 0.001131521
+    },
+    "budgetContext": "Holds central appropriations on behalf of all departments — contingencies, employee benefit plan contributions, and government-wide funds — so this is not TBS's own operating cost."
   },
   {
     "id": "finance",
@@ -46,16 +51,19 @@
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
     "spendingBreakdown": {
-      "personnel": 0.0008977591197416017,
-      "transportation": 1.326726144661766e-05,
-      "information": 2.1642045383367553e-05,
-      "professional_services": 8.476946104344774e-05,
-      "rentals": 9.55473484734259e-06,
-      "maintenance": 2.287954958941803e-06,
-      "utilities": 0.0005677032527083474,
-      "capital": 1.0374944456155518e-05,
-      "transfer_payments": 0.6489144547449168
-    }
+      "personnel": 0.000897757,
+      "transportation": 1.3267e-05,
+      "information": 2.1642e-05,
+      "professional_services": 8.4769e-05,
+      "rentals": 9.555e-06,
+      "maintenance": 2.288e-06,
+      "utilities": 0.000567702,
+      "transfer_payments": 0.648913094,
+      "public_debt": 0.325333074,
+      "other_subsidies": 0.024146477,
+      "capital": 1.0375e-05
+    },
+    "budgetContext": "Dominated by statutory transfers and public debt charges that flow through Finance — health/social transfers, equalization, and interest on the debt — rather than departmental spending."
   },
   {
     "id": "health",
@@ -68,17 +76,21 @@
     "source": "https://www.canada.ca/en/health-canada/corporate/transparency/corporate-management-reporting/report-plans-priorities/2024-2025-plan-at-glance.html",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["HC", "Health Canada"],
+    "aliases": [
+      "HC",
+      "Health Canada"
+    ],
     "spendingBreakdown": {
-      "personnel": 0.12901721601218125,
-      "transportation": 0.0011193788144773793,
-      "information": 0.0036157205355493833,
-      "professional_services": 0.06910818796696398,
-      "rentals": 0.0016950351959214443,
-      "maintenance": 0.001353704614735293,
-      "utilities": 0.0019625757676696586,
-      "capital": 0.004127008209815343,
-      "transfer_payments": 0.6428524278297207
+      "personnel": 0.122065654,
+      "transportation": 0.001059066,
+      "information": 0.003420902,
+      "professional_services": 0.065384577,
+      "rentals": 0.001603705,
+      "maintenance": 0.001280766,
+      "utilities": 0.00185683,
+      "transfer_payments": 0.608214967,
+      "other_subsidies": 0.191208891,
+      "capital": 0.003904641
     }
   },
   {
@@ -92,7 +104,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["ISED", "ISDE", "Innovation, Science and Economic Development Canada"]
+    "aliases": [
+      "ISED",
+      "ISDE",
+      "Innovation, Science and Economic Development Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.121488496,
+      "transportation": 0.001075575,
+      "information": 0.002496914,
+      "professional_services": 0.032488569,
+      "rentals": 0.005777995,
+      "maintenance": 0.001552568,
+      "utilities": 0.003615536,
+      "transfer_payments": 0.821880432,
+      "capital": 0.009623914
+    }
   },
   {
     "id": "environment",
@@ -105,7 +132,24 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["ECCC", "Environment Canada", "Environment and Climate Change Canada"]
+    "aliases": [
+      "ECCC",
+      "Environment Canada",
+      "Environment and Climate Change Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.355637895,
+      "transportation": 0.012118358,
+      "information": 0.004930314,
+      "professional_services": 0.076260803,
+      "rentals": 0.017805888,
+      "maintenance": 0.006923222,
+      "utilities": 0.017916696,
+      "transfer_payments": 0.487535382,
+      "public_debt": 0.000107899,
+      "other_subsidies": 0.002041895,
+      "capital": 0.018721648
+    }
   },
   {
     "id": "national-defence",
@@ -118,18 +162,25 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["DND", "National Defence", "Canadian Forces"],
+    "aliases": [
+      "DND",
+      "National Defence",
+      "Canadian Forces"
+    ],
     "spendingBreakdown": {
-      "personnel": 0.4108270286685966,
-      "transportation": 0.024813957316997023,
-      "information": 0.0010868381968445041,
-      "professional_services": 0.1878180390391222,
-      "rentals": 0.026130679954580224,
-      "maintenance": 0.07287417604813369,
-      "utilities": 0.04584067126107255,
-      "capital": 0.2093856565558355,
-      "transfer_payments": 0.02956196880819679
-    }
+      "personnel": 0.40182911,
+      "transportation": 0.024270483,
+      "information": 0.001063034,
+      "professional_services": 0.183704455,
+      "rentals": 0.025558367,
+      "maintenance": 0.071278088,
+      "utilities": 0.044836671,
+      "transfer_payments": 0.028914504,
+      "public_debt": 0.000114961,
+      "other_subsidies": 0.013630628,
+      "capital": 0.204799699
+    },
+    "budgetContext": "Canada's largest departmental budget — military personnel pay, equipment procurement, and operations across the CAF."
   },
   {
     "id": "justice",
@@ -141,7 +192,19 @@
     "description": "Responsible for ensuring that Canada's justice system is fair, accessible, and efficient.",
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
-    "lastUpdated": "2026-06-07"
+    "lastUpdated": "2026-06-07",
+    "spendingBreakdown": {
+      "personnel": 0.551129885,
+      "transportation": 0.004553126,
+      "information": 0.002665501,
+      "professional_services": 0.030136655,
+      "rentals": 0.006207823,
+      "maintenance": 0.001783628,
+      "utilities": 0.001570003,
+      "transfer_payments": 0.395483295,
+      "other_subsidies": 0.001441087,
+      "capital": 0.005028998
+    }
   },
   {
     "id": "public-safety",
@@ -154,7 +217,22 @@
     "source": "https://www.publicsafety.gc.ca/cnt/rsrcs/pblctns/dprtmntl-pln-2024-25/index-en.aspx",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["PS", "Public Safety Canada"]
+    "aliases": [
+      "PS",
+      "Public Safety Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.114970938,
+      "transportation": 0.000793072,
+      "information": 0.005177041,
+      "professional_services": 0.016821375,
+      "rentals": 0.003983509,
+      "maintenance": 0.005205236,
+      "utilities": 0.000286925,
+      "transfer_payments": 0.841782708,
+      "other_subsidies": 0.001860426,
+      "capital": 0.009118772
+    }
   },
   {
     "id": "indigenous-services",
@@ -167,7 +245,23 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["ISC", "Indigenous Services Canada", "SAC"]
+    "aliases": [
+      "ISC",
+      "Indigenous Services Canada",
+      "SAC"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.0419044,
+      "transportation": 0.018833431,
+      "information": 0.000283072,
+      "professional_services": 0.038260148,
+      "rentals": 0.000725343,
+      "maintenance": 0.000281106,
+      "utilities": 0.029578608,
+      "transfer_payments": 0.86973622,
+      "other_subsidies": 9.4847e-05,
+      "capital": 0.000302826
+    }
   },
   {
     "id": "immigration",
@@ -180,7 +274,24 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["IRCC", "Immigration, Refugees and Citizenship Canada", "Immigration Canada", "Citizenship Canada"]
+    "aliases": [
+      "IRCC",
+      "Immigration, Refugees and Citizenship Canada",
+      "Immigration Canada",
+      "Citizenship Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.252151465,
+      "transportation": 0.023646328,
+      "information": 0.003245478,
+      "professional_services": 0.192969858,
+      "rentals": 0.004525428,
+      "maintenance": 0.000487059,
+      "utilities": 0.013159058,
+      "transfer_payments": 0.503426514,
+      "other_subsidies": 0.00059719,
+      "capital": 0.005791622
+    }
   },
   {
     "id": "transport",
@@ -193,7 +304,23 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["TC", "Transport Canada", "Transport"]
+    "aliases": [
+      "TC",
+      "Transport Canada",
+      "Transport"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.226919301,
+      "transportation": 0.004435571,
+      "information": 0.002288698,
+      "professional_services": 0.057153912,
+      "rentals": 0.005264407,
+      "maintenance": 0.005150622,
+      "utilities": 0.004450158,
+      "transfer_payments": 0.58471465,
+      "other_subsidies": 0.035002233,
+      "capital": 0.07462045
+    }
   },
   {
     "id": "agriculture",
@@ -206,7 +333,23 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["AAFC", "Agriculture and Agri-Food Canada", "Agriculture Canada"]
+    "aliases": [
+      "AAFC",
+      "Agriculture and Agri-Food Canada",
+      "Agriculture Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.155043505,
+      "transportation": 0.001986798,
+      "information": 0.003074437,
+      "professional_services": 0.030268029,
+      "rentals": 0.003033043,
+      "maintenance": 0.003786552,
+      "utilities": 0.01146615,
+      "transfer_payments": 0.77282791,
+      "other_subsidies": 0.002362321,
+      "capital": 0.016151255
+    }
   },
   {
     "id": "fisheries",
@@ -219,7 +362,24 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["DFO", "Fisheries and Oceans Canada", "Fisheries Canada", "Oceans Canada"]
+    "aliases": [
+      "DFO",
+      "Fisheries and Oceans Canada",
+      "Fisheries Canada",
+      "Oceans Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.332854968,
+      "transportation": 0.018923427,
+      "information": 0.001366312,
+      "professional_services": 0.228976277,
+      "rentals": 0.013555572,
+      "maintenance": 0.039506418,
+      "utilities": 0.031775849,
+      "transfer_payments": 0.104073106,
+      "other_subsidies": 0.00654663,
+      "capital": 0.222421442
+    }
   },
   {
     "id": "esdc",
@@ -232,18 +392,24 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["ESDC", "Employment and Social Development Canada", "Service Canada"],
+    "aliases": [
+      "ESDC",
+      "Employment and Social Development Canada",
+      "Service Canada"
+    ],
     "spendingBreakdown": {
-      "personnel": 0.03510605056600943,
-      "transportation": 0.0007006339039217962,
-      "information": 0.0009710492176703032,
-      "professional_services": 0.008734945252906082,
-      "rentals": 0.0034905199724504193,
-      "maintenance": 8.521442973153158e-05,
-      "utilities": 0.000116629264739925,
-      "capital": 0.0006374202492957677,
-      "transfer_payments": 1.000418992129149
-    }
+      "personnel": 0.033377943,
+      "transportation": 0.000666145,
+      "information": 0.000923249,
+      "professional_services": 0.008304965,
+      "rentals": 0.003318698,
+      "maintenance": 8.102e-05,
+      "utilities": 0.000110888,
+      "transfer_payments": 0.951173019,
+      "other_subsidies": 0.001438031,
+      "capital": 0.000606043
+    },
+    "budgetContext": "Mostly passthrough benefits — Old Age Security, EI, and other transfers to individuals. The department's own operations are a small fraction of this total."
   },
   {
     "id": "cra",
@@ -256,7 +422,23 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CRA", "Revenue Canada", "Tax Canada"]
+    "aliases": [
+      "CRA",
+      "Revenue Canada",
+      "Tax Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.272579815,
+      "transportation": 0.007490919,
+      "information": 0.001345376,
+      "professional_services": 0.030889303,
+      "rentals": 0.015734805,
+      "maintenance": 0.003144746,
+      "utilities": 0.001334303,
+      "transfer_payments": 0.665681363,
+      "other_subsidies": 1.1073e-05,
+      "capital": 0.001788298
+    }
   },
   {
     "id": "cirnac",
@@ -269,7 +451,24 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CIRNAC", "Crown-Indigenous Relations and Northern Affairs Canada", "Crown-Indigenous Relations", "Northern Affairs"]
+    "aliases": [
+      "CIRNAC",
+      "Crown-Indigenous Relations and Northern Affairs Canada",
+      "Crown-Indigenous Relations",
+      "Northern Affairs"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.01976916,
+      "transportation": 0.000918581,
+      "information": 0.000459829,
+      "professional_services": 0.072767226,
+      "rentals": 0.001338054,
+      "maintenance": 0.000228888,
+      "utilities": 0.0001654,
+      "transfer_payments": 0.815163264,
+      "other_subsidies": 0.089182738,
+      "capital": 6.86e-06
+    }
   },
   {
     "id": "pspc",
@@ -282,7 +481,24 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["PSPC", "Public Services and Procurement Canada", "Public Services", "Procurement Canada"]
+    "aliases": [
+      "PSPC",
+      "Public Services and Procurement Canada",
+      "Public Services",
+      "Procurement Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.230685126,
+      "transportation": 0.007829335,
+      "information": 0.003846211,
+      "professional_services": 0.239392867,
+      "rentals": 0.151466466,
+      "maintenance": 0.169706052,
+      "utilities": 0.019837526,
+      "public_debt": 0.013572673,
+      "other_subsidies": 0.047195543,
+      "capital": 0.116468201
+    }
   },
   {
     "id": "veterans-affairs",
@@ -295,7 +511,23 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["VAC", "Veterans Affairs Canada", "Veterans Affairs"]
+    "aliases": [
+      "VAC",
+      "Veterans Affairs Canada",
+      "Veterans Affairs"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.059534815,
+      "transportation": 0.005322514,
+      "information": 0.000863519,
+      "professional_services": 0.098037562,
+      "rentals": 0.004196306,
+      "maintenance": 0.001574855,
+      "utilities": 0.056738739,
+      "transfer_payments": 0.772577337,
+      "other_subsidies": 1.039e-06,
+      "capital": 0.001153315
+    }
   },
   {
     "id": "canadian-heritage",
@@ -308,7 +540,23 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["PCH", "Canadian Heritage", "Heritage Canada"]
+    "aliases": [
+      "PCH",
+      "Canadian Heritage",
+      "Heritage Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.125204621,
+      "transportation": 0.000424008,
+      "information": 0.001513926,
+      "professional_services": 0.012257013,
+      "rentals": 0.001827522,
+      "maintenance": 0.001166965,
+      "utilities": 0.000975274,
+      "transfer_payments": 0.85490148,
+      "other_subsidies": 0.000186917,
+      "capital": 0.001542273
+    }
   },
   {
     "id": "shared-services",
@@ -321,7 +569,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["SSC", "Shared Services"]
+    "aliases": [
+      "SSC",
+      "Shared Services"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.298879866,
+      "transportation": 0.20499968,
+      "information": 0.001099135,
+      "professional_services": 0.12936314,
+      "rentals": 0.179717722,
+      "maintenance": 0.083009869,
+      "utilities": 0.001707,
+      "public_debt": 0.00026148,
+      "capital": 0.100962109
+    }
   },
   {
     "id": "correctional-service",
@@ -334,7 +596,24 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CSC", "Correctional Service Canada", "Correctional Service", "Corrections Canada"]
+    "aliases": [
+      "CSC",
+      "Correctional Service Canada",
+      "Correctional Service",
+      "Corrections Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.654793476,
+      "transportation": 0.008483935,
+      "information": 0.000175782,
+      "professional_services": 0.150698249,
+      "rentals": 0.014850588,
+      "maintenance": 0.010411285,
+      "utilities": 0.058292485,
+      "transfer_payments": 0.000491987,
+      "other_subsidies": 0.025829908,
+      "capital": 0.075972305
+    }
   },
   {
     "id": "cmhc",
@@ -347,7 +626,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CMHC", "Mortgage and Housing"]
+    "aliases": [
+      "CMHC",
+      "Mortgage and Housing"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "nrc",
@@ -360,7 +645,23 @@
     "source": "https://nrc.canada.ca/en/corporate/planning-reporting/national-research-council-canada-2024-25-departmental-plan-glance",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["NRC", "National Research Council Canada", "National Research Council"]
+    "aliases": [
+      "NRC",
+      "National Research Council Canada",
+      "National Research Council"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.351532401,
+      "transportation": 0.007602206,
+      "information": 0.000900855,
+      "professional_services": 0.062187173,
+      "rentals": 0.011645727,
+      "maintenance": 0.018618041,
+      "utilities": 0.035897486,
+      "transfer_payments": 0.382847663,
+      "other_subsidies": 0.015260754,
+      "capital": 0.113507694
+    }
   },
   {
     "id": "canada-council-arts",
@@ -373,7 +674,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CCA", "Canada Council"]
+    "aliases": [
+      "CCA",
+      "Canada Council"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "telefilm",
@@ -386,7 +693,12 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Telefilm"]
+    "aliases": [
+      "Telefilm"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "canada-space-agency",
@@ -399,7 +711,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CSA", "Space Agency"]
+    "aliases": [
+      "CSA",
+      "Space Agency"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.242116865,
+      "transportation": 0.020636887,
+      "information": 0.005425547,
+      "professional_services": 0.498580151,
+      "rentals": 0.00986551,
+      "maintenance": 0.009317157,
+      "utilities": 0.003072705,
+      "transfer_payments": 0.191966775,
+      "other_subsidies": 0.006186476,
+      "capital": 0.012831926
+    }
   },
   {
     "id": "nsERC",
@@ -412,7 +739,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["NSERC", "Natural Sciences Research Council"]
+    "aliases": [
+      "NSERC",
+      "Natural Sciences Research Council"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.040890383,
+      "transportation": 0.000408644,
+      "information": 0.000601579,
+      "professional_services": 0.003223522,
+      "rentals": 0.00080962,
+      "maintenance": 6.8146e-05,
+      "utilities": 2.9465e-05,
+      "transfer_payments": 0.952550308,
+      "other_subsidies": 2.717e-06,
+      "capital": 0.001415616
+    }
   },
   {
     "id": "sshrc",
@@ -425,7 +767,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["SSHRC", "Social Sciences Research Council"]
+    "aliases": [
+      "SSHRC",
+      "Social Sciences Research Council"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.032329265,
+      "transportation": 0.000782825,
+      "information": 0.001484541,
+      "professional_services": 0.003997893,
+      "rentals": 0.001230426,
+      "maintenance": 0.000136298,
+      "utilities": 0.000161239,
+      "transfer_payments": 0.959051728,
+      "other_subsidies": 1.658e-06,
+      "capital": 0.000824127
+    }
   },
   {
     "id": "cihr",
@@ -438,7 +795,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CIHR", "Health Research"]
+    "aliases": [
+      "CIHR",
+      "Health Research"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.053044153,
+      "transportation": 0.000850784,
+      "information": 0.000294333,
+      "professional_services": 0.003806678,
+      "rentals": 0.003340788,
+      "maintenance": 0.000267333,
+      "utilities": 0.000171882,
+      "transfer_payments": 0.937965248,
+      "capital": 0.000258801
+    }
   },
   {
     "id": "cse",
@@ -451,7 +822,14 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CSE", "CSEC"]
+    "aliases": [
+      "CSE",
+      "CSEC"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.497653385,
+      "other_subsidies": 0.502346615
+    }
   },
   {
     "id": "ofsi",
@@ -464,7 +842,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["OSFI", "Superintendent of Financial Institutions"]
+    "aliases": [
+      "OSFI",
+      "Superintendent of Financial Institutions"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.776181525,
+      "transportation": 0.01361833,
+      "information": 0.007758028,
+      "professional_services": 0.102780701,
+      "rentals": 0.059738932,
+      "maintenance": 0.002853122,
+      "utilities": 0.000636741,
+      "other_subsidies": 9.9296e-05,
+      "capital": 0.036333325
+    }
   },
   {
     "id": "pbo",
@@ -477,7 +869,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["PBO", "Parliamentary Budget Officer"]
+    "aliases": [
+      "PBO",
+      "Parliamentary Budget Officer"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.782067676,
+      "transportation": 0.010545182,
+      "information": 0.036971663,
+      "professional_services": 0.090459875,
+      "rentals": 0.036336411,
+      "maintenance": 0.00330331,
+      "utilities": 0.030405953,
+      "capital": 0.00990993
+    }
   },
   {
     "id": "natural-resources",
@@ -490,7 +895,23 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["NRCan", "Natural Resources Canada", "Natural Resources"]
+    "aliases": [
+      "NRCan",
+      "Natural Resources Canada",
+      "Natural Resources"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.107580596,
+      "transportation": 0.002639792,
+      "information": 0.005172116,
+      "professional_services": 0.039684179,
+      "rentals": 0.006378357,
+      "maintenance": 0.002013308,
+      "utilities": 0.00778818,
+      "transfer_payments": 0.814915907,
+      "other_subsidies": 0.001802194,
+      "capital": 0.012025371
+    }
   },
   {
     "id": "global-affairs",
@@ -503,7 +924,27 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["GAC", "Global Affairs Canada", "Global Affairs", "Foreign Affairs", "DFATD"]
+    "aliases": [
+      "GAC",
+      "Global Affairs Canada",
+      "Global Affairs",
+      "Foreign Affairs",
+      "DFATD",
+      "Department of Foreign Affairs, Trade and Development"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.180142936,
+      "transportation": 0.010610371,
+      "information": 0.003848191,
+      "professional_services": 0.053921849,
+      "rentals": 0.032223378,
+      "maintenance": 0.004919787,
+      "utilities": 0.006228361,
+      "transfer_payments": 0.691226658,
+      "other_subsidies": 0.000195063,
+      "capital": 0.016683407
+    },
+    "budgetContext": "Includes Canada's international assistance programming — a large share is transferred to partner countries and organizations rather than spent on department operations."
   },
   {
     "id": "privy-council",
@@ -516,20 +957,49 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["PCO", "Privy Council"]
+    "aliases": [
+      "PCO",
+      "Privy Council"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.718014622,
+      "transportation": 0.020973862,
+      "information": 0.02070403,
+      "professional_services": 0.163484627,
+      "rentals": 0.022705,
+      "maintenance": 0.007093058,
+      "utilities": 0.002258631,
+      "transfer_payments": 0.008923327,
+      "other_subsidies": 0.000136385,
+      "capital": 0.03570646
+    }
   },
   {
     "id": "statistics-canada",
     "name": "Statistics Canada",
     "type": "Agency",
-    "parent": "parliament",
+    "parent": "ISED",
     "budget": 736640333,
     "budgetVerified": true,
     "description": "Canada's national statistical agency, responsible for producing statistics on Canada's population, resources, economy, society and culture.",
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["StatsCan", "Statistics Canada"]
+    "aliases": [
+      "StatsCan",
+      "Statistics Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.851154358,
+      "transportation": 0.021716378,
+      "information": 0.022451106,
+      "professional_services": 0.042615082,
+      "rentals": 0.042179846,
+      "maintenance": 0.001349388,
+      "utilities": 0.001547181,
+      "other_subsidies": 0.00425278,
+      "capital": 0.012733881
+    }
   },
   {
     "id": "library-archives",
@@ -542,7 +1012,23 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["LAC", "Library and Archives Canada"]
+    "aliases": [
+      "LAC",
+      "Library and Archives Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.511202071,
+      "transportation": 0.007598668,
+      "information": 0.003776536,
+      "professional_services": 0.052740542,
+      "rentals": 0.016348222,
+      "maintenance": 0.025454022,
+      "utilities": 0.022287943,
+      "transfer_payments": 0.013064007,
+      "public_debt": 0.027211062,
+      "other_subsidies": 0.051545589,
+      "capital": 0.268771338
+    }
   },
   {
     "id": "national-film-board",
@@ -555,13 +1041,27 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["NFB", "National Film Board"]
+    "aliases": [
+      "NFB",
+      "National Film Board"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.588271695,
+      "transportation": 0.033887513,
+      "information": 0.030278487,
+      "professional_services": 0.156382846,
+      "rentals": 0.148928339,
+      "maintenance": 0.004231272,
+      "utilities": 0.005351315,
+      "other_subsidies": 0.001518902,
+      "capital": 0.031149631
+    }
   },
   {
     "id": "ukraine",
     "name": "Ukraine",
     "type": "ForeignCountry",
-    "parent": "global-affairs",
+    "parent": null,
     "budget": null,
     "received_aid": 25500000000,
     "aidVerified": true,
@@ -569,7 +1069,10 @@
     "source": "https://www.international.gc.ca/world-monde/issues_development-enjeux_developpement/response_conflict-reponse_conflits/crisis-crises/ukraine-dev.aspx?lang=eng",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Ukraine"]
+    "aliases": [
+      "Ukraine"
+    ],
+    "budgetContext": "Cumulative Canadian military, humanitarian, and financial assistance since Russia's 2022 full-scale invasion — an aid total, not a departmental budget."
   },
   {
     "id": "cbc",
@@ -582,7 +1085,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CBC", "CBC/Radio-Canada"]
+    "aliases": [
+      "CBC",
+      "CBC/Radio-Canada"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "canada-post",
@@ -595,7 +1104,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Canada Post", "Post Office"]
+    "aliases": [
+      "Canada Post",
+      "Post Office"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "via-rail",
@@ -608,7 +1123,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["VIA Rail", "VIA"]
+    "aliases": [
+      "VIA Rail",
+      "VIA"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "rcmp",
@@ -621,7 +1142,24 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["RCMP", "Mounties", "GRC"]
+    "aliases": [
+      "RCMP",
+      "Mounties",
+      "GRC"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.743317478,
+      "transportation": 0.031062684,
+      "information": 0.000551162,
+      "professional_services": 0.085095568,
+      "rentals": 0.021382449,
+      "maintenance": 0.015773455,
+      "utilities": 0.023369533,
+      "transfer_payments": 0.004318998,
+      "public_debt": 6.765e-05,
+      "other_subsidies": 0.020730855,
+      "capital": 0.054330167
+    }
   },
   {
     "id": "csis",
@@ -634,7 +1172,14 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CSIS", "SCRS"]
+    "aliases": [
+      "CSIS",
+      "SCRS"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.640148796,
+      "other_subsidies": 0.359851204
+    }
   },
   {
     "id": "border-services",
@@ -647,20 +1192,40 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CBSA", "Border Services", "Customs"]
+    "aliases": [
+      "CBSA",
+      "Border Services",
+      "Customs"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.663221251,
+      "transportation": 0.029067989,
+      "information": 0.001153926,
+      "professional_services": 0.187783737,
+      "rentals": 0.006321248,
+      "maintenance": 0.020421775,
+      "utilities": 0.012321466,
+      "other_subsidies": 0.012637035,
+      "capital": 0.067071573
+    }
   },
   {
     "id": "patent-office",
     "name": "Canadian Intellectual Property Office",
     "type": "Agency",
     "parent": "ISED",
-    "budget": 0,
+    "budget": 226277065,
     "budgetVerified": true,
     "description": "Responsible for administering Canada's intellectual property system, including patents, trademarks, and copyrights. CIPO is a special operating agency funded through service fees rather than government appropriations.",
-    "source": "https://ised-isde.canada.ca/site/canadian-intellectual-property-office/en",
-    "sourceParsedDate": "2026-06-07",
+    "source": "https://ised-isde.canada.ca/site/canadian-intellectual-property-office/en/canadian-intellectual-property-statistics/financial-information-statistics-2024-2025",
+    "sourceParsedDate": "2026-10-26",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CIPO", "Patent Office", "IP Office"]
+    "aliases": [
+      "CIPO",
+      "Patent Office",
+      "IP Office"
+    ],
+    "budgetContext": "Fee-funded revolving fund — CIPO pays its operating costs from patent, trademark, and industrial-design application fees and does not draw a parliamentary appropriation."
   },
   {
     "id": "public-health",
@@ -673,7 +1238,22 @@
     "source": "https://www.canada.ca/en/public-health/corporate/transparency/corporate-management-reporting/reports-plans-priorities/2024-2025-departmental-plan-at-a-glance.html",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["PHAC", "Public Health"]
+    "aliases": [
+      "PHAC",
+      "Public Health"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.247250953,
+      "transportation": 0.003967429,
+      "information": 0.013340177,
+      "professional_services": 0.09117654,
+      "rentals": 0.003603958,
+      "maintenance": 0.005416354,
+      "utilities": 0.417560961,
+      "transfer_payments": 0.199926617,
+      "other_subsidies": 0.001351332,
+      "capital": 0.01640568
+    }
   },
   {
     "id": "food-inspection",
@@ -686,7 +1266,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CFIA", "Food Inspection"]
+    "aliases": [
+      "CFIA",
+      "Food Inspection"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.780836005,
+      "transportation": 0.005509375,
+      "information": 0.01309905,
+      "professional_services": 0.081050092,
+      "rentals": 0.019658882,
+      "maintenance": 0.013838731,
+      "utilities": 0.031230293,
+      "transfer_payments": 0.01652499,
+      "other_subsidies": 0.003055926,
+      "capital": 0.035196654
+    }
   },
   {
     "id": "parks-canada",
@@ -699,7 +1294,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Parks Canada", "National Parks"]
+    "aliases": [
+      "Parks Canada",
+      "National Parks"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.425791359,
+      "transportation": 0.013060023,
+      "information": 0.010484494,
+      "professional_services": 0.121415093,
+      "rentals": 0.023676899,
+      "maintenance": 0.01312493,
+      "utilities": 0.062483251,
+      "transfer_payments": 0.072809773,
+      "other_subsidies": 0.048683428,
+      "capital": 0.20847075
+    }
   },
   {
     "id": "acoa",
@@ -712,7 +1322,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["ACOA", "Atlantic Canada Opportunities"]
+    "aliases": [
+      "ACOA",
+      "Atlantic Canada Opportunities"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.182993267,
+      "transportation": 0.003628988,
+      "information": 0.00140431,
+      "professional_services": 0.006970505,
+      "rentals": 0.004437535,
+      "maintenance": 0.000249798,
+      "utilities": 0.000567379,
+      "transfer_payments": 0.795281105,
+      "other_subsidies": 0.002673032,
+      "capital": 0.00179408
+    }
   },
   {
     "id": "canada-northern",
@@ -725,7 +1350,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CanNor", "Northern Development"]
+    "aliases": [
+      "CanNor",
+      "Northern Development"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.246221058,
+      "transportation": 0.013230463,
+      "information": 0.002592103,
+      "professional_services": 0.038190913,
+      "rentals": 0.027281247,
+      "maintenance": 0.001650376,
+      "utilities": 0.001390136,
+      "transfer_payments": 0.666185899,
+      "other_subsidies": 0.000943688,
+      "capital": 0.002314115
+    }
   },
   {
     "id": "feddev-ontario",
@@ -738,7 +1378,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["FedDev Ontario", "Southern Ontario Development"]
+    "aliases": [
+      "FedDev Ontario",
+      "Southern Ontario Development"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.134504093,
+      "transportation": 0.0014851,
+      "information": 0.003077765,
+      "professional_services": 0.026079023,
+      "rentals": 0.001138413,
+      "maintenance": 0.000190256,
+      "utilities": 0.000340823,
+      "transfer_payments": 0.830938805,
+      "capital": 0.002245721
+    }
   },
   {
     "id": "fednor",
@@ -751,7 +1405,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["FedNor", "Northern Ontario Development"]
+    "aliases": [
+      "FedNor",
+      "Northern Ontario Development"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.268486279,
+      "transportation": 0.004838708,
+      "information": 0.002899917,
+      "professional_services": 0.013204411,
+      "rentals": 0.002225308,
+      "maintenance": 0.000425432,
+      "utilities": 0.000229083,
+      "transfer_payments": 0.692272513,
+      "other_subsidies": 0.013239248,
+      "capital": 0.0021791
+    }
   },
   {
     "id": "ced-quebec",
@@ -764,7 +1433,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CED", "Quebec Regional Development"]
+    "aliases": [
+      "CED",
+      "Quebec Regional Development"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.141890441,
+      "transportation": 0.001078467,
+      "information": 0.00068946,
+      "professional_services": 0.009565394,
+      "rentals": 0.00241311,
+      "maintenance": 6.0091e-05,
+      "utilities": 0.000183434,
+      "transfer_payments": 0.8420955,
+      "capital": 0.002024103
+    }
   },
   {
     "id": "pacific-economic",
@@ -777,7 +1460,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["PacifiCan", "Pacific Development"]
+    "aliases": [
+      "PacifiCan",
+      "Pacific Development"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.16064934,
+      "transportation": 0.010006901,
+      "information": 0.009006214,
+      "professional_services": 0.069047614,
+      "rentals": 0.006004137,
+      "utilities": 0.001000687,
+      "transfer_payments": 0.739281656,
+      "capital": 0.005003451
+    }
   },
   {
     "id": "western-diversification",
@@ -790,7 +1486,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["WD", "Western Diversification"]
+    "aliases": [
+      "WD",
+      "Western Diversification"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.113579944,
+      "transportation": 0.003156178,
+      "information": 0.004463498,
+      "professional_services": 0.017753499,
+      "rentals": 0.005240001,
+      "maintenance": 0.002333633,
+      "utilities": 0.000456351,
+      "transfer_payments": 0.846967838,
+      "capital": 0.006049059
+    }
   },
   {
     "id": "atsc",
@@ -803,7 +1513,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["ATSSC", "Tribunals Support"]
+    "aliases": [
+      "ATSSC",
+      "Tribunals Support"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.832752386,
+      "transportation": 0.014095794,
+      "information": 0.010836546,
+      "professional_services": 0.08439869,
+      "rentals": 0.040308356,
+      "maintenance": 0.007821263,
+      "utilities": 0.003580165,
+      "other_subsidies": 0.000104341,
+      "capital": 0.006102459
+    }
   },
   {
     "id": "aecl",
@@ -816,7 +1540,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["AECL", "Atomic Energy"]
+    "aliases": [
+      "AECL",
+      "Atomic Energy"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "catsa",
@@ -829,7 +1559,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CATSA", "Air Transport Security"]
+    "aliases": [
+      "CATSA",
+      "Air Transport Security"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "ccohs",
@@ -842,7 +1578,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CCOHS", "Occupational Health"]
+    "aliases": [
+      "CCOHS",
+      "Occupational Health"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.791133716,
+      "transportation": 0.023780406,
+      "information": 0.005861974,
+      "professional_services": 0.058806171,
+      "rentals": 0.055766748,
+      "maintenance": 0.001310642,
+      "utilities": 0.002400875,
+      "other_subsidies": 0.060115865,
+      "capital": 0.000823603
+    }
   },
   {
     "id": "ccc",
@@ -855,7 +1605,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CCC", "Commercial Corporation"]
+    "aliases": [
+      "CCC",
+      "Commercial Corporation"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "cdc",
@@ -868,7 +1624,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CDC", "Dairy Commission"]
+    "aliases": [
+      "CDC",
+      "Dairy Commission"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "cer",
@@ -881,7 +1643,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CER", "Energy Regulator"]
+    "aliases": [
+      "CER",
+      "Energy Regulator"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.758627965,
+      "transportation": 0.018578617,
+      "information": 0.001667546,
+      "professional_services": 0.111919589,
+      "rentals": 0.01041659,
+      "maintenance": 0.00894594,
+      "utilities": 0.00244031,
+      "transfer_payments": 0.080588262,
+      "other_subsidies": 0.000576074,
+      "capital": 0.006239108
+    }
   },
   {
     "id": "cgc",
@@ -894,7 +1671,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CGC", "Grain Commission"]
+    "aliases": [
+      "CGC",
+      "Grain Commission"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.636216206,
+      "transportation": 0.054609215,
+      "information": 0.002874166,
+      "professional_services": 0.069604156,
+      "rentals": 0.105240448,
+      "maintenance": 0.037364207,
+      "utilities": 0.025867531,
+      "capital": 0.06822407
+    }
   },
   {
     "id": "chars",
@@ -907,7 +1697,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CHARS", "Arctic Research"]
+    "aliases": [
+      "CHARS",
+      "Arctic Research"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.389235652,
+      "transportation": 0.05931039,
+      "information": 0.01236041,
+      "professional_services": 0.077058464,
+      "rentals": 0.044236748,
+      "maintenance": 0.095054348,
+      "utilities": 0.060727809,
+      "transfer_payments": 0.220162844,
+      "other_subsidies": 0.000960628,
+      "capital": 0.040892707
+    }
   },
   {
     "id": "chrc",
@@ -920,7 +1725,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CHRC", "Human Rights Commission"]
+    "aliases": [
+      "CHRC",
+      "Human Rights Commission"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.881608853,
+      "transportation": 0.006668953,
+      "information": 0.003656687,
+      "professional_services": 0.073527789,
+      "rentals": 0.013886563,
+      "maintenance": 0.000831651,
+      "utilities": 0.00162667,
+      "other_subsidies": 0.000246984,
+      "capital": 0.01794585
+    }
   },
   {
     "id": "cics",
@@ -933,7 +1752,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CICS", "Intergovernmental Conference"]
+    "aliases": [
+      "CICS",
+      "Intergovernmental Conference"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.559613939,
+      "transportation": 0.132608884,
+      "information": 0.004391595,
+      "professional_services": 0.192331556,
+      "rentals": 0.091062566,
+      "maintenance": 0.001357049,
+      "utilities": 0.004573156,
+      "capital": 0.014061255
+    }
   },
   {
     "id": "cmhr",
@@ -946,7 +1778,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CMHR", "Human Rights Museum"]
+    "aliases": [
+      "CMHR",
+      "Human Rights Museum"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "cmh",
@@ -959,7 +1797,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CMH", "History Museum"]
+    "aliases": [
+      "CMH",
+      "History Museum"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "cmi",
@@ -972,7 +1816,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CMI", "Immigration Museum"]
+    "aliases": [
+      "CMI",
+      "Immigration Museum"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "cmn",
@@ -985,7 +1835,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CMN", "Nature Museum"]
+    "aliases": [
+      "CMN",
+      "Nature Museum"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "crrf",
@@ -998,7 +1854,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CRRF", "Race Relations"]
+    "aliases": [
+      "CRRF",
+      "Race Relations"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "crtc",
@@ -1011,7 +1873,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CRTC", "Broadcasting Commission"]
+    "aliases": [
+      "CRTC",
+      "Broadcasting Commission"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.782629448,
+      "transportation": 0.019411195,
+      "information": 0.038105059,
+      "professional_services": 0.095599565,
+      "rentals": 0.032236057,
+      "maintenance": 0.0081514,
+      "utilities": 0.001434642,
+      "other_subsidies": 0.000190777,
+      "capital": 0.022241857
+    }
   },
   {
     "id": "ctc",
@@ -1024,7 +1900,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CTC", "Tourism Commission"]
+    "aliases": [
+      "CTC",
+      "Tourism Commission"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "tsb",
@@ -1037,7 +1919,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["TSB", "Transportation Safety Board"]
+    "aliases": [
+      "TSB",
+      "Transportation Safety Board"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.846420008,
+      "transportation": 0.033121261,
+      "information": 0.00417988,
+      "professional_services": 0.067000265,
+      "rentals": 0.018601678,
+      "maintenance": 0.010339703,
+      "utilities": 0.005133194,
+      "capital": 0.015204011
+    }
   },
   {
     "id": "cta",
@@ -1050,7 +1945,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CTA", "Transportation Agency"]
+    "aliases": [
+      "CTA",
+      "Transportation Agency"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.885437858,
+      "transportation": 0.006579506,
+      "information": 0.008880207,
+      "professional_services": 0.050829757,
+      "rentals": 0.030711301,
+      "maintenance": 0.00189675,
+      "utilities": 0.001184976,
+      "capital": 0.014479646
+    }
   },
   {
     "id": "crc",
@@ -1063,7 +1971,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CRC", "RCMP Review"]
+    "aliases": [
+      "CRC",
+      "RCMP Review"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.767876836,
+      "transportation": 0.020824144,
+      "information": 0.001201326,
+      "professional_services": 0.116864585,
+      "rentals": 0.031542029,
+      "maintenance": 0.000682944,
+      "utilities": 0.007088171,
+      "other_subsidies": 0.042902808,
+      "capital": 0.011017157
+    }
   },
   {
     "id": "copyright-board",
@@ -1076,7 +1998,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Copyright Board"]
+    "aliases": [
+      "Copyright Board"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.760849686,
+      "transportation": 0.022440468,
+      "information": 0.022440468,
+      "professional_services": 0.128518806,
+      "rentals": 0.022440468,
+      "maintenance": 0.020196421,
+      "utilities": 0.005161308,
+      "other_subsidies": 0.001122023,
+      "capital": 0.016830351
+    }
   },
   {
     "id": "cas",
@@ -1089,7 +2024,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CAS", "Courts Administration"]
+    "aliases": [
+      "CAS",
+      "Courts Administration"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.497487646,
+      "transportation": 0.018338898,
+      "information": 0.00311738,
+      "professional_services": 0.260493312,
+      "rentals": 0.031834328,
+      "maintenance": 0.003782275,
+      "utilities": 0.016100061,
+      "other_subsidies": 0.000128659,
+      "capital": 0.168717443
+    }
   },
   {
     "id": "women-gender",
@@ -1102,7 +2051,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["WAGE", "Women and Gender"]
+    "aliases": [
+      "WAGE",
+      "Women and Gender"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.134696002,
+      "transportation": 0.002422869,
+      "information": 0.012114346,
+      "professional_services": 0.026920769,
+      "rentals": 0.001884454,
+      "maintenance": 0.000104991,
+      "utilities": 0.000134604,
+      "transfer_payments": 0.818311521,
+      "other_subsidies": 4.577e-06,
+      "capital": 0.003405868
+    }
   },
   {
     "id": "fintrac",
@@ -1115,7 +2079,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["FINTRAC", "Financial Intelligence"]
+    "aliases": [
+      "FINTRAC",
+      "Financial Intelligence"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.721209178,
+      "transportation": 0.00974674,
+      "information": 0.008221218,
+      "professional_services": 0.104235135,
+      "rentals": 0.110813982,
+      "maintenance": 0.005718872,
+      "utilities": 0.001786907,
+      "other_subsidies": 3.2845e-05,
+      "capital": 0.038235124
+    }
   },
   {
     "id": "house-commons",
@@ -1128,7 +2106,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["House of Commons", "Commons"]
+    "aliases": [
+      "House of Commons",
+      "Commons"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.736544564,
+      "transportation": 0.079085292,
+      "information": 0.02541072,
+      "professional_services": 0.038929419,
+      "rentals": 0.037131152,
+      "maintenance": 0.014899881,
+      "utilities": 0.019893045,
+      "transfer_payments": 0.00182529,
+      "other_subsidies": 0.001419472,
+      "capital": 0.044861165
+    }
   },
   {
     "id": "irb",
@@ -1141,7 +2134,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["IRB", "Immigration Board"]
+    "aliases": [
+      "IRB",
+      "Immigration Board"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.774586952,
+      "transportation": 0.010778314,
+      "information": 0.001919502,
+      "professional_services": 0.10599617,
+      "rentals": 0.025176165,
+      "maintenance": 0.035886708,
+      "utilities": 0.002277317,
+      "other_subsidies": 0.000601391,
+      "capital": 0.042777481
+    }
   },
   {
     "id": "iaac",
@@ -1154,7 +2161,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["IAAC", "Impact Assessment"]
+    "aliases": [
+      "IAAC",
+      "Impact Assessment"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.577726939,
+      "transportation": 0.023688483,
+      "information": 0.007106549,
+      "professional_services": 0.172925931,
+      "rentals": 0.002368853,
+      "maintenance": 0.000710652,
+      "utilities": 0.002368853,
+      "transfer_payments": 0.18538823,
+      "other_subsidies": 0.000473757,
+      "capital": 0.027241753
+    }
   },
   {
     "id": "idrc",
@@ -1167,7 +2189,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["IDRC", "Development Research"]
+    "aliases": [
+      "IDRC",
+      "Development Research"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "ijc",
@@ -1180,7 +2208,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["IJC", "International Joint Commission"]
+    "aliases": [
+      "IJC",
+      "International Joint Commission"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.653813077,
+      "transportation": 0.073377673,
+      "information": 0.020012093,
+      "professional_services": 0.212772972,
+      "rentals": 0.023347441,
+      "maintenance": 0.002001209,
+      "utilities": 0.003335349,
+      "capital": 0.011340186
+    }
   },
   {
     "id": "invest-canada",
@@ -1193,7 +2234,19 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Invest Canada", "Investment Hub"]
+    "aliases": [
+      "Invest Canada",
+      "Investment Hub"
+    ],
+    "spendingBreakdown": {
+      "transportation": 0.029931832,
+      "information": 0.855627106,
+      "professional_services": 0.078669319,
+      "rentals": 0.015117087,
+      "maintenance": 0.000302342,
+      "utilities": 0.000907025,
+      "capital": 0.01944529
+    }
   },
   {
     "id": "law-commission",
@@ -1206,7 +2259,19 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Law Commission"]
+    "aliases": [
+      "Law Commission"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.361326712,
+      "transportation": 0.035969961,
+      "information": 0.003659825,
+      "professional_services": 0.25879923,
+      "rentals": 0.084873419,
+      "maintenance": 0.108290211,
+      "utilities": 0.038961243,
+      "capital": 0.108119398
+    }
   },
   {
     "id": "leaders-debates",
@@ -1219,7 +2284,9 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Leaders Debates"]
+    "aliases": [
+      "Leaders Debates"
+    ]
   },
   {
     "id": "library-parliament",
@@ -1232,7 +2299,19 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Library of Parliament"]
+    "aliases": [
+      "Library of Parliament"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.833104085,
+      "transportation": 0.008967534,
+      "information": 0.028743551,
+      "professional_services": 0.050190378,
+      "rentals": 0.011768817,
+      "maintenance": 0.000258378,
+      "utilities": 0.063765098,
+      "capital": 0.00320216
+    }
   },
   {
     "id": "marine-atlantic",
@@ -1245,7 +2324,12 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Marine Atlantic"]
+    "aliases": [
+      "Marine Atlantic"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "mgerc",
@@ -1258,7 +2342,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["MGERC", "Military Grievances"]
+    "aliases": [
+      "MGERC",
+      "Military Grievances"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.768941471,
+      "transportation": 0.002508784,
+      "information": 0.001236204,
+      "professional_services": 0.157936385,
+      "rentals": 0.058481709,
+      "maintenance": 0.003936572,
+      "utilities": 0.001223472,
+      "capital": 0.005735403
+    }
   },
   {
     "id": "mpcc",
@@ -1271,7 +2368,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["MPCC", "Military Police"]
+    "aliases": [
+      "MPCC",
+      "Military Police"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.715914023,
+      "transportation": 0.017183702,
+      "information": 0.008949845,
+      "professional_services": 0.158770248,
+      "rentals": 0.08484453,
+      "maintenance": 0.000894984,
+      "utilities": 0.001270878,
+      "capital": 0.012171789
+    }
   },
   {
     "id": "nac",
@@ -1284,7 +2394,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["NAC", "Arts Centre"]
+    "aliases": [
+      "NAC",
+      "Arts Centre"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "ncc",
@@ -1297,7 +2413,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["NCC", "Capital Commission"]
+    "aliases": [
+      "NCC",
+      "Capital Commission"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "ngc",
@@ -1310,7 +2432,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["NGC", "National Gallery"]
+    "aliases": [
+      "NGC",
+      "National Gallery"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "nmst",
@@ -1323,7 +2451,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["NMST", "Science Museum"]
+    "aliases": [
+      "NMST",
+      "Science Museum"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "nsira",
@@ -1336,7 +2470,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["NSIRA", "Security Review"]
+    "aliases": [
+      "NSIRA",
+      "Security Review"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.717236054,
+      "transportation": 0.037191269,
+      "information": 0.004127825,
+      "professional_services": 0.194303949,
+      "rentals": 0.01679373,
+      "maintenance": 0.023666613,
+      "utilities": 0.003150182,
+      "capital": 0.003530377
+    }
   },
   {
     "id": "npa",
@@ -1349,7 +2496,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["NPA", "Pipeline Agency"]
+    "aliases": [
+      "NPA",
+      "Pipeline Agency"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.429494269,
+      "transportation": 0.043885056,
+      "information": 0.001755402,
+      "professional_services": 0.49151263,
+      "rentals": 0.021064827,
+      "maintenance": 0.001755402,
+      "utilities": 0.001755402,
+      "capital": 0.008777011
+    }
   },
   {
     "id": "oic",
@@ -1362,7 +2522,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["OIC", "Infrastructure Canada"]
+    "aliases": [
+      "OIC",
+      "Infrastructure Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.019300572,
+      "transportation": 0.000208209,
+      "information": 0.000195134,
+      "professional_services": 0.00595312,
+      "rentals": 0.000417692,
+      "maintenance": 0.002350429,
+      "utilities": 1.345e-06,
+      "transfer_payments": 0.963946283,
+      "public_debt": 0.005167608,
+      "capital": 0.002459609
+    }
   },
   {
     "id": "oag",
@@ -1375,7 +2550,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["OAG", "Auditor General"]
+    "aliases": [
+      "OAG",
+      "Auditor General"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.806804688,
+      "transportation": 0.020757156,
+      "information": 0.01076297,
+      "professional_services": 0.10716843,
+      "rentals": 0.024362751,
+      "maintenance": 0.00092254,
+      "utilities": 0.002667679,
+      "other_subsidies": 0.000768784,
+      "capital": 0.025785001
+    }
   },
   {
     "id": "oceo",
@@ -1388,7 +2577,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Elections Canada", "Chief Electoral Officer"]
+    "aliases": [
+      "Elections Canada",
+      "Chief Electoral Officer"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.522669967,
+      "transportation": 0.021406516,
+      "information": 0.020261073,
+      "professional_services": 0.273257587,
+      "rentals": 0.090658665,
+      "maintenance": 0.036824347,
+      "utilities": 0.005473911,
+      "transfer_payments": 0.003278204,
+      "capital": 0.026169728
+    }
   },
   {
     "id": "ocfja",
@@ -1401,7 +2604,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["OCFJA", "Federal Judicial Affairs"]
+    "aliases": [
+      "OCFJA",
+      "Federal Judicial Affairs"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.933944428,
+      "transportation": 0.029561193,
+      "information": 0.000159681,
+      "professional_services": 0.021996392,
+      "rentals": 0.000892184,
+      "maintenance": 5.196e-05,
+      "utilities": 7.0969e-05,
+      "other_subsidies": 0.012802331,
+      "capital": 0.000520863
+    }
   },
   {
     "id": "ocl",
@@ -1414,7 +2631,19 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Commissioner of Lobbying"]
+    "aliases": [
+      "Commissioner of Lobbying"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.781315003,
+      "transportation": 0.010257578,
+      "information": 0.007810964,
+      "professional_services": 0.159537957,
+      "rentals": 0.013910205,
+      "maintenance": 0.001008397,
+      "utilities": 0.001804907,
+      "capital": 0.024354989
+    }
   },
   {
     "id": "ocol",
@@ -1427,7 +2656,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Official Languages", "Commissioner of Official Languages"]
+    "aliases": [
+      "Official Languages",
+      "Commissioner of Official Languages"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.801124389,
+      "transportation": 0.019887573,
+      "information": 0.010938177,
+      "professional_services": 0.109381494,
+      "rentals": 0.013921309,
+      "maintenance": 0.009943786,
+      "utilities": 0.003977522,
+      "public_debt": 0.00099439,
+      "capital": 0.029831359
+    }
   },
   {
     "id": "ecie",
@@ -1440,7 +2683,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Ethics Commissioner", "Conflict of Interest"]
+    "aliases": [
+      "Ethics Commissioner",
+      "Conflict of Interest"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.833940349,
+      "transportation": 0.014275448,
+      "information": 0.013363554,
+      "professional_services": 0.119258642,
+      "rentals": 0.007169792,
+      "maintenance": 0.000583052,
+      "utilities": 0.002710026,
+      "capital": 0.008699137
+    }
   },
   {
     "id": "ocic",
@@ -1453,7 +2709,18 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Correctional Investigator"]
+    "aliases": [
+      "Correctional Investigator"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.804700224,
+      "transportation": 0.020100745,
+      "information": 0.014740546,
+      "professional_services": 0.134059506,
+      "rentals": 0.006700248,
+      "maintenance": 0.004958184,
+      "utilities": 0.014740546
+    }
   },
   {
     "id": "odpp",
@@ -1466,7 +2733,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["DPP", "Public Prosecutions"]
+    "aliases": [
+      "DPP",
+      "Public Prosecutions"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.718072562,
+      "transportation": 0.029721734,
+      "information": 0.001839906,
+      "professional_services": 0.197950158,
+      "rentals": 0.012245147,
+      "maintenance": 0.009827759,
+      "utilities": 0.006733272,
+      "capital": 0.023609462
+    }
   },
   {
     "id": "oggs",
@@ -1479,7 +2759,10 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Governor General", "Rideau Hall"]
+    "aliases": [
+      "Governor General",
+      "Rideau Hall"
+    ]
   },
   {
     "id": "oic-intelligence",
@@ -1492,7 +2775,19 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Intelligence Commissioner"]
+    "aliases": [
+      "Intelligence Commissioner"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.512117733,
+      "transportation": 0.010481965,
+      "information": 0.011646627,
+      "professional_services": 0.289224579,
+      "rentals": 0.126171796,
+      "maintenance": 0.038822091,
+      "utilities": 0.007652999,
+      "capital": 0.003882209
+    }
   },
   {
     "id": "opsic",
@@ -1505,7 +2800,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Integrity Commissioner"]
+    "aliases": [
+      "Integrity Commissioner"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.765596397,
+      "transportation": 0.036378364,
+      "information": 0.003823549,
+      "professional_services": 0.163059585,
+      "rentals": 0.012283327,
+      "maintenance": 0.000329687,
+      "utilities": 0.000434363,
+      "transfer_payments": 0.008242184,
+      "other_subsidies": 0.000247266,
+      "capital": 0.009605277
+    }
   },
   {
     "id": "oseo",
@@ -1518,7 +2827,19 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Senate Ethics"]
+    "aliases": [
+      "Senate Ethics"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.752989949,
+      "transportation": 0.011896555,
+      "information": 0.003130672,
+      "professional_services": 0.219147067,
+      "rentals": 0.003756807,
+      "maintenance": 0.000626134,
+      "utilities": 0.004696009,
+      "capital": 0.003756807
+    }
   },
   {
     "id": "oipc",
@@ -1531,7 +2852,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Privacy Commissioner", "Information Commissioner"]
+    "aliases": [
+      "Privacy Commissioner",
+      "Information Commissioner"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.843592908,
+      "transportation": 0.010437257,
+      "information": 0.008886438,
+      "professional_services": 0.085119213,
+      "rentals": 0.021398224,
+      "maintenance": 0.003302705,
+      "utilities": 0.001360773,
+      "transfer_payments": 0.009736919,
+      "other_subsidies": 0.000238262,
+      "capital": 0.015927302
+    }
   },
   {
     "id": "pbc",
@@ -1544,7 +2880,19 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Parole Board"]
+    "aliases": [
+      "Parole Board"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.820258355,
+      "transportation": 0.030635691,
+      "information": 0.001355562,
+      "professional_services": 0.135556154,
+      "rentals": 0.005557802,
+      "maintenance": 0.000704892,
+      "utilities": 0.002135972,
+      "capital": 0.003795572
+    }
   },
   {
     "id": "pmprb",
@@ -1557,7 +2905,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["PMPRB", "Medicine Prices"]
+    "aliases": [
+      "PMPRB",
+      "Medicine Prices"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.61480368,
+      "transportation": 0.013934089,
+      "information": 0.07286248,
+      "professional_services": 0.268437923,
+      "rentals": 0.007038187,
+      "maintenance": 0.003554594,
+      "utilities": 0.000563506,
+      "other_subsidies": 0.002630389,
+      "capital": 0.016175152
+    }
   },
   {
     "id": "pps",
@@ -1570,7 +2932,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["PPS", "Parliamentary Security"]
+    "aliases": [
+      "PPS",
+      "Parliamentary Security"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.836256264,
+      "transportation": 0.00315909,
+      "information": 0.000339484,
+      "professional_services": 0.090195397,
+      "rentals": 0.011857019,
+      "maintenance": 0.007855658,
+      "utilities": 0.010822355,
+      "other_subsidies": 0.018998025,
+      "capital": 0.020516708
+    }
   },
   {
     "id": "rsc",
@@ -1583,7 +2959,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Supreme Court Registrar"]
+    "aliases": [
+      "Supreme Court Registrar"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.806607234,
+      "transportation": 0.03577726,
+      "information": 0.007768151,
+      "professional_services": 0.058025754,
+      "rentals": 0.026061282,
+      "maintenance": 0.004625834,
+      "utilities": 0.026987236,
+      "other_subsidies": 0.000175347,
+      "capital": 0.033971903
+    }
   },
   {
     "id": "crerc",
@@ -1596,7 +2985,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["RCMP External Review"]
+    "aliases": [
+      "RCMP External Review"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.765715123,
+      "transportation": 0.009199186,
+      "information": 0.006132791,
+      "professional_services": 0.135393624,
+      "rentals": 0.007665989,
+      "maintenance": 0.003066395,
+      "utilities": 0.008432587,
+      "other_subsidies": 0.039863141,
+      "capital": 0.024531163
+    }
   },
   {
     "id": "nsicop",
@@ -1609,7 +3011,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["NSICOP", "Security Committee"]
+    "aliases": [
+      "NSICOP",
+      "Security Committee"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.515945009,
+      "transportation": 0.015704994,
+      "information": 0.003197871,
+      "professional_services": 0.421667473,
+      "rentals": 0.039472397,
+      "utilities": 0.002166048,
+      "other_subsidies": 4.2466e-05,
+      "capital": 0.001803741
+    }
   },
   {
     "id": "senate",
@@ -1622,7 +3037,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Senate of Canada"]
+    "aliases": [
+      "Senate of Canada"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.744042431,
+      "transportation": 0.092293417,
+      "information": 0.015730803,
+      "professional_services": 0.064468249,
+      "rentals": 0.024831496,
+      "maintenance": 0.013798862,
+      "utilities": 0.007549405,
+      "transfer_payments": 0.003336583,
+      "other_subsidies": 0.000261736,
+      "capital": 0.033687018
+    }
   },
   {
     "id": "scc",
@@ -1635,7 +3064,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["SCC", "Standards Council"]
+    "aliases": [
+      "SCC",
+      "Standards Council"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "fbc",
@@ -1648,7 +3083,12 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Federal Bridge Corporation"]
+    "aliases": [
+      "Federal Bridge Corporation"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "jccbi",
@@ -1661,7 +3101,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["JCCBI", "Champlain Bridges"]
+    "aliases": [
+      "JCCBI",
+      "Champlain Bridges"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "nbc",
@@ -1674,7 +3120,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["National Battlefields", "Plains of Abraham"]
+    "aliases": [
+      "National Battlefields",
+      "Plains of Abraham"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.246953598,
+      "transportation": 0.004911175,
+      "information": 0.011868673,
+      "professional_services": 0.1556788,
+      "rentals": 0.003274117,
+      "maintenance": 0.411561487,
+      "utilities": 0.020463229,
+      "other_subsidies": 0.118686726,
+      "capital": 0.026602197
+    }
   },
   {
     "id": "via-hfr",
@@ -1687,7 +3147,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["VIA HFR", "High-Frequency Rail"]
+    "aliases": [
+      "VIA HFR",
+      "High-Frequency Rail"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "wdba",
@@ -1700,7 +3166,13 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["WDBA", "Gordie Howe Bridge"]
+    "aliases": [
+      "WDBA",
+      "Gordie Howe Bridge"
+    ],
+    "spendingBreakdown": {
+      "other_subsidies": 1.0
+    }
   },
   {
     "id": "psc",
@@ -1713,85 +3185,119 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["PSC", "Public Service Commission"]
+    "aliases": [
+      "PSC",
+      "Public Service Commission"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.877276484,
+      "transportation": 0.000789271,
+      "information": 0.001580914,
+      "professional_services": 0.099758795,
+      "rentals": 0.009895526,
+      "maintenance": 0.00043374,
+      "utilities": 0.000860374,
+      "other_subsidies": 0.000860374,
+      "capital": 0.008544522
+    }
   },
   {
     "id": "clcc",
     "name": "Canadian Lakes Loaches Commission",
     "type": "Agency",
-    "parent": "fisheries",
+    "parent": null,
     "budget": 0,
     "budgetVerified": true,
-    "description": "Commission managing fisheries on the Great Lakes.",
+    "description": "Commission managing fisheries on the Great Lakes. [Does not appear in any federal registry or official publication. Likely a placeholder or fabricated entry — flagged for removal.]",
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CLCC"]
+    "aliases": [
+      "CLCC"
+    ],
+    "status": "fictional"
   },
   {
     "id": "ridley",
     "name": "Ridley Terminals Inc.",
     "type": "CrownCorporation",
-    "parent": "transport",
+    "parent": null,
     "budget": 0,
     "budgetVerified": true,
-    "description": "Crown corporation operating coal terminals in British Columbia.",
-    "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
+    "description": "Crown corporation operating coal terminals in British Columbia. [Sold December 2019: 90% divested to Riverstone/AMCI for $350M, 10% to a Lax Kw'alaams-Metlakatla First Nations partnership (CDEV). No longer a Crown corporation.]",
+    "source": "https://cdev.gc.ca/divestment-of-ridley-terminals-inc-closes/",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Ridley Terminals"]
+    "aliases": [
+      "Ridley Terminals"
+    ],
+    "status": "defunct"
   },
   {
     "id": "old-port",
     "name": "Old Port of Montreal Corporation Inc.",
     "type": "CrownCorporation",
-    "parent": "transport",
+    "parent": null,
     "budget": 0,
     "budgetVerified": true,
-    "description": "Crown corporation managing the Old Port of Montreal.",
-    "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
+    "description": "Crown corporation managing the Old Port of Montreal. [Amalgamated into Canada Lands Company CLC Ltd., November 2012; continues only as an operating division.]",
+    "source": "https://www.canada.ca/en/news/archive/2012/11/harper-government-takes-action-enhance-accountability-consolidating-canada-lands-subsidiaries.html",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Old Port Montreal"]
+    "aliases": [
+      "Old Port Montreal"
+    ],
+    "status": "defunct"
   },
   {
     "id": "parc-downsview",
     "name": "Parc Downsview Park Inc.",
     "type": "CrownCorporation",
-    "parent": "ISED",
+    "parent": null,
     "budget": 0,
     "budgetVerified": true,
-    "description": "Crown corporation managing Downsview Park in Toronto.",
-    "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
+    "description": "Crown corporation managing Downsview Park in Toronto. [Amalgamated into Canada Lands Company CLC Ltd., November 2012; continues only as an operating division.]",
+    "source": "https://www.canada.ca/en/news/archive/2012/11/harper-government-takes-action-enhance-accountability-consolidating-canada-lands-subsidiaries.html",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["Downsview Park"]
+    "aliases": [
+      "Downsview Park"
+    ],
+    "status": "defunct"
   },
   {
     "id": "defence-construction",
     "name": "Defence Construction Canada",
     "type": "CrownCorporation",
     "parent": "national-defence",
-    "budget": 0,
+    "budget": 179952000,
     "budgetVerified": true,
     "description": "Crown corporation providing construction management services for defence projects. Not included in Main Estimates.",
-    "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
-    "sourceParsedDate": "2026-06-07",
+    "source": "https://www.dcc-cdc.gc.ca/documents/reports/Annual_Report_2023-24_Accessible2.pdf",
+    "sourceParsedDate": "2026-10-26",
     "lastUpdated": "2026-06-07",
-    "aliases": ["DCC", "Defence Construction"]
+    "aliases": [
+      "DCC",
+      "Defence Construction"
+    ],
+    "budgetContext": "Services revenue, not an appropriation — DCC bills DND, CSE, and Shared Services for contract management; roughly $1.3B in contract payments pass through to construction contractors."
   },
   {
     "id": "cib",
     "name": "Canada Infrastructure Bank",
     "type": "CrownCorporation",
     "parent": "ISED",
-    "budget": 0,
+    "budget": 3619719000,
     "budgetVerified": true,
     "description": "Crown corporation investing in major infrastructure projects. Budget included in Office of Infrastructure of Canada.",
-    "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
-    "sourceParsedDate": "2026-06-07",
+    "source": "https://www.canada.ca/en/department-finance/corporate/transparency/2025/cow-cp-scenario-notes-eng.html",
+    "sourceParsedDate": "2026-10-26",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CIB", "Infrastructure Bank"]
+    "aliases": [
+      "CIB",
+      "Infrastructure Bank"
+    ],
+    "budgetContext": "Statutory investment capital, not operating expense — the Bank makes repayable loans and equity investments in infrastructure. Parliament authorized up to $35B in payments; the maximum cost to taxpayers is capped at $15B."
   },
   {
     "id": "cnsc",
@@ -1804,7 +3310,22 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CNSC", "Nuclear Safety"]
+    "aliases": [
+      "CNSC",
+      "Nuclear Safety"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.756059699,
+      "transportation": 0.031901832,
+      "information": 0.006621135,
+      "professional_services": 0.104433355,
+      "rentals": 0.018057641,
+      "maintenance": 0.020145941,
+      "utilities": 0.003009607,
+      "transfer_payments": 0.041111229,
+      "other_subsidies": 0.000601921,
+      "capital": 0.018057641
+    }
   },
   {
     "id": "casp",
@@ -1817,7 +3338,20 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CSPS", "Public Service School"]
+    "aliases": [
+      "CSPS",
+      "Public Service School"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.856944697,
+      "transportation": 0.004338016,
+      "information": 0.007396062,
+      "professional_services": 0.06266916,
+      "rentals": 0.046965753,
+      "maintenance": 0.000951425,
+      "utilities": 0.000590115,
+      "capital": 0.020144772
+    }
   },
   {
     "id": "casdo",
@@ -1830,7 +3364,21 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["CASDO", "Accessibility Standards"]
+    "aliases": [
+      "CASDO",
+      "Accessibility Standards"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.295926181,
+      "transportation": 0.015215787,
+      "information": 0.024345231,
+      "professional_services": 0.209977778,
+      "rentals": 0.039561018,
+      "maintenance": 0.003043148,
+      "utilities": 0.003043148,
+      "transfer_payments": 0.399758264,
+      "capital": 0.009129444
+    }
   },
   {
     "id": "vrab",
@@ -1843,6 +3391,73 @@
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
     "lastUpdated": "2026-06-07",
-    "aliases": ["VRAB", "Veterans Appeal Board"]
+    "aliases": [
+      "VRAB",
+      "Veterans Appeal Board"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.924224976,
+      "transportation": 0.024079813,
+      "information": 0.000460281,
+      "professional_services": 0.031603111,
+      "rentals": 0.006362827,
+      "maintenance": 7.309e-06,
+      "utilities": 0.010893567,
+      "other_subsidies": 5.005e-06,
+      "capital": 0.002363109
+    }
+  },
+  {
+    "id": "leaders-debates-commission",
+    "name": "Leaders' Debates Commission",
+    "type": "Agency",
+    "parent": "parliament",
+    "budget": 3513078,
+    "budgetVerified": true,
+    "description": "Independent body responsible for organizing the federal leaders' debates during general elections.",
+    "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
+    "sourceParsedDate": "2026-06-07",
+    "lastUpdated": "2026-10-26",
+    "aliases": [
+      "Leaders Debates Commission",
+      "Debates Commission"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.211893103,
+      "transportation": 0.016149086,
+      "information": 0.05439105,
+      "professional_services": 0.713632888,
+      "rentals": 0.001997678,
+      "other_subsidies": 0.001936194
+    }
+  },
+  {
+    "id": "office-governor-generals-secretary",
+    "name": "Office of the Governor General's Secretary",
+    "type": "Agency",
+    "parent": "parliament",
+    "budget": 25570788,
+    "budgetVerified": true,
+    "description": "Supports the Governor General in carrying out constitutional, ceremonial, and community duties; administers the Canadian honours system.",
+    "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
+    "sourceParsedDate": "2026-06-07",
+    "lastUpdated": "2026-10-26",
+    "aliases": [
+      "OGGS",
+      "Governor General's Office",
+      "Rideau Hall"
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.733468753,
+      "transportation": 0.052392676,
+      "information": 0.031891196,
+      "professional_services": 0.066060342,
+      "rentals": 0.025057382,
+      "maintenance": 0.001138956,
+      "utilities": 0.022779431,
+      "transfer_payments": 0.038737015,
+      "other_subsidies": 0.001138956,
+      "capital": 0.027335294
+    }
   }
 ]

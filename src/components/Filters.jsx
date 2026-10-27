@@ -1,25 +1,25 @@
-import React, { useState } from 'react'
+const MILLION = 1000000
+const SLIDER_MAX_MILLIONS = 150000 // covers the largest entity (~$143B)
 
-const Filters = ({ onFilterChange }) => {
-  const [type, setType] = useState('all')
-  const [budgetThreshold, setBudgetThreshold] = useState(0)
+// Controlled component — filter state lives in App (single source of
+// truth, enables programmatic reset) and flows down via `filters`.
+const Filters = ({ filters, onFilterChange }) => {
+  const { type, budgetThreshold } = filters
 
   const handleTypeChange = (e) => {
-    const newType = e.target.value
-    setType(newType)
-    onFilterChange({ type: newType, budgetThreshold })
+    onFilterChange({ type: e.target.value, budgetThreshold })
   }
 
+  // Number input is denominated in $M — keep it consistent with the
+  // slider and preset buttons (previously it set raw dollars).
   const handleBudgetChange = (e) => {
-    const newThreshold = parseInt(e.target.value) || 0
-    setBudgetThreshold(newThreshold)
+    const millions = parseFloat(e.target.value)
+    const newThreshold = Number.isFinite(millions) ? Math.max(0, millions) * MILLION : 0
     onFilterChange({ type, budgetThreshold: newThreshold })
   }
 
   const handleSliderChange = (e) => {
-    const newThreshold = parseInt(e.target.value) * 1000000
-    setBudgetThreshold(newThreshold)
-    onFilterChange({ type, budgetThreshold: newThreshold })
+    onFilterChange({ type, budgetThreshold: parseFloat(e.target.value) * MILLION })
   }
 
   const presetBudgets = [0, 100, 500, 1000, 5000, 10000]
@@ -53,7 +53,7 @@ const Filters = ({ onFilterChange }) => {
         <input
           id="budget-filter"
           type="number"
-          value={budgetThreshold / 1000000}
+          value={budgetThreshold / MILLION}
           onChange={handleBudgetChange}
           placeholder="0"
           min="0"
@@ -61,10 +61,11 @@ const Filters = ({ onFilterChange }) => {
         />
         <input
           type="range"
+          aria-label="Minimum budget filter"
           min="0"
-          max="35000"
-          step="100"
-          value={budgetThreshold / 1000000}
+          max={SLIDER_MAX_MILLIONS}
+          step="500"
+          value={Math.min(budgetThreshold / MILLION, SLIDER_MAX_MILLIONS)}
           onChange={handleSliderChange}
           className="w-32 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
         />
@@ -75,12 +76,10 @@ const Filters = ({ onFilterChange }) => {
           <button
             key={preset}
             onClick={() => {
-              const newThreshold = preset * 1000000
-              setBudgetThreshold(newThreshold)
-              onFilterChange({ type, budgetThreshold: newThreshold })
+              onFilterChange({ type, budgetThreshold: preset * MILLION })
             }}
             className={`px-2 py-1 text-xs rounded ${
-              budgetThreshold === preset * 1000000
+              budgetThreshold === preset * MILLION
                 ? 'bg-white text-red-700 font-medium'
                 : 'bg-red-600 text-white hover:bg-red-500'
             }`}

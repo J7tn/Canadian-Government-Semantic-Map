@@ -80,11 +80,6 @@
     "type": "reports_to"
   },
   {
-    "from": "ukraine",
-    "to": "global-affairs",
-    "type": "reports_to"
-  },
-  {
     "from": "canada-post",
     "to": "ISED",
     "type": "reports_to"
@@ -137,67 +132,80 @@
   {
     "from": "treasury-board",
     "to": "national-defence",
-    "type": "funds"
+    "type": "funds",
+    "amount": 30584803954
   },
   {
     "from": "treasury-board",
     "to": "indigenous-services",
-    "type": "funds"
+    "type": "funds",
+    "amount": 21038891053
   },
   {
     "from": "treasury-board",
     "to": "health",
-    "type": "funds"
+    "type": "funds",
+    "amount": 8678602524
   },
   {
     "from": "treasury-board",
     "to": "ISED",
-    "type": "funds"
+    "type": "funds",
+    "amount": 6135005455
   },
   {
     "from": "treasury-board",
     "to": "transport",
-    "type": "funds"
+    "type": "funds",
+    "amount": 3651829173
   },
   {
     "from": "treasury-board",
     "to": "agriculture",
-    "type": "funds"
+    "type": "funds",
+    "amount": 3742023674
   },
   {
     "from": "treasury-board",
     "to": "fisheries",
-    "type": "funds"
+    "type": "funds",
+    "amount": 4685180404
   },
   {
     "from": "treasury-board",
     "to": "public-safety",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1605273828
   },
   {
     "from": "treasury-board",
     "to": "immigration",
-    "type": "funds"
+    "type": "funds",
+    "amount": 4194448625
   },
   {
     "from": "treasury-board",
     "to": "environment",
-    "type": "funds"
+    "type": "funds",
+    "amount": 2760969226
   },
   {
     "from": "treasury-board",
     "to": "natural-resources",
-    "type": "funds"
+    "type": "funds",
+    "amount": 5551139953
   },
   {
     "from": "treasury-board",
     "to": "justice",
-    "type": "funds"
+    "type": "funds",
+    "amount": 927911871
   },
   {
     "from": "treasury-board",
     "to": "global-affairs",
-    "type": "funds"
+    "type": "funds",
+    "amount": 8808093823
   },
   {
     "from": "global-affairs",
@@ -207,111 +215,125 @@
   {
     "from": "ISED",
     "to": "canada-post",
-    "type": "funds"
+    "type": "funds",
+    "amount": 22210000
   },
   {
     "from": "transport",
     "to": "via-rail",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1159349066
   },
   {
     "from": "environment",
     "to": "parks-canada",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1229206968
   },
   {
     "from": "health",
     "to": "public-health",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1868507260
   },
   {
     "from": "health",
     "to": "food-inspection",
-    "type": "funds"
+    "type": "funds",
+    "amount": 856278798
   },
   {
     "from": "public-safety",
     "to": "rcmp",
-    "type": "funds"
+    "type": "funds",
+    "amount": 4847756099
   },
   {
     "from": "public-safety",
     "to": "csis",
-    "type": "funds"
+    "type": "funds",
+    "amount": 702623985
   },
   {
     "from": "public-safety",
     "to": "border-services",
-    "type": "funds"
+    "type": "funds",
+    "amount": 2649606362
   },
   {
     "from": "ISED",
     "to": "statistics-canada",
-    "type": "funds"
+    "type": "funds",
+    "amount": 736640333
   },
   {
     "from": "ISED",
     "to": "patent-office",
-    "type": "funds"
+    "type": "funds",
+    "amount": 226277065
   },
   {
     "from": "parliament",
     "to": "privy-council",
-    "type": "funds"
+    "type": "funds",
+    "amount": 243350586
   },
   {
     "from": "parliament",
     "to": "treasury-board",
-    "type": "funds"
+    "type": "funds",
+    "amount": 9344293029
   },
   {
     "from": "parliament",
     "to": "finance",
-    "type": "funds"
+    "type": "funds",
+    "amount": 143050168848
   },
   {
     "from": "parliament",
     "to": "justice",
-    "type": "funds"
+    "type": "funds",
+    "amount": 927911871
   },
   {
-    "from": "rcmp",
-    "to": "public-safety",
+    "from": "public-safety",
+    "to": "rcmp",
     "type": "oversees"
   },
   {
-    "from": "csis",
-    "to": "public-safety",
+    "from": "public-safety",
+    "to": "csis",
     "type": "oversees"
   },
   {
-    "from": "border-services",
-    "to": "public-safety",
+    "from": "public-safety",
+    "to": "border-services",
     "type": "oversees"
   },
   {
-    "from": "public-health",
-    "to": "health",
+    "from": "health",
+    "to": "public-health",
     "type": "oversees"
   },
   {
-    "from": "food-inspection",
-    "to": "health",
+    "from": "health",
+    "to": "food-inspection",
     "type": "oversees"
   },
   {
-    "from": "parks-canada",
-    "to": "environment",
+    "from": "environment",
+    "to": "parks-canada",
     "type": "oversees"
   },
   {
-    "from": "statistics-canada",
-    "to": "ISED",
+    "from": "ISED",
+    "to": "statistics-canada",
     "type": "oversees"
   },
   {
-    "from": "patent-office",
-    "to": "ISED",
+    "from": "ISED",
+    "to": "patent-office",
     "type": "oversees"
   },
   {
@@ -432,11 +454,6 @@
   {
     "from": "cirnac",
     "to": "parliament",
-    "type": "reports_to"
-  },
-  {
-    "from": "clcc",
-    "to": "fisheries",
     "type": "reports_to"
   },
   {
@@ -740,11 +757,6 @@
     "type": "reports_to"
   },
   {
-    "from": "old-port",
-    "to": "transport",
-    "type": "reports_to"
-  },
-  {
     "from": "opsic",
     "to": "parliament",
     "type": "reports_to"
@@ -756,11 +768,6 @@
   },
   {
     "from": "pacific-economic",
-    "to": "ISED",
-    "type": "reports_to"
-  },
-  {
-    "from": "parc-downsview",
     "to": "ISED",
     "type": "reports_to"
   },
@@ -785,11 +792,6 @@
     "type": "reports_to"
   },
   {
-    "from": "privy-council",
-    "to": "parliament",
-    "type": "reports_to"
-  },
-  {
     "from": "psc",
     "to": "treasury-board",
     "type": "reports_to"
@@ -797,11 +799,6 @@
   {
     "from": "pspc",
     "to": "parliament",
-    "type": "reports_to"
-  },
-  {
-    "from": "ridley",
-    "to": "transport",
     "type": "reports_to"
   },
   {
@@ -877,172 +874,206 @@
   {
     "from": "parliament",
     "to": "health",
-    "type": "funds"
+    "type": "funds",
+    "amount": 8678602524
   },
   {
     "from": "parliament",
     "to": "ISED",
-    "type": "funds"
+    "type": "funds",
+    "amount": 6135005455
   },
   {
     "from": "parliament",
     "to": "environment",
-    "type": "funds"
+    "type": "funds",
+    "amount": 2760969226
   },
   {
     "from": "parliament",
     "to": "national-defence",
-    "type": "funds"
+    "type": "funds",
+    "amount": 30584803954
   },
   {
     "from": "parliament",
     "to": "public-safety",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1605273828
   },
   {
     "from": "parliament",
     "to": "indigenous-services",
-    "type": "funds"
+    "type": "funds",
+    "amount": 21038891053
   },
   {
     "from": "parliament",
     "to": "immigration",
-    "type": "funds"
+    "type": "funds",
+    "amount": 4194448625
   },
   {
     "from": "parliament",
     "to": "transport",
-    "type": "funds"
+    "type": "funds",
+    "amount": 3651829173
   },
   {
     "from": "parliament",
     "to": "agriculture",
-    "type": "funds"
+    "type": "funds",
+    "amount": 3742023674
   },
   {
     "from": "parliament",
     "to": "fisheries",
-    "type": "funds"
+    "type": "funds",
+    "amount": 4685180404
   },
   {
     "from": "parliament",
     "to": "esdc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 98732220093
   },
   {
     "from": "parliament",
     "to": "cra",
-    "type": "funds"
+    "type": "funds",
+    "amount": 17579455563
   },
   {
     "from": "parliament",
     "to": "cirnac",
-    "type": "funds"
+    "type": "funds",
+    "amount": 10913250553
   },
   {
     "from": "parliament",
     "to": "pspc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 4784233010
   },
   {
     "from": "parliament",
     "to": "veterans-affairs",
-    "type": "funds"
+    "type": "funds",
+    "amount": 6214030778
   },
   {
     "from": "parliament",
     "to": "canadian-heritage",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1893268040
   },
   {
     "from": "parliament",
     "to": "shared-services",
-    "type": "funds"
+    "type": "funds",
+    "amount": 2480039758
   },
   {
     "from": "public-safety",
     "to": "correctional-service",
-    "type": "funds"
+    "type": "funds",
+    "amount": 3171276066
   },
   {
     "from": "parliament",
     "to": "cmhc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 5627708332
   },
   {
     "from": "parliament",
     "to": "nrc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1595142974
   },
   {
     "from": "canadian-heritage",
     "to": "canada-council-arts",
-    "type": "funds"
+    "type": "funds",
+    "amount": 363758160
   },
   {
     "from": "canadian-heritage",
     "to": "telefilm",
-    "type": "funds"
+    "type": "funds",
+    "amount": 103308591
   },
   {
     "from": "parliament",
     "to": "canada-space-agency",
-    "type": "funds"
+    "type": "funds",
+    "amount": 413967469
   },
   {
     "from": "parliament",
     "to": "nsERC",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1383834006
   },
   {
     "from": "parliament",
     "to": "sshrc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1197931895
   },
   {
     "from": "health",
     "to": "cihr",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1369560720
   },
   {
     "from": "public-safety",
     "to": "cse",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1041683002
   },
   {
     "from": "finance",
     "to": "ofsi",
-    "type": "funds"
+    "type": "funds",
+    "amount": 321937861
   },
   {
     "from": "parliament",
     "to": "pbo",
-    "type": "funds"
+    "type": "funds",
+    "amount": 7870893
   },
   {
     "from": "parliament",
     "to": "natural-resources",
-    "type": "funds"
+    "type": "funds",
+    "amount": 5551139953
   },
   {
     "from": "parliament",
     "to": "global-affairs",
-    "type": "funds"
+    "type": "funds",
+    "amount": 8808093823
   },
   {
     "from": "parliament",
     "to": "statistics-canada",
-    "type": "funds"
+    "type": "funds",
+    "amount": 736640333
   },
   {
     "from": "canadian-heritage",
     "to": "library-archives",
-    "type": "funds"
+    "type": "funds",
+    "amount": 199806690
   },
   {
     "from": "canadian-heritage",
     "to": "national-film-board",
-    "type": "funds"
+    "type": "funds",
+    "amount": 71954082
   },
   {
     "from": "global-affairs",
@@ -1052,1096 +1083,1168 @@
   {
     "from": "canadian-heritage",
     "to": "cbc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1383237411
   },
   {
     "from": "ISED",
     "to": "acoa",
-    "type": "funds"
+    "type": "funds",
+    "amount": 385643353
   },
   {
     "from": "ISED",
     "to": "canada-northern",
-    "type": "funds"
+    "type": "funds",
+    "amount": 71387976
   },
   {
     "from": "ISED",
     "to": "feddev-ontario",
-    "type": "funds"
+    "type": "funds",
+    "amount": 228681532
   },
   {
     "from": "ISED",
     "to": "fednor",
-    "type": "funds"
+    "type": "funds",
+    "amount": 55141574
   },
   {
     "from": "ISED",
     "to": "ced-quebec",
-    "type": "funds"
+    "type": "funds",
+    "amount": 316189481
   },
   {
     "from": "ISED",
     "to": "pacific-economic",
-    "type": "funds"
+    "type": "funds",
+    "amount": 120771053
   },
   {
     "from": "ISED",
     "to": "western-diversification",
-    "type": "funds"
+    "type": "funds",
+    "amount": 321336012
   },
   {
     "from": "justice",
     "to": "atsc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 80658913
   },
   {
     "from": "natural-resources",
     "to": "aecl",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1591309916
   },
   {
     "from": "transport",
     "to": "catsa",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1194373969
   },
   {
     "from": "esdc",
     "to": "ccohs",
-    "type": "funds"
+    "type": "funds",
+    "amount": 11596606
   },
   {
     "from": "ISED",
     "to": "ccc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 13792138
   },
   {
     "from": "agriculture",
     "to": "cdc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 4994571
   },
   {
     "from": "natural-resources",
     "to": "cer",
-    "type": "funds"
+    "type": "funds",
+    "amount": 111393654
   },
   {
     "from": "agriculture",
     "to": "cgc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 12170160
   },
   {
     "from": "ISED",
     "to": "chars",
-    "type": "funds"
+    "type": "funds",
+    "amount": 35410153
   },
   {
     "from": "justice",
     "to": "chrc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 37757130
   },
   {
     "from": "privy-council",
     "to": "cics",
-    "type": "funds"
+    "type": "funds",
+    "amount": 7826542
   },
   {
     "from": "canadian-heritage",
     "to": "cmhr",
-    "type": "funds"
+    "type": "funds",
+    "amount": 28589790
   },
   {
     "from": "canadian-heritage",
     "to": "cmh",
-    "type": "funds"
+    "type": "funds",
+    "amount": 83116568
   },
   {
     "from": "canadian-heritage",
     "to": "cmi",
-    "type": "funds"
+    "type": "funds",
+    "amount": 10024370
   },
   {
     "from": "canadian-heritage",
     "to": "cmn",
-    "type": "funds"
+    "type": "funds",
+    "amount": 32534909
   },
   {
     "from": "canadian-heritage",
     "to": "crrf",
-    "type": "funds"
+    "type": "funds",
+    "amount": 8992410
   },
   {
     "from": "ISED",
     "to": "crtc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 18015148
   },
   {
     "from": "ISED",
     "to": "ctc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 115967712
   },
   {
     "from": "transport",
     "to": "tsb",
-    "type": "funds"
+    "type": "funds",
+    "amount": 40619347
   },
   {
     "from": "transport",
     "to": "cta",
-    "type": "funds"
+    "type": "funds",
+    "amount": 56259387
   },
   {
     "from": "public-safety",
     "to": "crc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 16279517
   },
   {
     "from": "ISED",
     "to": "copyright-board",
-    "type": "funds"
+    "type": "funds",
+    "amount": 4456235
   },
   {
     "from": "justice",
     "to": "cas",
-    "type": "funds"
+    "type": "funds",
+    "amount": 165950921
   },
   {
     "from": "parliament",
     "to": "women-gender",
-    "type": "funds"
+    "type": "funds",
+    "amount": 371460417
   },
   {
     "from": "finance",
     "to": "fintrac",
-    "type": "funds"
+    "type": "funds",
+    "amount": 104126301
   },
   {
     "from": "parliament",
     "to": "house-commons",
-    "type": "funds"
+    "type": "funds",
+    "amount": 623691994
   },
   {
     "from": "immigration",
     "to": "irb",
-    "type": "funds"
+    "type": "funds",
+    "amount": 334508059
   },
   {
     "from": "environment",
     "to": "iaac",
-    "type": "funds"
+    "type": "funds",
+    "amount": 106644374
   },
   {
     "from": "global-affairs",
     "to": "idrc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 157520169
   },
   {
     "from": "environment",
     "to": "ijc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 7495468
   },
   {
     "from": "ISED",
     "to": "invest-canada",
-    "type": "funds"
+    "type": "funds",
+    "amount": 33075156
   },
   {
     "from": "justice",
     "to": "law-commission",
-    "type": "funds"
+    "type": "funds",
+    "amount": 3875595
   },
   {
     "from": "parliament",
     "to": "leaders-debates",
-    "type": "funds"
+    "type": "funds",
+    "amount": 3513078
   },
   {
     "from": "parliament",
     "to": "library-parliament",
-    "type": "funds"
+    "type": "funds",
+    "amount": 62860029
   },
   {
     "from": "transport",
     "to": "marine-atlantic",
-    "type": "funds"
+    "type": "funds",
+    "amount": 159010958
   },
   {
     "from": "national-defence",
     "to": "mgerc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 8247023
   },
   {
     "from": "national-defence",
     "to": "mpcc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 5586689
   },
   {
     "from": "canadian-heritage",
     "to": "nac",
-    "type": "funds"
+    "type": "funds",
+    "amount": 57005441
   },
   {
     "from": "ISED",
     "to": "ncc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 94769836
   },
   {
     "from": "canadian-heritage",
     "to": "ngc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 50020493
   },
   {
     "from": "canadian-heritage",
     "to": "nmst",
-    "type": "funds"
+    "type": "funds",
+    "amount": 38404738
   },
   {
     "from": "public-safety",
     "to": "nsira",
-    "type": "funds"
+    "type": "funds",
+    "amount": 18411633
   },
   {
     "from": "natural-resources",
     "to": "npa",
-    "type": "funds"
+    "type": "funds",
+    "amount": 569670
   },
   {
     "from": "ISED",
     "to": "oic",
-    "type": "funds"
+    "type": "funds",
+    "amount": 8205210016
   },
   {
     "from": "parliament",
     "to": "oag",
-    "type": "funds"
+    "type": "funds",
+    "amount": 127415620
   },
   {
     "from": "parliament",
     "to": "oceo",
-    "type": "funds"
+    "type": "funds",
+    "amount": 259288288
   },
   {
     "from": "justice",
     "to": "ocfja",
-    "type": "funds"
+    "type": "funds",
+    "amount": 788800057
   },
   {
     "from": "parliament",
     "to": "ocl",
-    "type": "funds"
+    "type": "funds",
+    "amount": 5955987
   },
   {
     "from": "parliament",
     "to": "ocol",
-    "type": "funds"
+    "type": "funds",
+    "amount": 25354225
   },
   {
     "from": "parliament",
     "to": "ecie",
-    "type": "funds"
+    "type": "funds",
+    "amount": 8575563
   },
   {
     "from": "public-safety",
     "to": "ocic",
-    "type": "funds"
+    "type": "funds",
+    "amount": 7462410
   },
   {
     "from": "justice",
     "to": "odpp",
-    "type": "funds"
+    "type": "funds",
+    "amount": 208453021
   },
   {
     "from": "parliament",
     "to": "oggs",
-    "type": "funds"
+    "type": "funds",
+    "amount": 25570788
   },
   {
     "from": "public-safety",
     "to": "oic-intelligence",
-    "type": "funds"
+    "type": "funds",
+    "amount": 2575853
   },
   {
     "from": "parliament",
     "to": "opsic",
-    "type": "funds"
+    "type": "funds",
+    "amount": 6066353
   },
   {
     "from": "parliament",
     "to": "oseo",
-    "type": "funds"
+    "type": "funds",
+    "amount": 1597101
   },
   {
     "from": "parliament",
     "to": "oipc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 51150945
   },
   {
     "from": "public-safety",
     "to": "pbc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 73270166
   },
   {
     "from": "health",
     "to": "pmprb",
-    "type": "funds"
+    "type": "funds",
+    "amount": 17746047
   },
   {
     "from": "parliament",
     "to": "pps",
-    "type": "funds"
+    "type": "funds",
+    "amount": 104543183
   },
   {
     "from": "justice",
     "to": "rsc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 47967787
   },
   {
     "from": "public-safety",
     "to": "crerc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 6522316
   },
   {
     "from": "parliament",
     "to": "nsicop",
-    "type": "funds"
+    "type": "funds",
+    "amount": 3720600
   },
   {
     "from": "parliament",
     "to": "senate",
-    "type": "funds"
+    "type": "funds",
+    "amount": 134868514
   },
   {
     "from": "ISED",
     "to": "scc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 21397106
   },
   {
     "from": "transport",
     "to": "fbc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 17923000
   },
   {
     "from": "transport",
     "to": "jccbi",
-    "type": "funds"
+    "type": "funds",
+    "amount": 262413187
   },
   {
     "from": "canadian-heritage",
     "to": "nbc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 24434072
   },
   {
     "from": "transport",
     "to": "via-hfr",
-    "type": "funds"
+    "type": "funds",
+    "amount": 45254000
   },
   {
     "from": "transport",
     "to": "wdba",
-    "type": "funds"
+    "type": "funds",
+    "amount": 951657774
   },
   {
     "from": "treasury-board",
     "to": "psc",
-    "type": "funds"
-  },
-  {
-    "from": "fisheries",
-    "to": "clcc",
-    "type": "funds"
-  },
-  {
-    "from": "transport",
-    "to": "ridley",
-    "type": "funds"
-  },
-  {
-    "from": "transport",
-    "to": "old-port",
-    "type": "funds"
-  },
-  {
-    "from": "ISED",
-    "to": "parc-downsview",
-    "type": "funds"
+    "type": "funds",
+    "amount": 98317664
   },
   {
     "from": "national-defence",
     "to": "defence-construction",
-    "type": "funds"
+    "type": "funds",
+    "amount": 179952000
   },
   {
-    "from": "ISED",
+    "from": "finance",
     "to": "cib",
-    "type": "funds"
+    "type": "funds",
+    "amount": 3619719000
   },
   {
     "from": "natural-resources",
     "to": "cnsc",
-    "type": "funds"
+    "type": "funds",
+    "amount": 166134660
   },
   {
     "from": "treasury-board",
     "to": "casp",
-    "type": "funds"
+    "type": "funds",
+    "amount": 87838771
   },
   {
     "from": "ISED",
     "to": "casdo",
-    "type": "funds"
+    "type": "funds",
+    "amount": 21262850
   },
   {
     "from": "veterans-affairs",
     "to": "vrab",
-    "type": "funds"
+    "type": "funds",
+    "amount": 22575341
   },
   {
-    "from": "treasury-board",
-    "to": "parliament",
+    "from": "parliament",
+    "to": "treasury-board",
     "type": "oversees"
   },
   {
-    "from": "finance",
-    "to": "parliament",
+    "from": "parliament",
+    "to": "finance",
     "type": "oversees"
   },
   {
-    "from": "health",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "ISED",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "environment",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "national-defence",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "justice",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "public-safety",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "indigenous-services",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "immigration",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "transport",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "agriculture",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "fisheries",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "esdc",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "cra",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "cirnac",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "pspc",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "veterans-affairs",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "canadian-heritage",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "shared-services",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "correctional-service",
-    "to": "public-safety",
-    "type": "oversees"
-  },
-  {
-    "from": "cmhc",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "nrc",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "canada-council-arts",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "telefilm",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "canada-space-agency",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "nsERC",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "sshrc",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "cihr",
+    "from": "parliament",
     "to": "health",
     "type": "oversees"
   },
   {
-    "from": "cse",
+    "from": "parliament",
+    "to": "ISED",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "environment",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "national-defence",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "justice",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
     "to": "public-safety",
     "type": "oversees"
   },
   {
-    "from": "ofsi",
-    "to": "finance",
+    "from": "parliament",
+    "to": "indigenous-services",
     "type": "oversees"
   },
   {
-    "from": "pbo",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "natural-resources",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "global-affairs",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "privy-council",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "statistics-canada",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "library-archives",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "national-film-board",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "ukraine",
-    "to": "global-affairs",
-    "type": "oversees"
-  },
-  {
-    "from": "cbc",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "canada-post",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "via-rail",
-    "to": "transport",
-    "type": "oversees"
-  },
-  {
-    "from": "acoa",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "canada-northern",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "feddev-ontario",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "fednor",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "ced-quebec",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "pacific-economic",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "western-diversification",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "atsc",
-    "to": "justice",
-    "type": "oversees"
-  },
-  {
-    "from": "aecl",
-    "to": "natural-resources",
-    "type": "oversees"
-  },
-  {
-    "from": "catsa",
-    "to": "transport",
-    "type": "oversees"
-  },
-  {
-    "from": "ccohs",
-    "to": "esdc",
-    "type": "oversees"
-  },
-  {
-    "from": "ccc",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "cdc",
-    "to": "agriculture",
-    "type": "oversees"
-  },
-  {
-    "from": "cer",
-    "to": "natural-resources",
-    "type": "oversees"
-  },
-  {
-    "from": "cgc",
-    "to": "agriculture",
-    "type": "oversees"
-  },
-  {
-    "from": "chars",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "chrc",
-    "to": "justice",
-    "type": "oversees"
-  },
-  {
-    "from": "cics",
-    "to": "privy-council",
-    "type": "oversees"
-  },
-  {
-    "from": "cmhr",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "cmh",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "cmi",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "cmn",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "crrf",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "crtc",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "ctc",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "tsb",
-    "to": "transport",
-    "type": "oversees"
-  },
-  {
-    "from": "cta",
-    "to": "transport",
-    "type": "oversees"
-  },
-  {
-    "from": "crc",
-    "to": "public-safety",
-    "type": "oversees"
-  },
-  {
-    "from": "copyright-board",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "cas",
-    "to": "justice",
-    "type": "oversees"
-  },
-  {
-    "from": "women-gender",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "fintrac",
-    "to": "finance",
-    "type": "oversees"
-  },
-  {
-    "from": "house-commons",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "irb",
+    "from": "parliament",
     "to": "immigration",
     "type": "oversees"
   },
   {
-    "from": "iaac",
-    "to": "environment",
-    "type": "oversees"
-  },
-  {
-    "from": "idrc",
-    "to": "global-affairs",
-    "type": "oversees"
-  },
-  {
-    "from": "ijc",
-    "to": "environment",
-    "type": "oversees"
-  },
-  {
-    "from": "invest-canada",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "law-commission",
-    "to": "justice",
-    "type": "oversees"
-  },
-  {
-    "from": "leaders-debates",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "library-parliament",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "marine-atlantic",
+    "from": "parliament",
     "to": "transport",
     "type": "oversees"
   },
   {
-    "from": "mgerc",
-    "to": "national-defence",
+    "from": "parliament",
+    "to": "agriculture",
     "type": "oversees"
   },
   {
-    "from": "mpcc",
-    "to": "national-defence",
-    "type": "oversees"
-  },
-  {
-    "from": "nac",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "ncc",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "ngc",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "nmst",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "nsira",
-    "to": "public-safety",
-    "type": "oversees"
-  },
-  {
-    "from": "npa",
-    "to": "natural-resources",
-    "type": "oversees"
-  },
-  {
-    "from": "oic",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "oag",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "oceo",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "ocfja",
-    "to": "justice",
-    "type": "oversees"
-  },
-  {
-    "from": "ocl",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "ocol",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "ecie",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "ocic",
-    "to": "public-safety",
-    "type": "oversees"
-  },
-  {
-    "from": "odpp",
-    "to": "justice",
-    "type": "oversees"
-  },
-  {
-    "from": "oggs",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "oic-intelligence",
-    "to": "public-safety",
-    "type": "oversees"
-  },
-  {
-    "from": "opsic",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "oseo",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "oipc",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "pbc",
-    "to": "public-safety",
-    "type": "oversees"
-  },
-  {
-    "from": "pmprb",
-    "to": "health",
-    "type": "oversees"
-  },
-  {
-    "from": "pps",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "rsc",
-    "to": "justice",
-    "type": "oversees"
-  },
-  {
-    "from": "crerc",
-    "to": "public-safety",
-    "type": "oversees"
-  },
-  {
-    "from": "nsicop",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "senate",
-    "to": "parliament",
-    "type": "oversees"
-  },
-  {
-    "from": "scc",
-    "to": "ISED",
-    "type": "oversees"
-  },
-  {
-    "from": "fbc",
-    "to": "transport",
-    "type": "oversees"
-  },
-  {
-    "from": "jccbi",
-    "to": "transport",
-    "type": "oversees"
-  },
-  {
-    "from": "nbc",
-    "to": "canadian-heritage",
-    "type": "oversees"
-  },
-  {
-    "from": "via-hfr",
-    "to": "transport",
-    "type": "oversees"
-  },
-  {
-    "from": "wdba",
-    "to": "transport",
-    "type": "oversees"
-  },
-  {
-    "from": "psc",
-    "to": "treasury-board",
-    "type": "oversees"
-  },
-  {
-    "from": "clcc",
+    "from": "parliament",
     "to": "fisheries",
     "type": "oversees"
   },
   {
-    "from": "ridley",
-    "to": "transport",
+    "from": "parliament",
+    "to": "esdc",
     "type": "oversees"
   },
   {
-    "from": "old-port",
-    "to": "transport",
+    "from": "parliament",
+    "to": "cra",
     "type": "oversees"
   },
   {
-    "from": "parc-downsview",
-    "to": "ISED",
+    "from": "parliament",
+    "to": "cirnac",
     "type": "oversees"
   },
   {
-    "from": "defence-construction",
-    "to": "national-defence",
+    "from": "parliament",
+    "to": "pspc",
     "type": "oversees"
   },
   {
-    "from": "cib",
-    "to": "ISED",
+    "from": "parliament",
+    "to": "veterans-affairs",
     "type": "oversees"
   },
   {
-    "from": "cnsc",
+    "from": "parliament",
+    "to": "canadian-heritage",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "shared-services",
+    "type": "oversees"
+  },
+  {
+    "from": "public-safety",
+    "to": "correctional-service",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "cmhc",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "nrc",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "canada-council-arts",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "telefilm",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "canada-space-agency",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "nsERC",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "sshrc",
+    "type": "oversees"
+  },
+  {
+    "from": "health",
+    "to": "cihr",
+    "type": "oversees"
+  },
+  {
+    "from": "public-safety",
+    "to": "cse",
+    "type": "oversees"
+  },
+  {
+    "from": "finance",
+    "to": "ofsi",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "pbo",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
     "to": "natural-resources",
     "type": "oversees"
   },
   {
-    "from": "casp",
-    "to": "treasury-board",
+    "from": "parliament",
+    "to": "global-affairs",
     "type": "oversees"
   },
   {
-    "from": "casdo",
-    "to": "ISED",
+    "from": "parliament",
+    "to": "privy-council",
     "type": "oversees"
   },
   {
-    "from": "vrab",
-    "to": "veterans-affairs",
+    "from": "parliament",
+    "to": "statistics-canada",
     "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "library-archives",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "national-film-board",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "cbc",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "canada-post",
+    "type": "oversees"
+  },
+  {
+    "from": "transport",
+    "to": "via-rail",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "acoa",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "canada-northern",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "feddev-ontario",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "fednor",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "ced-quebec",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "pacific-economic",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "western-diversification",
+    "type": "oversees"
+  },
+  {
+    "from": "justice",
+    "to": "atsc",
+    "type": "oversees"
+  },
+  {
+    "from": "natural-resources",
+    "to": "aecl",
+    "type": "oversees"
+  },
+  {
+    "from": "transport",
+    "to": "catsa",
+    "type": "oversees"
+  },
+  {
+    "from": "esdc",
+    "to": "ccohs",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "ccc",
+    "type": "oversees"
+  },
+  {
+    "from": "agriculture",
+    "to": "cdc",
+    "type": "oversees"
+  },
+  {
+    "from": "natural-resources",
+    "to": "cer",
+    "type": "oversees"
+  },
+  {
+    "from": "agriculture",
+    "to": "cgc",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "chars",
+    "type": "oversees"
+  },
+  {
+    "from": "justice",
+    "to": "chrc",
+    "type": "oversees"
+  },
+  {
+    "from": "privy-council",
+    "to": "cics",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "cmhr",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "cmh",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "cmi",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "cmn",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "crrf",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "crtc",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "ctc",
+    "type": "oversees"
+  },
+  {
+    "from": "transport",
+    "to": "tsb",
+    "type": "oversees"
+  },
+  {
+    "from": "transport",
+    "to": "cta",
+    "type": "oversees"
+  },
+  {
+    "from": "public-safety",
+    "to": "crc",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "copyright-board",
+    "type": "oversees"
+  },
+  {
+    "from": "justice",
+    "to": "cas",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "women-gender",
+    "type": "oversees"
+  },
+  {
+    "from": "finance",
+    "to": "fintrac",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "house-commons",
+    "type": "oversees"
+  },
+  {
+    "from": "immigration",
+    "to": "irb",
+    "type": "oversees"
+  },
+  {
+    "from": "environment",
+    "to": "iaac",
+    "type": "oversees"
+  },
+  {
+    "from": "global-affairs",
+    "to": "idrc",
+    "type": "oversees"
+  },
+  {
+    "from": "environment",
+    "to": "ijc",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "invest-canada",
+    "type": "oversees"
+  },
+  {
+    "from": "justice",
+    "to": "law-commission",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "leaders-debates",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "library-parliament",
+    "type": "oversees"
+  },
+  {
+    "from": "transport",
+    "to": "marine-atlantic",
+    "type": "oversees"
+  },
+  {
+    "from": "national-defence",
+    "to": "mgerc",
+    "type": "oversees"
+  },
+  {
+    "from": "national-defence",
+    "to": "mpcc",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "nac",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "ncc",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "ngc",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "nmst",
+    "type": "oversees"
+  },
+  {
+    "from": "public-safety",
+    "to": "nsira",
+    "type": "oversees"
+  },
+  {
+    "from": "natural-resources",
+    "to": "npa",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "oic",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "oag",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "oceo",
+    "type": "oversees"
+  },
+  {
+    "from": "justice",
+    "to": "ocfja",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "ocl",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "ocol",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "ecie",
+    "type": "oversees"
+  },
+  {
+    "from": "public-safety",
+    "to": "ocic",
+    "type": "oversees"
+  },
+  {
+    "from": "justice",
+    "to": "odpp",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "oggs",
+    "type": "oversees"
+  },
+  {
+    "from": "public-safety",
+    "to": "oic-intelligence",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "opsic",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "oseo",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "oipc",
+    "type": "oversees"
+  },
+  {
+    "from": "public-safety",
+    "to": "pbc",
+    "type": "oversees"
+  },
+  {
+    "from": "health",
+    "to": "pmprb",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "pps",
+    "type": "oversees"
+  },
+  {
+    "from": "justice",
+    "to": "rsc",
+    "type": "oversees"
+  },
+  {
+    "from": "public-safety",
+    "to": "crerc",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "nsicop",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "senate",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "scc",
+    "type": "oversees"
+  },
+  {
+    "from": "transport",
+    "to": "fbc",
+    "type": "oversees"
+  },
+  {
+    "from": "transport",
+    "to": "jccbi",
+    "type": "oversees"
+  },
+  {
+    "from": "canadian-heritage",
+    "to": "nbc",
+    "type": "oversees"
+  },
+  {
+    "from": "transport",
+    "to": "via-hfr",
+    "type": "oversees"
+  },
+  {
+    "from": "transport",
+    "to": "wdba",
+    "type": "oversees"
+  },
+  {
+    "from": "treasury-board",
+    "to": "psc",
+    "type": "oversees"
+  },
+  {
+    "from": "national-defence",
+    "to": "defence-construction",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "cib",
+    "type": "oversees"
+  },
+  {
+    "from": "natural-resources",
+    "to": "cnsc",
+    "type": "oversees"
+  },
+  {
+    "from": "treasury-board",
+    "to": "casp",
+    "type": "oversees"
+  },
+  {
+    "from": "ISED",
+    "to": "casdo",
+    "type": "oversees"
+  },
+  {
+    "from": "veterans-affairs",
+    "to": "vrab",
+    "type": "oversees"
+  },
+  {
+    "from": "leaders-debates-commission",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "parliament",
+    "to": "leaders-debates-commission",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "leaders-debates-commission",
+    "type": "funds",
+    "amount": 3513078
+  },
+  {
+    "from": "office-governor-generals-secretary",
+    "to": "parliament",
+    "type": "reports_to"
+  },
+  {
+    "from": "parliament",
+    "to": "office-governor-generals-secretary",
+    "type": "oversees"
+  },
+  {
+    "from": "parliament",
+    "to": "office-governor-generals-secretary",
+    "type": "funds",
+    "amount": 25570788
   }
 ]

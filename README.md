@@ -1,6 +1,12 @@
 # Canadian Government Semantic Map
 
-An interactive web application that visualizes the structure of the Canadian federal government as a semantic graph. This open-source tool makes relationships between ministries, agencies, Crown corporations, programs, and budget flows transparent and navigable.
+[![Deploy](https://github.com/j7tn/Canadian-Government-Semantic-Map/actions/workflows/static.yml/badge.svg)](https://github.com/j7tn/Canadian-Government-Semantic-Map/actions/workflows/static.yml)
+[![Live site](https://img.shields.io/badge/live-j7tn.github.io-red)](https://j7tn.github.io/Canadian-Government-Semantic-Map/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+An interactive web application that visualizes the structure of the Canadian federal government as a semantic graph — **140 entities** and **434 typed relationships** covering ministries, agencies, Crown corporations, programs, and international aid flows. This open-source tool makes government structure and budget flows transparent and navigable.
+
+**[Live site →](https://j7tn.github.io/Canadian-Government-Semantic-Map/)** · **[Documentation →](docs/README.md)**
 
 ## Features
 
@@ -18,6 +24,15 @@ An interactive web application that visualizes the structure of the Canadian fed
 - **Graph Visualization**: Cytoscape.js
 - **Styling**: TailwindCSS
 - **Data**: JSON files (loaded dynamically at runtime)
+- **Quality gates**: Vitest unit tests, ESLint, and a Python data validator — all enforced in CI before deploy
+
+## Documentation
+
+| Where | What |
+|-------|------|
+| [docs/wiki/](docs/wiki/Home.md) | System documentation — architecture, graph internals, data pipeline, deployment, accessibility |
+| [docs/api/](docs/api/components.md) | Module reference — component props, hooks, utilities, theme registry |
+| [docs/updates/](docs/updates/2026-10-26-hardening-and-docs.md) | Update log — dated summaries of significant changes |
 
 ## Getting Started
 
@@ -51,7 +66,7 @@ npm run dev
 npm run build
 ```
 
-The built files will be in the `docs` directory.
+The built files will be in the `dist` directory (gitignored — GitHub Actions uploads it as the Pages artifact). `docs/` is the hand-written documentation folder.
 
 ### Deployment
 
@@ -92,7 +107,13 @@ canadian-government-semantic-map/
 ├── data/
 │   ├── entities.json          # Government entity data
 │   ├── relationships.json      # Entity relationships
+│   ├── layout.json            # Saved node positions
 │   └── sources.json           # Data source information
+├── pipeline/
+│   ├── validate_data.py       # Data integrity checks (runs in CI)
+│   ├── extract_*.py           # One-off extraction scripts
+│   ├── *.csv / *.pdf          # Raw government source files
+│   └── actual_spending_breakdown.json
 ├── src/
 │   ├── components/
 │   │   ├── GraphView.jsx      # Cytoscape graph visualization
@@ -100,11 +121,17 @@ canadian-government-semantic-map/
 │   │   ├── SearchBar.jsx      # Search functionality
 │   │   ├── Filters.jsx        # Filter controls
 │   │   ├── Legend.jsx         # Graph legend
+│   │   ├── Directory.jsx      # Accessible entity list
 │   │   └── Sources.jsx        # Sources modal
+│   ├── config/graphTheme.js   # Shared type/color/label registry
+│   ├── hooks/                 # useGraphData, useDebouncedValue
+│   ├── utils/                 # format.js, graphFilter.js (+ tests)
 │   ├── App.jsx                # Main application component
 │   └── main.jsx               # Application entry point
 ├── index.html                 # HTML template
 ├── vite.config.js             # Vite configuration
+├── eslint.config.js           # Lint configuration
+├── requirements.txt           # Python deps (pdfplumber)
 └── package.json               # Dependencies and scripts
 ```
 
@@ -128,7 +155,13 @@ Each entity represents a government organization:
   "source": "string",
   "sourceParsedDate": "string",
   "lastUpdated": "string",
-  "aliases": ["string"]
+  "aliases": ["string"],
+  "spendingBreakdown": {
+    "personnel": 0.12,
+    "transfer_payments": 0.61,
+    "public_debt": 0.0,
+    "other_subsidies": 0.19
+  }
 }
 ```
 
@@ -146,6 +179,10 @@ Each entity represents a government organization:
 - `sourceParsedDate`: Date when the source was parsed (YYYY-MM-DD format)
 - `lastUpdated`: Date when the entity data was last verified (YYYY-MM-DD format, or "unknown")
 - `aliases`: Alternative names for the entity
+- `spendingBreakdown`: Optional map of spending category → fraction of gross expenditure (values in [0,1], summing to ~1.0). Keys: `personnel`, `transportation`, `information`, `professional_services`, `rentals`, `maintenance`, `utilities`, `capital`, `transfer_payments`, `public_debt`, `other_subsidies`
+- `budgetContext`: Optional plain-language explanation of the figure — rendered in the sidebar's "Why this number" panel (e.g., CIB's figure is repayable investment capital, not expense). Entities without one get an auto-derived explanation from `spendingBreakdown` composition
+- `summary`: Optional plain-language one-liner rendered in the sidebar's "What it does" block — overrides the auto-derived summary built from entity type + first description sentence
+- `status`: Optional — `defunct` (dissolved/privatized/merged) or `fictional` (no existence in federal registries). Flagged entities surface their status in the Data Gaps table instead of per-field gaps
 
 ### Relationships (`data/relationships.json`)
 
@@ -155,17 +192,25 @@ Each relationship represents a connection between entities:
 {
   "from": "string",
   "to": "string",
-  "type": "reports_to|funds|regulates|owns|oversees|international_aid"
+  "type": "reports_to|funds|oversees|international_aid",
+  "amount": "number|null"
 }
 ```
 
+Direction convention: the arrow points from the actor to the target —
+`X --reports_to--> Y` reads "X reports to Y", `X --oversees--> Y` reads
+"X oversees Y" (parent -> child), `X --funds--> Y` reads "X funds Y".
+
 **Relationship Types:**
-- `reports_to`: Organizational reporting structure
-- `funds`: Budget allocation/flow
-- `regulates`: Regulatory oversight
-- `owns`: Ownership (e.g., Crown corporations)
-- `oversees`: General oversight
+- `reports_to`: Organizational reporting structure (child -> parent)
+- `funds`: Budget allocation/flow (funder -> recipient)
+- `oversees`: Portfolio oversight (parent -> child, generated from the `parent` field)
 - `international_aid`: Foreign aid distribution
+
+**Fields:**
+- `amount`: For `funds` edges — the recipient's annual budget in CAD
+  (the appropriated amount). `null` when the recipient's budget is
+  unknown (e.g. self-funded Crown corporations, foreign aid targets).
 
 ### Sources (`data/sources.json`)
 
@@ -224,18 +269,24 @@ In the UI, verified entities show the actual budget amount, while unverified ent
 
 ### Data Loading
 
-The application loads JSON data dynamically at runtime using `fetch()`:
+The application loads JSON data dynamically at runtime using `fetch()`. `data/` is served verbatim as the Vite `publicDir`:
 
 ```javascript
-// In App.jsx
-useEffect(() => {
-  fetch('/data/entities.json')
-    .then(res => res.json())
-    .then(data => setEntities(data))
-}, [])
+// In src/hooks/useGraphData.js — paths are relative to the Vite base
+const res = await fetch(`${import.meta.env.BASE_URL}entities.json`)
+if (!res.ok) throw new Error(`Failed to load entities.json (HTTP ${res.status})`)
+const entities = await res.json()
 ```
 
-This approach ensures that data changes are reflected immediately without requiring a rebuild.
+The hook surfaces `loading`/`error` states with a retry UI. The published layout in `data/layout.json` is loaded too, so manually arranged node positions persist across sessions once committed.
+
+### Data Validation
+
+Before deploying, CI runs `pipeline/validate_data.py`, which checks entity/relationship referential integrity, ID uniqueness, known types, and `spendingBreakdown` fraction ranges. Run it locally with:
+
+```bash
+npm run validate-data
+```
 
 ### Graph Visualization
 
@@ -249,9 +300,13 @@ The graph is rendered using Cytoscape.js with the following features:
 ### User Interaction
 
 1. **Click on a node**: Opens the sidebar with entity details
-2. **Search**: Filters nodes by name
+2. **Search**: Filters nodes by name (debounced; arrow keys navigate suggestions)
 3. **Filter**: Filter by entity type and budget threshold
 4. **Zoom/Pan**: Use mouse wheel to zoom, drag to pan
+5. **Fit View / double right-click**: Frames the whole graph
+6. **Directory**: Accessible, keyboard-navigable list of all entities
+7. **Drag a node**: Reposition it; **Download Layout** exports positions as `layout.json`, which can be committed to `data/` to publish the arrangement
+8. **Reset Layout**: Reloads and discards in-session position changes
 
 ## Contributing
 

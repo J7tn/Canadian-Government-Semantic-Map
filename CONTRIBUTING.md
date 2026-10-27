@@ -26,9 +26,14 @@ Thank you for your interest in contributing to the Canadian Government Semantic 
 3. Choose appropriate relationship type:
    - `reports_to`: Hierarchical reporting relationship
    - `funds`: Budget allocation relationship
-   - `regulates`: Regulatory oversight
-   - `owns`: Ownership relationship
    - `oversees`: General oversight
+   - `international_aid`: Foreign aid distribution
+4. To introduce a *new* relationship type, also add it to
+   `RELATIONSHIP_TYPES` in `src/config/graphTheme.js` and
+   `KNOWN_REL_TYPES` in `pipeline/validate_data.py` — otherwise it renders
+   with the generic edge style and CI warns.
+5. Run `npm run validate-data` — dangling endpoints and duplicate edges
+   are caught automatically.
 
 ### Code Contributions
 

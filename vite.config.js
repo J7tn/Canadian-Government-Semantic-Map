@@ -5,7 +5,16 @@ export default defineConfig({
   plugins: [react()],
   base: '/Canadian-Government-Semantic-Map/',
   build: {
-    outDir: 'docs'
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Cytoscape is ~80% of the bundle — splitting it lets app-code
+          // deploys reuse the cached vendor chunk.
+          vendor: ['cytoscape']
+        }
+      }
+    }
   },
   server: {
     port: 3000
