@@ -1,13 +1,25 @@
+import { RELATIONSHIP_TYPES } from '../config/graphTheme'
+
 const MILLION = 1000000
 const SLIDER_MAX_MILLIONS = 150000 // covers the largest entity (~$143B)
 
 // Controlled component — filter state lives in App (single source of
 // truth, enables programmatic reset) and flows down via `filters`.
 const Filters = ({ filters, onFilterChange }) => {
-  const { type, budgetThreshold } = filters
+  const { type, budgetThreshold, hiddenRelTypes } = filters
 
   const handleTypeChange = (e) => {
-    onFilterChange({ type: e.target.value, budgetThreshold })
+    onFilterChange({ type: e.target.value, budgetThreshold, hiddenRelTypes })
+  }
+
+  const toggleRelType = (relType) => {
+    const next = new Set(hiddenRelTypes)
+    if (next.has(relType)) {
+      next.delete(relType)
+    } else {
+      next.add(relType)
+    }
+    onFilterChange({ type, budgetThreshold, hiddenRelTypes: next })
   }
 
   // Number input is denominated in $M — keep it consistent with the
@@ -15,11 +27,11 @@ const Filters = ({ filters, onFilterChange }) => {
   const handleBudgetChange = (e) => {
     const millions = parseFloat(e.target.value)
     const newThreshold = Number.isFinite(millions) ? Math.max(0, millions) * MILLION : 0
-    onFilterChange({ type, budgetThreshold: newThreshold })
+    onFilterChange({ type, budgetThreshold: newThreshold, hiddenRelTypes })
   }
 
   const handleSliderChange = (e) => {
-    onFilterChange({ type, budgetThreshold: parseFloat(e.target.value) * MILLION })
+    onFilterChange({ type, budgetThreshold: parseFloat(e.target.value) * MILLION, hiddenRelTypes })
   }
 
   const presetBudgets = [0, 100, 500, 1000, 5000, 10000]
@@ -76,7 +88,7 @@ const Filters = ({ filters, onFilterChange }) => {
           <button
             key={preset}
             onClick={() => {
-              onFilterChange({ type, budgetThreshold: preset * MILLION })
+              onFilterChange({ type, budgetThreshold: preset * MILLION, hiddenRelTypes })
             }}
             className={`px-2 py-1 text-xs rounded ${
               budgetThreshold === preset * MILLION
@@ -88,6 +100,36 @@ const Filters = ({ filters, onFilterChange }) => {
           </button>
         ))}
       </div>
+
+      {/* Edge-type visibility: toggles types off without touching
+          node filters — hidden types lose their graph edges only. */}
+      <fieldset className="flex items-center gap-1">
+        <legend className="sr-only">Relationship types shown</legend>
+        {Object.entries(RELATIONSHIP_TYPES).map(([relType, info]) => {
+          const hidden = hiddenRelTypes?.has(relType)
+          return (
+            <button
+              key={relType}
+              type="button"
+              aria-pressed={!hidden}
+              onClick={() => toggleRelType(relType)}
+              title={`${hidden ? 'Show' : 'Hide'} ${info.label} edges`}
+              className={`px-2 py-1 text-xs rounded flex items-center gap-1 ${
+                hidden
+                  ? 'bg-red-800 text-red-200 opacity-60'
+                  : 'bg-red-600 text-white hover:bg-red-500'
+              }`}
+            >
+              <span
+                aria-hidden="true"
+                className="inline-block w-3 h-0.5"
+                style={{ backgroundColor: info.color }}
+              />
+              {info.label}
+            </button>
+          )
+        })}
+      </fieldset>
     </div>
   )
 }

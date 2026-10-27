@@ -38,7 +38,7 @@ const Legend = ({ onHover }) => {
           Relationship Types
         </h4>
         <div className="space-y-1.5">
-          {relationshipTypes.map(({ type, color, label, description }) => (
+          {relationshipTypes.map(({ type, color, width, dashed, label, description }) => (
             <div
               key={type}
               tabIndex={0}
@@ -49,9 +49,13 @@ const Legend = ({ onHover }) => {
               onBlur={() => onHover(null)}
             >
               <div className="flex items-center">
+                {/* Glyph mirrors the canvas stroke: width + dash from
+                    RELATIONSHIP_TYPES so the legend never lies. */}
                 <div
-                  className="w-8 h-0.5"
-                  style={{ backgroundColor: color }}
+                  className="w-8"
+                  style={{
+                    borderTop: `${width}px ${dashed ? 'dashed' : 'solid'} ${color}`
+                  }}
                 />
                 <div
                   className="w-0 h-0 border-l-4"

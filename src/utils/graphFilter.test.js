@@ -73,6 +73,26 @@ describe('buildGraphElements', () => {
     expect(elements.filter(e => e.data.source)).toHaveLength(0)
   })
 
+  it('hides edges whose type is in hiddenRelTypes', () => {
+    const filters = { ...noFilters, hiddenRelTypes: new Set(['funds']) }
+    const edges = buildGraphElements(entities, relationships, filters, '')
+      .filter(e => e.data.source)
+    expect(edges).toHaveLength(1)
+    expect(edges[0].data.type).toBe('international_aid')
+  })
+
+  it('keeps every edge when hiddenRelTypes is empty or absent', () => {
+    expect(
+      buildGraphElements(entities, relationships, noFilters, '')
+        .filter(e => e.data.source)
+    ).toHaveLength(2)
+    const empty = { ...noFilters, hiddenRelTypes: new Set() }
+    expect(
+      buildGraphElements(entities, relationships, empty, '')
+        .filter(e => e.data.source)
+    ).toHaveLength(2)
+  })
+
   it('produces unique edge ids even with hyphenated entity ids', () => {
     const tricky = [
       { id: 'a-b', name: 'AB', type: 'Other' },

@@ -90,6 +90,17 @@ describe('relationshipInfo', () => {
       fundsAmountMissing: true
     })
   })
+
+  it('does not flag when a secondary edge lacks amount but the primary has one', () => {
+    const rels = [
+      fundedRel,
+      { from: 'treasury-board', to: 'test-org', type: 'funds', amount: null }
+    ]
+    expect(relationshipInfo('test-org', rels)).toEqual({
+      hasFundsEdge: true,
+      fundsAmountMissing: false
+    })
+  })
 })
 
 describe('collectDataGaps + summarizeGaps', () => {

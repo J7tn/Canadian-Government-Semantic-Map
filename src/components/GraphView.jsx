@@ -140,8 +140,11 @@ const GraphView = ({ entities, relationships, layout, selectedEntityId, onNodeCl
       wheelSensitivity: 0.3
     })
     cyRef.current = cy
-    // Debug handle for live inspection (pan flags, viewport, element state).
-    window.__cy = cy
+    // Debug handle for live inspection (pan flags, viewport, element state) —
+    // dev builds only, no reason to leak the instance in production.
+    if (import.meta.env.DEV) {
+      window.__cy = cy
+    }
 
     cy.on('tap', 'node', (evt) => onNodeClickRef.current?.(evt.target.id()))
 

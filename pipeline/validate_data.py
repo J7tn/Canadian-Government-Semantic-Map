@@ -53,6 +53,7 @@ def main():
 
     ids = set()
     seen = set()
+    seen_names = {}
     for i, entity in enumerate(entities):
         eid = entity.get("id")
         loc = f"entities[{i}] ({eid or 'no id'})"
@@ -64,6 +65,18 @@ def main():
             errors.append(f"{loc}: duplicate id '{eid}'")
         seen.add(eid)
         ids.add(eid)
+
+        # Two records claiming the same real-world org split its edges
+        # and double-count its budget — a sync artifact, not a structure.
+        name = entity.get("name")
+        if name:
+            if name in seen_names:
+                errors.append(
+                    f"{loc}: duplicate name '{name}' "
+                    f"(also entities[{seen_names[name]}])"
+                )
+            else:
+                seen_names[name] = i
 
         if not entity.get("name"):
             errors.append(f"{loc}: missing 'name'")
@@ -97,6 +110,7 @@ def main():
         if parent is not None and parent not in ids:
             errors.append(f"entities[{i}] ({entity.get('id')}): parent '{parent}' not in entities")
 
+    by_id = {e.get("id"): e for e in entities}
     seen_edges = set()
     for i, rel in enumerate(relationships):
         loc = f"relationships[{i}]"
@@ -106,7 +120,14 @@ def main():
         if to not in ids:
             errors.append(f"{loc}: 'to' id '{to}' not in entities")
         if rtype not in KNOWN_REL_TYPES:
-            warnings.append(f"{loc}: unknown relationship type '{rtype}'")
+            errors.append(f"{loc}: unknown relationship type '{rtype}'")
+        if rtype == "funds" and by_id.get(to, {}).get("type") == "ForeignCountry":
+            errors.append(
+                f"{loc}: 'funds' edge targets ForeignCountry '{to}' — "
+                "aid flows use 'international_aid'"
+            )
+        if rtype != "funds" and rel.get("amount") is not None:
+            warnings.append(f"{loc}: 'amount' on a non-funds edge")
         key = (frm, to, rtype)
         if key in seen_edges:
             warnings.append(f"{loc}: duplicate edge {key}")
@@ -127,17 +148,55 @@ def main():
                 f"{entity.get('id')}: no incoming 'funds' edge"
             )
 
-    # funds edges should carry an amount when the recipient has a budget.
-    by_id = {e.get("id"): e for e in entities}
+    # 'amount' semantics: the recipient's appropriation — carried on the
+    # PRIMARY funding edge only (the sole incoming funds edge, or the
+    # parliament edge when several channels exist). Secondary channels
+    # (e.g. TBS central votes, portfolio routing) have unknown draws and
+    # keep amount null — copying the full budget onto them double-counts.
+    incoming = {}
+    for rel in relationships:
+        if rel.get("type") == "funds":
+            incoming.setdefault(rel.get("to"), []).append(rel)
     for i, rel in enumerate(relationships):
         if rel.get("type") != "funds":
             continue
         target = by_id.get(rel.get("to"))
-        if target and target.get("budget") is not None and rel.get("amount") is None:
+        edges = incoming.get(rel.get("to"), [])
+        primary = len(edges) == 1 or rel.get("from") == "parliament"
+        if (
+            primary
+            and target
+            and target.get("budget") is not None
+            and rel.get("amount") is None
+        ):
             warnings.append(
-                f"relationships[{i}]: funds edge "
+                f"relationships[{i}]: primary funds edge "
                 f"{rel.get('from')} -> {rel.get('to')} missing 'amount'"
             )
+
+    # Hierarchy cross-check: parent fields drive generated 'oversees'
+    # edges; 'reports_to' is curated. Flag pairs where the three don't
+    # agree — curating a divergence deliberately means marking the
+    # oversees edge 'curated: true'.
+    parent_of = {e.get("id"): e.get("parent") for e in entities}
+    oversees_pairs = {(r.get("from"), r.get("to")) for r in relationships
+                      if r.get("type") == "oversees"}
+    for i, rel in enumerate(relationships):
+        if rel.get("type") == "oversees":
+            if parent_of.get(rel.get("to")) != rel.get("from") \
+                    and not rel.get("curated"):
+                warnings.append(
+                    f"relationships[{i}]: oversees "
+                    f"{rel.get('from')} -> {rel.get('to')} not backed by "
+                    "a parent field (mark 'curated': true if intentional)"
+                )
+        elif rel.get("type") == "reports_to":
+            frm, to = rel.get("from"), rel.get("to")
+            if parent_of.get(frm) != to and (to, frm) not in oversees_pairs:
+                warnings.append(
+                    f"relationships[{i}]: reports_to "
+                    f"{frm} -> {to} matches no parent field or oversees edge"
+                )
 
     if isinstance(layout, dict):
         for key in layout:

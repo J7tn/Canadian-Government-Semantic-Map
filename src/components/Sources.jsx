@@ -16,10 +16,13 @@ const Sources = () => {
   }, [])
 
   // Lazy-fetch sources.json on first open — no point requesting it on
-  // every page load when most sessions never open the modal.
+  // every page load when most sessions never open the modal. A request id
+  // (not a cancelled flag) guards stale results: a cancelled cleanup would
+  // run on the 'idle'->'loading' dep change and kill the in-flight fetch.
+  const requestRef = useRef(0)
   useEffect(() => {
     if (!isOpen || status !== 'idle') return
-    let cancelled = false
+    const requestId = ++requestRef.current
     setStatus('loading')
     fetch(`${import.meta.env.BASE_URL}sources.json`)
       .then(res => {
@@ -27,14 +30,13 @@ const Sources = () => {
         return res.json()
       })
       .then(data => {
-        if (cancelled) return
+        if (requestRef.current !== requestId) return
         setSources(data)
         setStatus('ready')
       })
       .catch(() => {
-        if (!cancelled) setStatus('error')
+        if (requestRef.current === requestId) setStatus('error')
       })
-    return () => { cancelled = true }
   }, [isOpen, status])
 
   // Focus trap + Escape + focus restore. Only active while open.

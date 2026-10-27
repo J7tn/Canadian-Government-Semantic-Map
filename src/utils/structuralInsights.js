@@ -71,13 +71,14 @@ export function collectInsights(entities, relationships) {
   // 3. Arm's-length delivery.
   const ministries = live.filter(e => e.type === 'Ministry').length
   const armLength = live.filter(e => e.type === 'Agency' || e.type === 'CrownCorporation').length
+  const ratio = ministries > 0 ? (armLength / ministries).toFixed(1) : null
   insights.push({
     severity: 'medium',
     issue: 'Most of government works at arm’s length',
     scope: `${armLength} outside bodies vs ${ministries} departments`,
     detail:
-      'Agencies and Crown corporations outnumber departments almost 6 to 1. Most federal ' +
-      'work is done by organizations a minister doesn’t run day to day — they answer to ' +
+      `Agencies and Crown corporations outnumber departments ${ratio ? `${ratio} to 1` : ''}. ` +
+      'Most federal work is done by organizations a minister doesn’t run day to day — they answer to ' +
       'their own boards, which makes it harder to say who’s really in charge.',
     impact:
       'Cuts both ways: it keeps things like statistics and policing insulated from ' +
@@ -85,7 +86,10 @@ export function collectInsights(entities, relationships) {
       '“not my department” and voters are left holding the bag.'
   })
 
-  // 4. Overlapping budgetary authority.
+  // 4. Overlapping budgetary authority. Multiple incoming funds edges
+  // are real funding channels (e.g. departments can draw on Treasury
+  // Board's central votes in addition to their own appropriation) —
+  // secondary channels carry amount null since the draw is unknown.
   const funders = new Map()
   for (const r of relationships) {
     if (r.type !== 'funds') continue
@@ -99,9 +103,9 @@ export function collectInsights(entities, relationships) {
       issue: 'Some departments are paid from two pockets',
       scope: `${dualFunded.length} organizations with two funders`,
       detail:
-        'Several departments get money from Parliament’s main vote AND from Treasury ' +
-        'Board’s central reserve. It’s hard to tell which pot paid for what — a real ' +
-        'blind spot in how central funds are held and handed out.',
+        'Several departments get money from Parliament’s main vote AND can draw on Treasury ' +
+        'Board’s central reserve. How much flows through the second channel isn’t published ' +
+        'per department — a real blind spot in how central funds are held and handed out.',
       impact:
         'Mostly bad for transparency — money drawn from the reserve gets less debate ' +
         'and less of a paper trail per dollar, so it’s harder for Parliament (and you) ' +
@@ -128,16 +132,17 @@ export function collectInsights(entities, relationships) {
   }
 
   // 6. Aid coverage asymmetry.
-  const recipients = live.filter(e => e.type === 'ForeignCountry').length
+  const recipientNames = live.filter(e => e.type === 'ForeignCountry').map(e => e.name)
   const gac = entities.find(e => e.id === 'global-affairs')
-  if (recipients <= 1 && gac?.spendingBreakdown?.transfer_payments > 0.3) {
+  if (recipientNames.length <= 1 && gac?.spendingBreakdown?.transfer_payments > 0.3) {
+    const shown = recipientNames.length === 1 ? recipientNames[0] : 'none'
     insights.push({
       severity: 'medium',
       issue: 'Foreign aid: only one country shown',
-      scope: `${recipients} recipient${recipients === 1 ? '' : 's'} on the map`,
+      scope: `${recipientNames.length} recipient${recipientNames.length === 1 ? '' : 's'} on the map`,
       detail:
         'Canada sends billions abroad through Global Affairs to dozens of countries — ' +
-        'but only Ukraine is mapped. The rest of the aid picture is invisible.',
+        `but only ${shown} is mapped. The rest of the aid picture is invisible.`,
       impact:
         'Most of Canada’s role in the world stays out of sight — it’s hard for the ' +
         'public to see where aid goes, how much, or why those countries were chosen.'

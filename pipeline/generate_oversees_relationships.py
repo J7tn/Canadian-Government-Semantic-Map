@@ -2,12 +2,13 @@
 
 Direction convention:  parent --oversees--> child
 (the arrowhead points at the entity being overseen, matching the legend:
-"which entities oversee others"). Edges authored by earlier versions of
-this script used the reverse direction.
+"which entities oversee others").
 
-Existing curated oversees edges are kept; generated edges are
-synchronized with the current parent fields: missing ones added, stale
-wrong-direction duplicates removed.
+Regeneration is wholesale: every oversees edge without an explicit
+``"curated": true`` flag is rebuilt from the current parent fields, so
+stale edges disappear automatically when a parent changes or is removed.
+Curated edges (e.g. parliament -> statistics-canada, which oversees but
+is not StatCan's portfolio parent) survive untouched.
 
 Run from anywhere:  python pipeline/generate_oversees_relationships.py
 """
@@ -24,38 +25,37 @@ def main():
     with open(DATA / "relationships.json", encoding="utf-8") as f:
         relationships = json.load(f)
 
-    # Desired generated edges: parent -> child for every entity with a parent.
     desired = {
         (e["parent"], e["id"])
         for e in entities
         if e.get("parent") and e["parent"] != e["id"]
     }
 
-    current_oversees = {(r["from"], r["to"]) for r in relationships
-                        if r["type"] == "oversees"}
+    curated = [r for r in relationships
+               if r["type"] == "oversees" and r.get("curated")]
+    curated_pairs = {(r["from"], r["to"]) for r in curated}
 
-    added = 0
-    for frm, to in sorted(desired - current_oversees):
-        relationships.append({"from": frm, "to": to, "type": "oversees"})
-        added += 1
+    others = [r for r in relationships if r["type"] != "oversees"]
+    generated = [
+        {"from": frm, "to": to, "type": "oversees"}
+        for frm, to in sorted(desired - curated_pairs)
+    ]
 
-    # Drop wrong-direction edges whose correct parent->child edge exists.
-    rel_keys = {(r["from"], r["to"], r["type"]) for r in relationships}
-    removed = 0
-    kept = []
-    for r in relationships:
-        if r["type"] == "oversees" \
-                and (r["to"], r["from"]) in desired \
-                and (r["to"], r["from"], "oversees") in rel_keys:
-            removed += 1
-            continue
-        kept.append(r)
+    kept = others + generated + curated
+    removed = (
+        len([r for r in relationships if r["type"] == "oversees"])
+        - len(curated)
+        - len(desired & (current_pairs := {
+            (r["from"], r["to"]) for r in relationships
+            if r["type"] == "oversees"}))
+    )
 
     with open(DATA / "relationships.json", "w", encoding="utf-8") as f:
         json.dump(kept, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    print(f"added {added}, removed {removed} stale/duplicate")
+    print(f"regenerated {len(generated)} from parent fields, "
+          f"kept {len(curated)} curated, removed {max(removed, 0)} stale")
     print(f"total oversees: "
           f"{len([r for r in kept if r['type'] == 'oversees'])}")
 

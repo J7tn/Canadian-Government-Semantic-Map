@@ -47,7 +47,10 @@ export function buildGraphElements(entities, relationships, filters, searchQuery
   }))
 
   const edges = relationships
-    .filter(rel => visibleIds.has(rel.from) && visibleIds.has(rel.to))
+    .filter(rel =>
+      visibleIds.has(rel.from) && visibleIds.has(rel.to) &&
+      !filters.hiddenRelTypes?.has(rel.type)
+    )
     .map(rel => ({
       data: {
         id: JSON.stringify([rel.from, rel.to, rel.type]),

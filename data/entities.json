@@ -2280,12 +2280,14 @@
     "parent": "parliament",
     "budget": 3513078,
     "budgetVerified": true,
-    "description": "Organizes federal leaders' debates during elections.",
+    "description": "Independent body responsible for organizing the federal leaders' debates during general elections.",
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
-    "lastUpdated": "2026-06-07",
+    "lastUpdated": "2026-10-26",
     "aliases": [
-      "Leaders Debates"
+      "Leaders Debates",
+      "Leaders Debates Commission",
+      "Debates Commission"
     ]
   },
   {
@@ -2755,14 +2757,28 @@
     "parent": "parliament",
     "budget": 25570788,
     "budgetVerified": true,
-    "description": "Supports the Governor General of Canada.",
+    "description": "Supports the Governor General in carrying out constitutional, ceremonial, and community duties; administers the Canadian honours system.",
     "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
     "sourceParsedDate": "2026-06-07",
-    "lastUpdated": "2026-06-07",
+    "lastUpdated": "2026-10-26",
     "aliases": [
       "Governor General",
+      "OGGS",
+      "Governor General's Office",
       "Rideau Hall"
-    ]
+    ],
+    "spendingBreakdown": {
+      "personnel": 0.733468753,
+      "transportation": 0.052392676,
+      "information": 0.031891196,
+      "professional_services": 0.066060342,
+      "rentals": 0.025057382,
+      "maintenance": 0.001138956,
+      "utilities": 0.022779431,
+      "transfer_payments": 0.038737015,
+      "other_subsidies": 0.001138956,
+      "capital": 0.027335294
+    }
   },
   {
     "id": "oic-intelligence",
@@ -3405,59 +3421,6 @@
       "utilities": 0.010893567,
       "other_subsidies": 5.005e-06,
       "capital": 0.002363109
-    }
-  },
-  {
-    "id": "leaders-debates-commission",
-    "name": "Leaders' Debates Commission",
-    "type": "Agency",
-    "parent": "parliament",
-    "budget": 3513078,
-    "budgetVerified": true,
-    "description": "Independent body responsible for organizing the federal leaders' debates during general elections.",
-    "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
-    "sourceParsedDate": "2026-06-07",
-    "lastUpdated": "2026-10-26",
-    "aliases": [
-      "Leaders Debates Commission",
-      "Debates Commission"
-    ],
-    "spendingBreakdown": {
-      "personnel": 0.211893103,
-      "transportation": 0.016149086,
-      "information": 0.05439105,
-      "professional_services": 0.713632888,
-      "rentals": 0.001997678,
-      "other_subsidies": 0.001936194
-    }
-  },
-  {
-    "id": "office-governor-generals-secretary",
-    "name": "Office of the Governor General's Secretary",
-    "type": "Agency",
-    "parent": "parliament",
-    "budget": 25570788,
-    "budgetVerified": true,
-    "description": "Supports the Governor General in carrying out constitutional, ceremonial, and community duties; administers the Canadian honours system.",
-    "source": "https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2024-25/budgetary-expenditures-standard-object.csv",
-    "sourceParsedDate": "2026-06-07",
-    "lastUpdated": "2026-10-26",
-    "aliases": [
-      "OGGS",
-      "Governor General's Office",
-      "Rideau Hall"
-    ],
-    "spendingBreakdown": {
-      "personnel": 0.733468753,
-      "transportation": 0.052392676,
-      "information": 0.031891196,
-      "professional_services": 0.066060342,
-      "rentals": 0.025057382,
-      "maintenance": 0.001138956,
-      "utilities": 0.022779431,
-      "transfer_payments": 0.038737015,
-      "other_subsidies": 0.001138956,
-      "capital": 0.027335294
     }
   }
 ]

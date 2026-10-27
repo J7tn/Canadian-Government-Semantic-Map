@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { validateGraphPayload } from '../utils/graphData'
+import { validateGraphPayload, warnGraphAnomalies } from '../utils/graphData'
 
 const BASE = import.meta.env.BASE_URL
 const FETCH_TIMEOUT_MS = 15000
@@ -31,16 +31,17 @@ export function useGraphData() {
     const attempt = ++attemptRef.current
     setState(prev => ({ ...prev, status: 'loading', error: null }))
     try {
-      const [entities, relationships] = await Promise.all([
+      // layout.json fetches in parallel but fails soft — positions are
+      // optional, auto-layout covers their absence.
+      const [entities, relationships, layoutResult] = await Promise.all([
         fetchJson('entities.json'),
-        fetchJson('relationships.json')
+        fetchJson('relationships.json'),
+        fetchJson('layout.json').then(
+          value => ({ ok: true, value }),
+          () => ({ ok: false, value: null })
+        )
       ])
-      let layout = null
-      try {
-        layout = await fetchJson('layout.json')
-      } catch {
-        // Positions are optional — auto-layout covers their absence.
-      }
+      let layout = layoutResult.ok ? layoutResult.value : null
       if (attempt !== attemptRef.current) return
       try {
         validateGraphPayload(entities, relationships, layout)
@@ -58,6 +59,9 @@ export function useGraphData() {
           throw validationError
         }
       }
+      // Anomalies that survive shape validation (dangling refs, unknown
+      // types) render as dropped/gray edges — warn so they're visible.
+      warnGraphAnomalies(entities, relationships)
       setState({ status: 'ready', entities, relationships, layout, error: null })
     } catch (err) {
       if (attempt !== attemptRef.current) return

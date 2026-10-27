@@ -1,15 +1,21 @@
 """Generate 'funds' relationships for data/relationships.json.
 
-Semantics: ``from`` appropriates funding for ``to``; ``amount`` is the
-recipient's annual budget in CAD (null when the recipient's budget is
-unknown — e.g. self-funded Crown corporations or foreign aid targets).
+Semantics: ``from`` is a funding channel for ``to``; ``amount`` is the
+recipient's appropriation in CAD, carried on the PRIMARY edge only —
+the sole incoming 'funds' edge, or the parliament edge when several
+channels exist. Secondary channels (TBS central votes, portfolio
+routing) keep ``amount`` null: the draw is real but unknown, and
+copying the full budget onto them double-counts the money.
 
 What it does:
 
-1. Ensures every non-ForeignCountry entity has at least one incoming
-   'funds' edge. Entities without a curated funder get a default
-   ``parliament -> entity`` edge (appropriation through the Estimates).
-2. Backfills ``amount`` on every 'funds' edge from the recipient's budget.
+1. Ensures every live non-ForeignCountry entity has at least one
+   incoming 'funds' edge. Entities without a curated funder get a
+   default ``parliament -> entity`` edge (appropriation through the
+   Estimates). Defunct/fictional entities are skipped — no current
+   funding by design.
+2. Backfills ``amount`` on primary edges from the recipient's budget
+   and nulls it on secondary edges.
 3. Leaves curated non-parliament funding edges untouched.
 
 Idempotent — safe to re-run after editing entities or curated edges.
@@ -38,6 +44,8 @@ def main():
     for e in entities:
         if e["type"] == "ForeignCountry":
             continue  # aid flows are international_aid edges, not funds
+        if e.get("status") in ("defunct", "fictional"):
+            continue  # no current funding by design
         if e["id"] in funded or not by_id.get(e["id"]):
             continue
         if e["id"] == "parliament":
@@ -55,13 +63,23 @@ def main():
         funded.add(e["id"])
         added += 1
 
-    # Backfill amount = recipient budget on every funds edge.
+    # Backfill amount = recipient budget on primary edges only.
+    # An edge is primary when it is the recipient's sole incoming funds
+    # edge, or when it comes from parliament (the appropriating vote);
+    # secondary channels carry null.
+    incoming = {}
+    for rel in relationships:
+        if rel["type"] == "funds":
+            incoming.setdefault(rel["to"], []).append(rel)
+
     with_amount = 0
     for rel in relationships:
         if rel["type"] != "funds":
             continue
+        edges = incoming.get(rel["to"], [])
+        primary = len(edges) == 1 or rel["from"] == "parliament"
         target = by_id.get(rel["to"])
-        amount = target.get("budget") if target else None
+        amount = (target.get("budget") if target else None) if primary else None
         if rel.get("amount") != amount:
             rel["amount"] = amount
         if amount is not None:

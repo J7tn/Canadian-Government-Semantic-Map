@@ -2,16 +2,21 @@
 
 Applies structural fixes and backfills that should hold for the dataset:
 
-1. Adds entities that exist in the Main Estimates CSV but were missing
+1. Ensures entities that exist in the Main Estimates CSV are present
    (currently: Leaders' Debates Commission, Office of the Governor
-   General's Secretary).
+   General's Secretary). Matching is by NAME — a record whose name
+   already exists under a different id upgrades that record in place,
+   keeping the established id, rather than appending a duplicate.
 2. Ensures Global Affairs carries the DFATD alias used by the CSV.
 3. Normalizes 'oversees' edge direction to parent -> child (arrow points
    at the entity being overseen, matching the legend).
-4. Backfills 'funds' edge 'amount' with the recipient's annual budget
-   (appropriation semantics: Parliament/ministry funds the org's budget).
-5. Creates reports_to / oversees / funds edges + a layout position for
-   any newly added entity.
+4. Backfills 'funds' edge 'amount' with the recipient's annual budget on
+   primary edges only — the sole incoming funds edge, or the parliament
+   edge when several funding channels exist. Secondary channels (TBS
+   central votes, portfolio routing) carry null: the draw is real but
+   unknown, and copying the full budget double-counts the money.
+5. Creates missing reports_to / oversees / funds edges + a layout
+   position for each ensured entity.
 
 Safe to re-run: every step checks before mutating.
 
@@ -237,12 +242,33 @@ def main():
     by_id = {e["id"]: e for e in entities}
     existing = {(r["from"], r["to"], r["type"]) for r in rels}
 
-    # 1. Missing entities
+    # 1. Missing entities — matched by NAME, not id. A record whose
+    # name already exists upgrades in place (keeping the established
+    # id that edges/layout reference); only a genuinely new name is
+    # appended. Matching by id alone would silently create a second
+    # record for the same organization.
+    by_name = {e["name"]: e for e in entities}
     added = 0
+    resolved_ids = []
     for ne in MISSING_ENTITIES:
-        if ne["id"] not in by_id:
+        existing_entity = by_name.get(ne["name"])
+        if existing_entity is not None:
+            for key, value in ne.items():
+                if key == "id":
+                    continue  # keep the established id
+                if key == "aliases":
+                    merged = existing_entity.setdefault("aliases", [])
+                    for alias in value:
+                        if alias not in merged:
+                            merged.append(alias)
+                else:
+                    existing_entity[key] = value
+            resolved_ids.append(existing_entity["id"])
+        elif ne["id"] not in by_id:
             entities.append(ne)
             by_id[ne["id"]] = ne
+            by_name[ne["name"]] = ne
+            resolved_ids.append(ne["id"])
             added += 1
 
     # 1b. Verified budgets for non-appropriated entities
@@ -345,26 +371,36 @@ def main():
             rels.append({"from": frm, "to": to, "type": rtype, **extra})
             existing.add(key)
 
+    incoming = {}
+    for rel in rels:
+        if rel["type"] == "funds":
+            incoming.setdefault(rel["to"], []).append(rel)
+
     amounted = 0
     for rel in rels:
         if rel["type"] != "funds":
             continue
+        edges = incoming.get(rel["to"], [])
+        primary = len(edges) == 1 or rel["from"] == "parliament"
         target = by_id.get(rel["to"])
-        amount = target.get("budget") if target else None
+        amount = (target.get("budget") if target else None) if primary else None
         if rel.get("amount") != amount:
             rel["amount"] = amount
         if amount is not None:
             amounted += 1
 
-    # 5. Edges + layout for new entities
+    # 5. Edges + layout for ensured entities — resolved ids, so a
+    # name-matched record repairs its own edges instead of minting
+    # edges for a phantom id.
     px = layout.get("parliament", {}).get("x", 0)
     py = layout.get("parliament", {}).get("y", 0)
-    for i, ne in enumerate(MISSING_ENTITIES):
-        add_rel(ne["id"], "parliament", "reports_to")
-        add_rel("parliament", ne["id"], "oversees")
-        add_rel("parliament", ne["id"], "funds", amount=ne["budget"])
+    for i, eid in enumerate(resolved_ids):
+        e = by_id[eid]
+        add_rel(eid, "parliament", "reports_to")
+        add_rel("parliament", eid, "oversees")
+        add_rel("parliament", eid, "funds", amount=e.get("budget"))
         offset = -220 + i * 440
-        layout.setdefault(ne["id"], {"x": px + offset, "y": py - 180})
+        layout.setdefault(eid, {"x": px + offset, "y": py - 180})
 
     save("entities.json", entities)
     save("relationships.json", rels)

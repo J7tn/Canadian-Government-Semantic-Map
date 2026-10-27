@@ -84,11 +84,24 @@ export function relationshipInfo(entityId, relationships) {
  * sorted most-gaps-first then alphabetically.
  */
 export function collectDataGaps(entities, relationships) {
+  // One pass to index incoming funds edges — deriving relInfo per entity
+  // would re-scan the whole array O(V×E).
+  const fundsByTarget = new Map()
+  for (const rel of relationships) {
+    if (rel.type !== 'funds') continue
+    const list = fundsByTarget.get(rel.to) || []
+    list.push(rel)
+    fundsByTarget.set(rel.to, list)
+  }
   return entities
-    .map(entity => ({
-      entity,
-      gaps: getEntityGaps(entity, relationshipInfo(entity.id, relationships))
-    }))
+    .map(entity => {
+      const incoming = fundsByTarget.get(entity.id) || []
+      const gaps = getEntityGaps(entity, {
+        hasFundsEdge: incoming.length > 0,
+        fundsAmountMissing: incoming.length > 0 && incoming.every(r => r.amount == null)
+      })
+      return { entity, gaps }
+    })
     .filter(row => row.gaps.length > 0)
     .sort((a, b) => b.gaps.length - a.gaps.length || a.entity.name.localeCompare(b.entity.name))
 }

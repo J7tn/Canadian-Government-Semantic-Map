@@ -1,6 +1,7 @@
 import {
   ENTITY_TYPES,
   DEFAULT_ENTITY_BADGE,
+  RELATIONSHIP_TYPES,
   SPENDING_CATEGORIES
 } from '../config/graphTheme'
 import { formatBudget, formatPercent } from '../utils/format'
@@ -8,11 +9,44 @@ import { entityMoney } from '../utils/graphFilter'
 import { budgetInsight } from '../utils/budgetInsight'
 import { plainSummary } from '../utils/plainSummary'
 
-const Sidebar = ({ entity, onClose }) => {
+// One edge row: direction arrow, type label, resolved counterpart name,
+// and the amount when the edge carries one (primary funding edges only).
+const EdgeRow = ({ rel, entity, nameOf }) => {
+  const outgoing = rel.from === entity.id
+  const otherId = outgoing ? rel.to : rel.from
+  const info = RELATIONSHIP_TYPES[rel.type]
+  return (
+    <li className="flex items-baseline gap-1.5 text-sm">
+      <span
+        aria-hidden="true"
+        className="inline-block w-2.5 h-0.5 flex-shrink-0 translate-y-[-3px]"
+        style={{
+          borderTop: `2px ${info?.dashed ? 'dashed' : 'solid'} ${info?.color || '#cbd5e1'}`
+        }}
+      />
+      <span className="text-gray-700">
+        {outgoing ? '→ ' : '← '}
+        <span className="font-medium">{info?.label || rel.type}</span>{' '}
+        {nameOf(otherId)}
+        {rel.type === 'funds' && rel.amount != null && (
+          <span className="text-gray-500"> ({formatBudget(rel.amount)})</span>
+        )}
+      </span>
+    </li>
+  )
+}
+
+const Sidebar = ({ entity, onClose, entities = [], relationships = [] }) => {
   if (!entity) return null
 
   const typeInfo = ENTITY_TYPES[entity.type]
   const isForeignCountry = entity.type === 'ForeignCountry'
+
+  const nameOf = (id) => entities.find(e => e.id === id)?.name || id
+  const edges = relationships.filter(r => r.from === entity.id || r.to === entity.id)
+  const parentEntity = entity.parent
+    ? entities.find(e => e.id === entity.parent)
+    : null
 
   const breakdownEntries = entity.spendingBreakdown
     ? Object.entries(entity.spendingBreakdown)
@@ -119,7 +153,27 @@ const Sidebar = ({ entity, onClose }) => {
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">
                 Parent Entity
               </h3>
-              <p className="text-gray-700 text-sm">{entity.parent}</p>
+              <p className="text-gray-700 text-sm">
+                {parentEntity?.name || entity.parent}
+              </p>
+            </div>
+          )}
+
+          {edges.length > 0 && (
+            <div>
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">
+                Relationships
+              </h3>
+              <ul className="space-y-1">
+                {edges.map(rel => (
+                  <EdgeRow
+                    key={`${rel.from}-${rel.to}-${rel.type}`}
+                    rel={rel}
+                    entity={entity}
+                    nameOf={nameOf}
+                  />
+                ))}
+              </ul>
             </div>
           )}
 

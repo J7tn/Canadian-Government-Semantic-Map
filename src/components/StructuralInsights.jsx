@@ -21,7 +21,31 @@ const StructuralInsights = ({ entities, relationships }) => {
       <p className="text-sm text-gray-500 mt-1 mb-4">
         Things this data reveals about how the federal government is actually put together — written in plain English, computed live from the numbers.
       </p>
-      <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
+      {/* Stacked cards on small screens where a 5-column table is unreadable */}
+      <div className="space-y-4 md:hidden">
+        {insights.map((insight) => (
+          <article
+            key={insight.issue}
+            className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm space-y-2"
+          >
+            <div className="flex items-start justify-between gap-2">
+              <h3 className="font-medium text-gray-900">{insight.issue}</h3>
+              <span
+                className={`inline-block flex-shrink-0 px-2 py-0.5 rounded-full text-xs font-medium ${SEVERITY_STYLES[insight.severity] || SEVERITY_STYLES.low}`}
+              >
+                {insight.severity}
+              </span>
+            </div>
+            <p className="text-xs text-gray-500">{insight.scope}</p>
+            <p className="text-sm text-gray-700 leading-relaxed">{insight.detail}</p>
+            <p className="text-sm text-gray-700 leading-relaxed rounded bg-blue-50/40 p-2">
+              {insight.impact}
+            </p>
+          </article>
+        ))}
+      </div>
+
+      <div className="hidden md:block overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
         <table className="min-w-full divide-y divide-gray-200 text-sm">
           <thead className="bg-gray-50">
             <tr>
@@ -42,16 +66,16 @@ const StructuralInsights = ({ entities, relationships }) => {
                     {insight.severity}
                   </span>
                 </td>
-                <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                <td className="px-4 py-3 font-medium text-gray-900 min-w-40">
                   {insight.issue}
                 </td>
-                <td className="px-4 py-3 text-gray-600 whitespace-nowrap">
+                <td className="px-4 py-3 text-gray-600 min-w-28">
                   {insight.scope}
                 </td>
-                <td className="px-4 py-3 text-gray-700 leading-relaxed max-w-2xl">
+                <td className="px-4 py-3 text-gray-700 leading-relaxed">
                   {insight.detail}
                 </td>
-                <td className="px-4 py-3 text-gray-700 leading-relaxed max-w-md bg-blue-50/40">
+                <td className="px-4 py-3 text-gray-700 leading-relaxed bg-blue-50/40">
                   {insight.impact}
                 </td>
               </tr>

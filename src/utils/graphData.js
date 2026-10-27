@@ -6,6 +6,8 @@
 // Kept deliberately lightweight: it verifies the shapes the renderer dereferences,
 // not the full editorial schema (that's the Python validator's job).
 
+import { RELATIONSHIP_TYPES } from '../config/graphTheme'
+
 function describe(index, collection) {
   return `${collection}[${index}]`
 }
@@ -68,5 +70,44 @@ export function validateGraphPayload(entities, relationships, layout) {
   if (problems.length > 0) {
     const extra = problems.length > 1 ? ` (+${problems.length - 1} more)` : ''
     throw new Error(`Invalid graph data: ${problems[0]}${extra}`)
+  }
+}
+
+// Soft lint for anomalies that still render — run after the payload
+// passes validateGraphPayload. Dangling refs are dropped by
+// buildGraphElements and unknown types render as gray edges: silent
+// degradation worth surfacing, but not worth the error UI.
+export function warnGraphAnomalies(entities, relationships) {
+  if (!Array.isArray(entities) || !Array.isArray(relationships)) return
+
+  const ids = new Set(entities.map(e => e?.id).filter(Boolean))
+  const names = new Set()
+  const anomalies = []
+
+  entities.forEach((entity, i) => {
+    if (entity?.name) {
+      if (names.has(entity.name)) {
+        anomalies.push(`entities[${i}] duplicates name '${entity.name}'`)
+      }
+      names.add(entity.name)
+    }
+  })
+
+  relationships.forEach((rel, i) => {
+    if (!rel || typeof rel !== 'object') return
+    const loc = `relationships[${i}]`
+    for (const field of ['from', 'to']) {
+      if (typeof rel[field] === 'string' && !ids.has(rel[field])) {
+        anomalies.push(`${loc} '${field}' id '${rel[field]}' has no matching entity (edge dropped)`)
+      }
+    }
+    if (typeof rel.type === 'string' && !RELATIONSHIP_TYPES[rel.type]) {
+      anomalies.push(`${loc} unknown relationship type '${rel.type}' (renders as default edge)`)
+    }
+  })
+
+  anomalies.slice(0, 10).forEach(msg => console.warn(`graph data anomaly: ${msg}`))
+  if (anomalies.length > 10) {
+    console.warn(`graph data anomalies: +${anomalies.length - 10} more`)
   }
 }

@@ -18,7 +18,10 @@ function App() {
   const searchQuery = useDebouncedValue(searchInput, 150)
   const [filters, setFilters] = useState({
     type: 'all',
-    budgetThreshold: 0
+    budgetThreshold: 0,
+    // Set of relationship types hidden on the canvas (edge types only —
+    // node visibility is governed by type/budget/search).
+    hiddenRelTypes: new Set()
   })
   const [hoverDescription, setHoverDescription] = useState(null)
   const [directoryOpen, setDirectoryOpen] = useState(false)
@@ -70,10 +73,26 @@ function App() {
   const openDirectory = useCallback(() => setDirectoryOpen(true), [])
   const closeDirectory = useCallback(() => setDirectoryOpen(false), [])
 
-  // Reload discards in-session position tweaks and restores the saved layout.
+  // Restore the saved layout: drop in-session drags, re-seed the position
+  // registry from layout.json, snap visible nodes back, and refit. When no
+  // saved layout exists the auto-layout result is the baseline — reloading
+  // is the only way to regenerate it, so we keep that fallback.
   const handleResetLayout = useCallback(() => {
-    window.location.reload()
-  }, [])
+    const cy = cyRef.current
+    if (!layout || !cy) {
+      window.location.reload()
+      return
+    }
+    for (const key of Object.keys(positionsRegistry.current)) {
+      delete positionsRegistry.current[key]
+    }
+    Object.assign(positionsRegistry.current, layout)
+    cy.nodes().forEach(node => {
+      const p = layout[node.id()]
+      if (p) node.position(p)
+    })
+    cy.fit(undefined, 50)
+  }, [layout])
 
   // Export the full position registry, then overlay live positions for
   // visible nodes. Exporting only cy.nodes() would silently drop
@@ -195,6 +214,8 @@ function App() {
         {selectedEntity && (
           <Sidebar
             entity={selectedEntity}
+            entities={entities}
+            relationships={relationships}
             onClose={handleCloseSidebar}
           />
         )}
