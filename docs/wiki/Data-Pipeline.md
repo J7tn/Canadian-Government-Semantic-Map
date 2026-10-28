@@ -1,87 +1,98 @@
 # Data Pipeline
 
-`pipeline/` holds the raw government source files and the one-off scripts
-that turn them into `data/*.json`. Everything is manual — run a script,
-inspect the output, hand-merge into the data files.
+`pipeline/` holds the raw government source files and the scripts that
+maintain `data/*.json`. `sync_data.py` is the main entry point — every
+script is idempotent and safe to re-run.
 
 ## Prerequisites
 
 ```bash
-pip install -r requirements.txt   # pdfplumber — only needed for PDF scripts
+pip install -r requirements.txt   # pdfplumber — kept for optional PDF source scouting; no current script needs it
 ```
 
-Scripts that touch `data/` use `../data/` paths — run them from inside
-`pipeline/`. `validate_data.py` resolves the repo root from its own
-location and works from anywhere.
+All scripts resolve repo paths from their own location — run them from anywhere.
 
 ## Scripts
 
 ### `validate_data.py` — the gate
 
 Checks referential integrity and schema sanity for `data/*.json`:
-unique entity ids, dangling `parent`/`from`/`to` refs, unknown types,
-`spendingBreakdown` fractions in `[0,1]` summing to ~1, layout keys that
-reference real ids. Prints `ERROR`/`WARN` lines; exits 1 on any error.
+
+- **errors** — duplicate entity ids *and* duplicate names, dangling
+  `parent`/`from`/`to` refs, unknown entity or relationship types,
+  `funds` edges targeting a `ForeignCountry` entity, an `amount` on a
+  non-primary `funds` edge (secondary channels stay `null`)
+- **warnings** — `spendingBreakdown` fractions outside `[0,1]` or not
+  summing to ~1, `parent`/`oversees`/`reports_to` inconsistencies
+
+Prints `ERROR`/`WARN` lines; exits 1 on any error.
 **Runs in CI before every deploy** — treat warnings as worth fixing.
 
 ```bash
 npm run validate-data        # or: python pipeline/validate_data.py
 ```
 
-### `extract_actual_spending.py` — spending breakdowns
+### `sync_data.py` — the maintainer
+
+One idempotent pass over `data/`:
+
+- upgrades entries in `MISSING_ENTITIES` in place — matches by name
+  (merging aliases) and preserves established ids
+- applies `status` flags, `budgetContext` notes, and verified budgets
+- sets `inMainEstimates: true` when the entity's name or an alias
+  matches an organization row in the Main Estimates CSV — the flag
+  powers the Budget Math ledger
+- drops stale edges, repoints `funds` edges, and creates missing
+  `reports_to` / `oversees` / `funds` edges + layout positions for
+  ensured entities
+- backfills `amount` on *primary* funds edges only — the sole incoming
+  funds edge or the `parliament` edge; secondary channels (e.g. TBS
+  central votes) keep `null` since their per-department draw isn't
+  published
+
+```bash
+python pipeline/sync_data.py
+```
+
+### `apply_main_estimates.py` — spending breakdowns
 
 Reads `budgetary-expenditures-standard-object.csv` (Main Estimates by
-standard object) and produces per-entity category percentages for the
-orgs listed in `org_mapping` (currently: DND, Health, TBS, Finance, ESDC).
+standard object) and writes `spendingBreakdown` — each category as a
+fraction of gross spend — for every CSV org that maps to an entity by
+name or alias. Audits `budget` against the CSV `Total` column but never
+overwrites it; mismatches and unmatched orgs are printed for review.
 
-Key detail: the CSV `Total` column is **already net of "Less:
-Revenues"**, so percentages divide by the *gross category sum* and
-include `public_debt` and `other_subsidies`. Output →
-`actual_spending_breakdown.json`; copy the `percentages` block into the
-entity's `spendingBreakdown` field.
-
-To cover a new org: add its CSV organization name → entity id to
-`org_mapping`.
-
-### `extract_spending_breakdown.py` — all-org breakdown (legacy)
-
-DictReader-based variant that emits raw dollar categories for *every*
-org, keyed by org name (not entity id). Output file is not consumed by
-the app — useful as a lookup table when curating new entities.
-
-### `extract_main_estimates_budgets.py` — org totals
-
-Prints each org's `Total` summed across rows. Use it to fill `budget`
-for a new entity, then set `budgetVerified: true` with the CSV as source.
-
-### `extract_pdf_spending.py` — exploratory
-
-Dumps spending-related pages/tables from a Departmental Plan PDF for
-inspection. It prints, it doesn't write — a scouting tool, not a
-transformer.
+Key detail: the CSV `Total` is **already net of "Less: Revenues"**, so
+fractions divide by the gross category sum, not `Total`.
 
 ### `generate_oversees_relationships.py` — derive `oversees` edges
 
-Generates `entity.parent → oversees` edges in `relationships.json`
-(dedup-aware). Idempotent — safe to re-run after adding entities.
+Rebuilds `entity.parent → oversees` edges in `relationships.json` from
+scratch: stale generated edges are removed and edges marked
+`"curated": true` are preserved (e.g. `parliament → statistics-canada`).
+Idempotent — safe to re-run after adding entities.
 
-### `calculate_budget.py` — sanity check
+### `generate_funds_relationships.py` — derive `funds` edges
 
-Compares the sum of all entity budgets against the Main Estimates total
-($449.2B) so you can see how much of the government the map covers.
+Adds `parliament → entity` appropriation edges where missing (skips
+`defunct` and `fictional` entities) and applies the primary-edge
+`amount` rule described under `sync_data.py`.
 
 ## Source Files
 
 - `budgetary-expenditures-standard-object.csv` — TBS Main Estimates
-  2024-25, expenditures by standard object. Latin-1 encoded; the scripts
-  try several encodings automatically.
-- `dnd-departmental-plan-2024-25.pdf` — DND Departmental Plan, input for
-  the PDF scout script.
+  2024-25, expenditures by standard object. cp1252 encoded; preamble
+  rows precede the real `Organization` header and a trailing `Total`
+  row is excluded — `sync_data.py::estimates_org_names` is the
+  canonical parser.
 
 ## Workflow for a New Entity
 
-1. `python extract_main_estimates_budgets.py` → get the `budget` figure.
-2. Add the entity to `data/entities.json` (see [Data Schema](Data-Schema.md)).
-3. Add relationships; optionally run `generate_oversees_relationships.py`.
+1. Add the entity to `data/entities.json` (see [Data Schema](Data-Schema.md));
+   take `budget` from the CSV `Total` when the org appears there.
+2. `python pipeline/sync_data.py` — applies flags/contexts, adds the
+   `inMainEstimates` flag, and creates missing edges + a layout slot.
+3. Run `generate_oversees_relationships.py` and
+   `generate_funds_relationships.py` if its `parent`/funding changed.
 4. `npm run validate-data` — must be clean before commit.
 5. Commit + push → CI revalidates, rebuilds, deploys.

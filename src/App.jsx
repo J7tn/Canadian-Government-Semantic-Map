@@ -8,6 +8,7 @@ import Sources from './components/Sources'
 import Directory from './components/Directory'
 import DataGaps from './components/DataGaps'
 import StructuralInsights from './components/StructuralInsights'
+import BudgetMath from './components/BudgetMath'
 import { useGraphData } from './hooks/useGraphData'
 import { useDebouncedValue } from './hooks/useDebouncedValue'
 
@@ -239,6 +240,7 @@ function App() {
         onSelect={handleDirectorySelect}
       />
       <StructuralInsights entities={entities} relationships={relationships} />
+      <BudgetMath entities={entities} relationships={relationships} />
     </div>
   )
 }

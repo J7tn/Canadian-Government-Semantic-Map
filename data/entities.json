@@ -37,7 +37,8 @@
       "other_subsidies": 0.434146005,
       "capital": 0.001131521
     },
-    "budgetContext": "Holds central appropriations on behalf of all departments — contingencies, employee benefit plan contributions, and government-wide funds — so this is not TBS's own operating cost."
+    "budgetContext": "Holds central appropriations on behalf of all departments — contingencies, employee benefit plan contributions, and government-wide funds — so this is not TBS's own operating cost.",
+    "inMainEstimates": true
   },
   {
     "id": "finance",
@@ -63,7 +64,8 @@
       "other_subsidies": 0.024146477,
       "capital": 1.0375e-05
     },
-    "budgetContext": "Dominated by statutory transfers and public debt charges that flow through Finance — health/social transfers, equalization, and interest on the debt — rather than departmental spending."
+    "budgetContext": "Dominated by statutory transfers and public debt charges that flow through Finance — health/social transfers, equalization, and interest on the debt — rather than departmental spending.",
+    "inMainEstimates": true
   },
   {
     "id": "health",
@@ -91,7 +93,8 @@
       "transfer_payments": 0.608214967,
       "other_subsidies": 0.191208891,
       "capital": 0.003904641
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ISED",
@@ -119,7 +122,8 @@
       "utilities": 0.003615536,
       "transfer_payments": 0.821880432,
       "capital": 0.009623914
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "environment",
@@ -149,7 +153,8 @@
       "public_debt": 0.000107899,
       "other_subsidies": 0.002041895,
       "capital": 0.018721648
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "national-defence",
@@ -180,7 +185,8 @@
       "other_subsidies": 0.013630628,
       "capital": 0.204799699
     },
-    "budgetContext": "Canada's largest departmental budget — military personnel pay, equipment procurement, and operations across the CAF."
+    "budgetContext": "Canada's largest departmental budget — military personnel pay, equipment procurement, and operations across the CAF.",
+    "inMainEstimates": true
   },
   {
     "id": "justice",
@@ -204,7 +210,8 @@
       "transfer_payments": 0.395483295,
       "other_subsidies": 0.001441087,
       "capital": 0.005028998
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "public-safety",
@@ -232,7 +239,8 @@
       "transfer_payments": 0.841782708,
       "other_subsidies": 0.001860426,
       "capital": 0.009118772
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "indigenous-services",
@@ -261,7 +269,8 @@
       "transfer_payments": 0.86973622,
       "other_subsidies": 9.4847e-05,
       "capital": 0.000302826
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "immigration",
@@ -291,7 +300,8 @@
       "transfer_payments": 0.503426514,
       "other_subsidies": 0.00059719,
       "capital": 0.005791622
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "transport",
@@ -320,7 +330,8 @@
       "transfer_payments": 0.58471465,
       "other_subsidies": 0.035002233,
       "capital": 0.07462045
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "agriculture",
@@ -349,7 +360,8 @@
       "transfer_payments": 0.77282791,
       "other_subsidies": 0.002362321,
       "capital": 0.016151255
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "fisheries",
@@ -379,7 +391,8 @@
       "transfer_payments": 0.104073106,
       "other_subsidies": 0.00654663,
       "capital": 0.222421442
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "esdc",
@@ -409,7 +422,8 @@
       "other_subsidies": 0.001438031,
       "capital": 0.000606043
     },
-    "budgetContext": "Mostly passthrough benefits — Old Age Security, EI, and other transfers to individuals. The department's own operations are a small fraction of this total."
+    "budgetContext": "Mostly passthrough benefits — Old Age Security, EI, and other transfers to individuals. The department's own operations are a small fraction of this total.",
+    "inMainEstimates": true
   },
   {
     "id": "cra",
@@ -438,7 +452,8 @@
       "transfer_payments": 0.665681363,
       "other_subsidies": 1.1073e-05,
       "capital": 0.001788298
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cirnac",
@@ -468,7 +483,8 @@
       "transfer_payments": 0.815163264,
       "other_subsidies": 0.089182738,
       "capital": 6.86e-06
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "pspc",
@@ -498,7 +514,8 @@
       "public_debt": 0.013572673,
       "other_subsidies": 0.047195543,
       "capital": 0.116468201
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "veterans-affairs",
@@ -527,7 +544,8 @@
       "transfer_payments": 0.772577337,
       "other_subsidies": 1.039e-06,
       "capital": 0.001153315
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "canadian-heritage",
@@ -556,7 +574,8 @@
       "transfer_payments": 0.85490148,
       "other_subsidies": 0.000186917,
       "capital": 0.001542273
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "shared-services",
@@ -583,7 +602,8 @@
       "utilities": 0.001707,
       "public_debt": 0.00026148,
       "capital": 0.100962109
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "correctional-service",
@@ -613,7 +633,8 @@
       "transfer_payments": 0.000491987,
       "other_subsidies": 0.025829908,
       "capital": 0.075972305
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cmhc",
@@ -632,7 +653,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "nrc",
@@ -661,7 +683,8 @@
       "transfer_payments": 0.382847663,
       "other_subsidies": 0.015260754,
       "capital": 0.113507694
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "canada-council-arts",
@@ -680,7 +703,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "telefilm",
@@ -698,7 +722,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "canada-space-agency",
@@ -726,7 +751,8 @@
       "transfer_payments": 0.191966775,
       "other_subsidies": 0.006186476,
       "capital": 0.012831926
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "nsERC",
@@ -754,7 +780,8 @@
       "transfer_payments": 0.952550308,
       "other_subsidies": 2.717e-06,
       "capital": 0.001415616
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "sshrc",
@@ -782,7 +809,8 @@
       "transfer_payments": 0.959051728,
       "other_subsidies": 1.658e-06,
       "capital": 0.000824127
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cihr",
@@ -809,7 +837,8 @@
       "utilities": 0.000171882,
       "transfer_payments": 0.937965248,
       "capital": 0.000258801
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cse",
@@ -829,7 +858,8 @@
     "spendingBreakdown": {
       "personnel": 0.497653385,
       "other_subsidies": 0.502346615
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ofsi",
@@ -856,7 +886,8 @@
       "utilities": 0.000636741,
       "other_subsidies": 9.9296e-05,
       "capital": 0.036333325
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "pbo",
@@ -882,7 +913,8 @@
       "maintenance": 0.00330331,
       "utilities": 0.030405953,
       "capital": 0.00990993
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "natural-resources",
@@ -911,7 +943,8 @@
       "transfer_payments": 0.814915907,
       "other_subsidies": 0.001802194,
       "capital": 0.012025371
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "global-affairs",
@@ -944,7 +977,8 @@
       "other_subsidies": 0.000195063,
       "capital": 0.016683407
     },
-    "budgetContext": "Includes Canada's international assistance programming — a large share is transferred to partner countries and organizations rather than spent on department operations."
+    "budgetContext": "Includes Canada's international assistance programming — a large share is transferred to partner countries and organizations rather than spent on department operations.",
+    "inMainEstimates": true
   },
   {
     "id": "privy-council",
@@ -972,7 +1006,8 @@
       "transfer_payments": 0.008923327,
       "other_subsidies": 0.000136385,
       "capital": 0.03570646
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "statistics-canada",
@@ -999,7 +1034,8 @@
       "utilities": 0.001547181,
       "other_subsidies": 0.00425278,
       "capital": 0.012733881
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "library-archives",
@@ -1028,7 +1064,8 @@
       "public_debt": 0.027211062,
       "other_subsidies": 0.051545589,
       "capital": 0.268771338
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "national-film-board",
@@ -1055,7 +1092,8 @@
       "utilities": 0.005351315,
       "other_subsidies": 0.001518902,
       "capital": 0.031149631
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ukraine",
@@ -1091,7 +1129,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "canada-post",
@@ -1110,7 +1149,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "via-rail",
@@ -1129,7 +1169,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "rcmp",
@@ -1159,7 +1200,8 @@
       "public_debt": 6.765e-05,
       "other_subsidies": 0.020730855,
       "capital": 0.054330167
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "csis",
@@ -1179,7 +1221,8 @@
     "spendingBreakdown": {
       "personnel": 0.640148796,
       "other_subsidies": 0.359851204
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "border-services",
@@ -1207,7 +1250,8 @@
       "utilities": 0.012321466,
       "other_subsidies": 0.012637035,
       "capital": 0.067071573
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "patent-office",
@@ -1253,7 +1297,8 @@
       "transfer_payments": 0.199926617,
       "other_subsidies": 0.001351332,
       "capital": 0.01640568
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "food-inspection",
@@ -1281,7 +1326,8 @@
       "transfer_payments": 0.01652499,
       "other_subsidies": 0.003055926,
       "capital": 0.035196654
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "parks-canada",
@@ -1309,7 +1355,8 @@
       "transfer_payments": 0.072809773,
       "other_subsidies": 0.048683428,
       "capital": 0.20847075
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "acoa",
@@ -1337,7 +1384,8 @@
       "transfer_payments": 0.795281105,
       "other_subsidies": 0.002673032,
       "capital": 0.00179408
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "canada-northern",
@@ -1365,7 +1413,8 @@
       "transfer_payments": 0.666185899,
       "other_subsidies": 0.000943688,
       "capital": 0.002314115
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "feddev-ontario",
@@ -1392,7 +1441,8 @@
       "utilities": 0.000340823,
       "transfer_payments": 0.830938805,
       "capital": 0.002245721
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "fednor",
@@ -1420,7 +1470,8 @@
       "transfer_payments": 0.692272513,
       "other_subsidies": 0.013239248,
       "capital": 0.0021791
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ced-quebec",
@@ -1447,7 +1498,8 @@
       "utilities": 0.000183434,
       "transfer_payments": 0.8420955,
       "capital": 0.002024103
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "pacific-economic",
@@ -1473,7 +1525,8 @@
       "utilities": 0.001000687,
       "transfer_payments": 0.739281656,
       "capital": 0.005003451
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "western-diversification",
@@ -1500,7 +1553,8 @@
       "utilities": 0.000456351,
       "transfer_payments": 0.846967838,
       "capital": 0.006049059
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "atsc",
@@ -1527,7 +1581,8 @@
       "utilities": 0.003580165,
       "other_subsidies": 0.000104341,
       "capital": 0.006102459
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "aecl",
@@ -1546,7 +1601,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "catsa",
@@ -1565,7 +1621,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ccohs",
@@ -1592,7 +1649,8 @@
       "utilities": 0.002400875,
       "other_subsidies": 0.060115865,
       "capital": 0.000823603
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ccc",
@@ -1611,7 +1669,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cdc",
@@ -1630,7 +1689,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cer",
@@ -1658,7 +1718,8 @@
       "transfer_payments": 0.080588262,
       "other_subsidies": 0.000576074,
       "capital": 0.006239108
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cgc",
@@ -1684,7 +1745,8 @@
       "maintenance": 0.037364207,
       "utilities": 0.025867531,
       "capital": 0.06822407
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "chars",
@@ -1712,7 +1774,8 @@
       "transfer_payments": 0.220162844,
       "other_subsidies": 0.000960628,
       "capital": 0.040892707
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "chrc",
@@ -1739,7 +1802,8 @@
       "utilities": 0.00162667,
       "other_subsidies": 0.000246984,
       "capital": 0.01794585
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cics",
@@ -1765,7 +1829,8 @@
       "maintenance": 0.001357049,
       "utilities": 0.004573156,
       "capital": 0.014061255
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cmhr",
@@ -1784,7 +1849,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cmh",
@@ -1803,7 +1869,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cmi",
@@ -1822,7 +1889,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cmn",
@@ -1841,7 +1909,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "crrf",
@@ -1860,7 +1929,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "crtc",
@@ -1887,7 +1957,8 @@
       "utilities": 0.001434642,
       "other_subsidies": 0.000190777,
       "capital": 0.022241857
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ctc",
@@ -1906,7 +1977,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "tsb",
@@ -1932,7 +2004,8 @@
       "maintenance": 0.010339703,
       "utilities": 0.005133194,
       "capital": 0.015204011
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cta",
@@ -1958,7 +2031,8 @@
       "maintenance": 0.00189675,
       "utilities": 0.001184976,
       "capital": 0.014479646
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "crc",
@@ -1985,7 +2059,8 @@
       "utilities": 0.007088171,
       "other_subsidies": 0.042902808,
       "capital": 0.011017157
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "copyright-board",
@@ -2011,7 +2086,8 @@
       "utilities": 0.005161308,
       "other_subsidies": 0.001122023,
       "capital": 0.016830351
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "cas",
@@ -2038,7 +2114,8 @@
       "utilities": 0.016100061,
       "other_subsidies": 0.000128659,
       "capital": 0.168717443
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "women-gender",
@@ -2066,7 +2143,8 @@
       "transfer_payments": 0.818311521,
       "other_subsidies": 4.577e-06,
       "capital": 0.003405868
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "fintrac",
@@ -2093,7 +2171,8 @@
       "utilities": 0.001786907,
       "other_subsidies": 3.2845e-05,
       "capital": 0.038235124
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "house-commons",
@@ -2121,7 +2200,8 @@
       "transfer_payments": 0.00182529,
       "other_subsidies": 0.001419472,
       "capital": 0.044861165
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "irb",
@@ -2148,7 +2228,8 @@
       "utilities": 0.002277317,
       "other_subsidies": 0.000601391,
       "capital": 0.042777481
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "iaac",
@@ -2176,7 +2257,8 @@
       "transfer_payments": 0.18538823,
       "other_subsidies": 0.000473757,
       "capital": 0.027241753
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "idrc",
@@ -2195,7 +2277,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ijc",
@@ -2221,7 +2304,8 @@
       "maintenance": 0.002001209,
       "utilities": 0.003335349,
       "capital": 0.011340186
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "invest-canada",
@@ -2246,7 +2330,8 @@
       "maintenance": 0.000302342,
       "utilities": 0.000907025,
       "capital": 0.01944529
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "law-commission",
@@ -2271,7 +2356,8 @@
       "maintenance": 0.108290211,
       "utilities": 0.038961243,
       "capital": 0.108119398
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "leaders-debates",
@@ -2288,7 +2374,8 @@
       "Leaders Debates",
       "Leaders Debates Commission",
       "Debates Commission"
-    ]
+    ],
+    "inMainEstimates": true
   },
   {
     "id": "library-parliament",
@@ -2313,7 +2400,8 @@
       "maintenance": 0.000258378,
       "utilities": 0.063765098,
       "capital": 0.00320216
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "marine-atlantic",
@@ -2331,7 +2419,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "mgerc",
@@ -2357,7 +2446,8 @@
       "maintenance": 0.003936572,
       "utilities": 0.001223472,
       "capital": 0.005735403
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "mpcc",
@@ -2383,7 +2473,8 @@
       "maintenance": 0.000894984,
       "utilities": 0.001270878,
       "capital": 0.012171789
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "nac",
@@ -2402,7 +2493,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ncc",
@@ -2421,7 +2513,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ngc",
@@ -2440,7 +2533,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "nmst",
@@ -2459,7 +2553,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "nsira",
@@ -2485,7 +2580,8 @@
       "maintenance": 0.023666613,
       "utilities": 0.003150182,
       "capital": 0.003530377
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "npa",
@@ -2511,7 +2607,8 @@
       "maintenance": 0.001755402,
       "utilities": 0.001755402,
       "capital": 0.008777011
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "oic",
@@ -2539,7 +2636,8 @@
       "transfer_payments": 0.963946283,
       "public_debt": 0.005167608,
       "capital": 0.002459609
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "oag",
@@ -2566,7 +2664,8 @@
       "utilities": 0.002667679,
       "other_subsidies": 0.000768784,
       "capital": 0.025785001
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "oceo",
@@ -2593,7 +2692,8 @@
       "utilities": 0.005473911,
       "transfer_payments": 0.003278204,
       "capital": 0.026169728
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ocfja",
@@ -2620,7 +2720,8 @@
       "utilities": 7.0969e-05,
       "other_subsidies": 0.012802331,
       "capital": 0.000520863
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ocl",
@@ -2645,7 +2746,8 @@
       "maintenance": 0.001008397,
       "utilities": 0.001804907,
       "capital": 0.024354989
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ocol",
@@ -2672,7 +2774,8 @@
       "utilities": 0.003977522,
       "public_debt": 0.00099439,
       "capital": 0.029831359
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ecie",
@@ -2698,7 +2801,8 @@
       "maintenance": 0.000583052,
       "utilities": 0.002710026,
       "capital": 0.008699137
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "ocic",
@@ -2722,7 +2826,8 @@
       "rentals": 0.006700248,
       "maintenance": 0.004958184,
       "utilities": 0.014740546
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "odpp",
@@ -2748,7 +2853,8 @@
       "maintenance": 0.009827759,
       "utilities": 0.006733272,
       "capital": 0.023609462
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "oggs",
@@ -2778,7 +2884,8 @@
       "transfer_payments": 0.038737015,
       "other_subsidies": 0.001138956,
       "capital": 0.027335294
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "oic-intelligence",
@@ -2803,7 +2910,8 @@
       "maintenance": 0.038822091,
       "utilities": 0.007652999,
       "capital": 0.003882209
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "opsic",
@@ -2830,7 +2938,8 @@
       "transfer_payments": 0.008242184,
       "other_subsidies": 0.000247266,
       "capital": 0.009605277
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "oseo",
@@ -2855,7 +2964,8 @@
       "maintenance": 0.000626134,
       "utilities": 0.004696009,
       "capital": 0.003756807
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "oipc",
@@ -2883,7 +2993,8 @@
       "transfer_payments": 0.009736919,
       "other_subsidies": 0.000238262,
       "capital": 0.015927302
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "pbc",
@@ -2908,7 +3019,8 @@
       "maintenance": 0.000704892,
       "utilities": 0.002135972,
       "capital": 0.003795572
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "pmprb",
@@ -2935,7 +3047,8 @@
       "utilities": 0.000563506,
       "other_subsidies": 0.002630389,
       "capital": 0.016175152
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "pps",
@@ -2962,7 +3075,8 @@
       "utilities": 0.010822355,
       "other_subsidies": 0.018998025,
       "capital": 0.020516708
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "rsc",
@@ -2988,7 +3102,8 @@
       "utilities": 0.026987236,
       "other_subsidies": 0.000175347,
       "capital": 0.033971903
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "crerc",
@@ -3014,7 +3129,8 @@
       "utilities": 0.008432587,
       "other_subsidies": 0.039863141,
       "capital": 0.024531163
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "nsicop",
@@ -3040,7 +3156,8 @@
       "utilities": 0.002166048,
       "other_subsidies": 4.2466e-05,
       "capital": 0.001803741
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "senate",
@@ -3067,7 +3184,8 @@
       "transfer_payments": 0.003336583,
       "other_subsidies": 0.000261736,
       "capital": 0.033687018
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "scc",
@@ -3086,7 +3204,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "fbc",
@@ -3104,7 +3223,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "jccbi",
@@ -3123,7 +3243,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "nbc",
@@ -3150,7 +3271,8 @@
       "utilities": 0.020463229,
       "other_subsidies": 0.118686726,
       "capital": 0.026602197
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "via-hfr",
@@ -3169,7 +3291,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "wdba",
@@ -3188,7 +3311,8 @@
     ],
     "spendingBreakdown": {
       "other_subsidies": 1.0
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "psc",
@@ -3215,7 +3339,8 @@
       "utilities": 0.000860374,
       "other_subsidies": 0.000860374,
       "capital": 0.008544522
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "clcc",
@@ -3341,7 +3466,8 @@
       "transfer_payments": 0.041111229,
       "other_subsidies": 0.000601921,
       "capital": 0.018057641
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "casp",
@@ -3367,7 +3493,8 @@
       "maintenance": 0.000951425,
       "utilities": 0.000590115,
       "capital": 0.020144772
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "casdo",
@@ -3394,7 +3521,8 @@
       "utilities": 0.003043148,
       "transfer_payments": 0.399758264,
       "capital": 0.009129444
-    }
+    },
+    "inMainEstimates": true
   },
   {
     "id": "vrab",
@@ -3421,6 +3549,7 @@
       "utilities": 0.010893567,
       "other_subsidies": 5.005e-06,
       "capital": 0.002363109
-    }
+    },
+    "inMainEstimates": true
   }
 ]

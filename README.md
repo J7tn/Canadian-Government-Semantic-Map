@@ -4,7 +4,7 @@
 [![Live site](https://img.shields.io/badge/live-j7tn.github.io-red)](https://j7tn.github.io/Canadian-Government-Semantic-Map/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-An interactive web application that visualizes the structure of the Canadian federal government as a semantic graph — **140 entities** and **434 typed relationships** covering ministries, agencies, Crown corporations, programs, and international aid flows. This open-source tool makes government structure and budget flows transparent and navigable.
+An interactive web application that visualizes the structure of the Canadian federal government as a semantic graph — **138 entities** and **413 typed relationships** covering ministries, agencies, Crown corporations, programs, and international aid flows. This open-source tool makes government structure and budget flows transparent and navigable.
 
 **[Live site →](https://j7tn.github.io/Canadian-Government-Semantic-Map/)** · **[Documentation →](docs/README.md)**
 
@@ -13,7 +13,7 @@ An interactive web application that visualizes the structure of the Canadian fed
 - **Interactive Graph Visualization**: Explore the federal government structure through an interactive node-based graph
 - **Entity Information**: Click on any node to view detailed information including budget, description, and source links
 - **Search Functionality**: Quickly find specific government entities
-- **Filtering**: Filter by entity type (Ministry, Agency, Crown Corporation, etc.) and budget threshold
+- **Filtering**: Filter by entity type (Ministry, Agency, Crown Corporation, etc.), budget threshold, and relationship type
 - **Responsive Design**: Clean, modern UI built with React and TailwindCSS
 - **Data Verification System**: Distinguishes between verified and unverified budget figures
 - **Source Tracking**: Tracks when sources were parsed and last updated
@@ -110,10 +110,11 @@ canadian-government-semantic-map/
 │   ├── layout.json            # Saved node positions
 │   └── sources.json           # Data source information
 ├── pipeline/
-│   ├── validate_data.py       # Data integrity checks (runs in CI)
-│   ├── extract_*.py           # One-off extraction scripts
-│   ├── *.csv / *.pdf          # Raw government source files
-│   └── actual_spending_breakdown.json
+│   ├── validate_data.py          # Data integrity checks (runs in CI)
+│   ├── sync_data.py              # Entity upgrades, status/budget flags, edge repair
+│   ├── apply_main_estimates.py   # spendingBreakdown from Main Estimates CSV
+│   ├── generate_*.py             # oversees/funds edge generators
+│   └── *.csv                     # Raw government source files
 ├── src/
 │   ├── components/
 │   │   ├── GraphView.jsx      # Cytoscape graph visualization
@@ -122,10 +123,14 @@ canadian-government-semantic-map/
 │   │   ├── Filters.jsx        # Filter controls
 │   │   ├── Legend.jsx         # Graph legend
 │   │   ├── Directory.jsx      # Accessible entity list
+│   │   ├── DataGaps.jsx       # Missing-data report
+│   │   ├── StructuralInsights.jsx # Derived structural observations
+│   │   ├── BudgetMath.jsx     # Main Estimates reconciliation ledger
 │   │   └── Sources.jsx        # Sources modal
 │   ├── config/graphTheme.js   # Shared type/color/label registry
 │   ├── hooks/                 # useGraphData, useDebouncedValue
-│   ├── utils/                 # format.js, graphFilter.js (+ tests)
+│   ├── utils/                 # format, graphFilter, dataGaps, graphData,
+│   │                          # budgetMath, structuralInsights (+ tests)
 │   ├── App.jsx                # Main application component
 │   └── main.jsx               # Application entry point
 ├── index.html                 # HTML template
@@ -183,6 +188,7 @@ Each entity represents a government organization:
 - `budgetContext`: Optional plain-language explanation of the figure — rendered in the sidebar's "Why this number" panel (e.g., CIB's figure is repayable investment capital, not expense). Entities without one get an auto-derived explanation from `spendingBreakdown` composition
 - `summary`: Optional plain-language one-liner rendered in the sidebar's "What it does" block — overrides the auto-derived summary built from entity type + first description sentence
 - `status`: Optional — `defunct` (dissolved/privatized/merged) or `fictional` (no existence in federal registries). Flagged entities surface their status in the Data Gaps table instead of per-field gaps
+- `inMainEstimates`: Optional — `true` when the entity's name or an alias matches an organization row in the Main Estimates CSV (set by `pipeline/sync_data.py`). The "Money Math" ledger uses it to separate parliamentary appropriations from self-funded or statutory money shown on the map
 
 ### Relationships (`data/relationships.json`)
 
@@ -306,7 +312,7 @@ The graph is rendered using Cytoscape.js with the following features:
 5. **Fit View / double right-click**: Frames the whole graph
 6. **Directory**: Accessible, keyboard-navigable list of all entities
 7. **Drag a node**: Reposition it; **Download Layout** exports positions as `layout.json`, which can be committed to `data/` to publish the arrangement
-8. **Reset Layout**: Reloads and discards in-session position changes
+8. **Reset Layout**: Restores the published `layout.json` positions in place (falls back to a reload when no layout is available)
 
 ## Contributing
 

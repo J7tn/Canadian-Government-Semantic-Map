@@ -69,7 +69,7 @@ Rendered in the Sources modal; fetched lazily on first open.
 ## Data Lifecycle
 
 ```
-source docs (CSV/PDF) ──▶ pipeline/extract_*.py ──▶ data/*.json
+source docs (CSV) ──▶ pipeline/sync_data.py + apply_main_estimates.py ──▶ data/*.json
                                                       │
                             pipeline/validate_data.py ◀┘  (CI gate)
                                                       │

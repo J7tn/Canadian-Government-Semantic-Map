@@ -17,16 +17,23 @@ Applies structural fixes and backfills that should hold for the dataset:
    unknown, and copying the full budget double-counts the money.
 5. Creates missing reports_to / oversees / funds edges + a layout
    position for each ensured entity.
+6. Flags each entity with 'inMainEstimates': true when its name or an
+   alias matches an organization row in the Main Estimates CSV. The
+   front-end reconciliation table uses the flag to separate
+   parliamentary appropriations from self-funded / statutory money.
 
 Safe to re-run: every step checks before mutating.
 
 Run from anywhere:  python pipeline/sync_data.py
 """
+import csv
 import json
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
+MAIN_ESTIMATES_CSV = ROOT / "pipeline" / "budgetary-expenditures-standard-object.csv"
 SRC = (
     "https://www.canada.ca/content/dam/tbs-sct/documents/planned-"
     "government-spending/main-estimates/2024-25/"
@@ -229,6 +236,31 @@ def load(name):
         return json.load(f)
 
 
+def _norm_name(s):
+    """Normalize an organization name for CSV matching: unicode-fold,
+    straighten curly/CP-1252 quotes and dashes, lowercase, strip."""
+    s = unicodedata.normalize("NFKD", s or "")
+    for ch in ("\u2019", "\u2018", "\x92"):
+        s = s.replace(ch, "'")
+    return s.replace("\x96", "-").strip().lower()
+
+
+def estimates_org_names():
+    """Organization names in the Main Estimates CSV (cp1252; preamble
+    rows precede the real header; a trailing 'Total' row is excluded)."""
+    names = set()
+    with open(MAIN_ESTIMATES_CSV, encoding="cp1252") as f:
+        header_seen = False
+        for row in csv.reader(f):
+            if not header_seen:
+                if row and row[0].strip() == "Organization":
+                    header_seen = True
+                continue
+            if row and row[0].strip() and row[0].strip().lower() != "total":
+                names.add(_norm_name(row[0]))
+    return names
+
+
 def save(name, data):
     with open(DATA / name, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
@@ -305,6 +337,23 @@ def main():
         if e is not None and e.get("budgetContext") != context:
             e["budgetContext"] = context
             contexted += 1
+
+    # 1e. inMainEstimates flag — true when the entity's name or an alias
+    #     matches an organization row in the Main Estimates CSV. The flag
+    #     separates parliamentary appropriations from self-funded or
+    #     statutory money for the budget reconciliation table.
+    org_names = estimates_org_names()
+    estimates_flagged = 0
+    for e in entities:
+        matched = _norm_name(e.get("name")) in org_names or any(
+            _norm_name(a) in org_names for a in e.get("aliases") or []
+        )
+        if matched and e.get("inMainEstimates") is not True:
+            e["inMainEstimates"] = True
+            estimates_flagged += 1
+        elif not matched and "inMainEstimates" in e:
+            del e["inMainEstimates"]
+            estimates_flagged += 1
 
     # 2. DFATD alias on Global Affairs
     ga = by_id.get("global-affairs")
@@ -410,6 +459,7 @@ def main():
     print(f"verified budget fields written: {verified}")
     print(f"status flags applied: {flagged}")
     print(f"budget contexts written: {contexted}")
+    print(f"inMainEstimates flags changed: {estimates_flagged}")
     print(f"parents fixed/cleared: {parents_fixed}")
     print(f"wrong edges dropped: {edges_dropped}")
     print(f"funds edges repointed: {repointed}")
